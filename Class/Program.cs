@@ -1,4 +1,4 @@
-namespace ISManager
+namespace ISManager.Class
 {
     internal static class Program
     {

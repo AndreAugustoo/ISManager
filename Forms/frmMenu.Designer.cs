@@ -28,25 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             panel1 = new Panel();
             pnlNav = new Panel();
-            btnSair = new Button();
-            btnMigracoes = new Button();
-            btnClientes = new Button();
-            btnDashboard = new Button();
+            btnSair = new FontAwesome.Sharp.IconButton();
+            btnMigracoes = new FontAwesome.Sharp.IconButton();
+            btnClientes = new FontAwesome.Sharp.IconButton();
+            btnDashboard = new FontAwesome.Sharp.IconButton();
             panel2 = new Panel();
             lblNome = new Label();
             lblSubNome = new Label();
             pictureBox1 = new PictureBox();
-            errorProvider1 = new ErrorProvider(components);
-            mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             pnlFormLoader = new Panel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -63,86 +59,98 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(186, 577);
             panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
             // 
             // pnlNav
             // 
             pnlNav.BackColor = Color.SteelBlue;
             pnlNav.Location = new Point(0, 193);
             pnlNav.Name = "pnlNav";
-            pnlNav.Size = new Size(3, 100);
+            pnlNav.Size = new Size(5, 100);
             pnlNav.TabIndex = 3;
             // 
             // btnSair
             // 
-            btnSair.Dock = DockStyle.Bottom;
             btnSair.FlatAppearance.BorderSize = 0;
             btnSair.FlatStyle = FlatStyle.Flat;
-            btnSair.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSair.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             btnSair.ForeColor = Color.FromArgb(0, 126, 249);
+            btnSair.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket;
+            btnSair.IconColor = Color.FromArgb(0, 126, 249);
+            btnSair.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnSair.IconSize = 34;
             btnSair.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSair.Location = new Point(0, 535);
+            btnSair.Location = new Point(0, 538);
             btnSair.Name = "btnSair";
-            btnSair.Size = new Size(186, 42);
-            btnSair.TabIndex = 1;
+            btnSair.Padding = new Padding(10, 0, 0, 0);
+            btnSair.Size = new Size(186, 40);
+            btnSair.TabIndex = 7;
             btnSair.Text = "Sair";
-            btnSair.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnSair.UseVisualStyleBackColor = true;
             btnSair.Click += btnSair_Click;
-            btnSair.Leave += btnSair_Leave;
             // 
             // btnMigracoes
             // 
             btnMigracoes.Dock = DockStyle.Top;
             btnMigracoes.FlatAppearance.BorderSize = 0;
             btnMigracoes.FlatStyle = FlatStyle.Flat;
-            btnMigracoes.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnMigracoes.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             btnMigracoes.ForeColor = Color.FromArgb(0, 126, 249);
+            btnMigracoes.IconChar = FontAwesome.Sharp.IconChar.NetworkWired;
+            btnMigracoes.IconColor = Color.FromArgb(0, 126, 249);
+            btnMigracoes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnMigracoes.IconSize = 34;
             btnMigracoes.ImageAlign = ContentAlignment.MiddleLeft;
-            btnMigracoes.Location = new Point(0, 232);
+            btnMigracoes.Location = new Point(0, 228);
             btnMigracoes.Name = "btnMigracoes";
-            btnMigracoes.Size = new Size(186, 42);
-            btnMigracoes.TabIndex = 1;
+            btnMigracoes.Padding = new Padding(10, 0, 0, 0);
+            btnMigracoes.Size = new Size(186, 40);
+            btnMigracoes.TabIndex = 6;
             btnMigracoes.Text = "Migrações";
-            btnMigracoes.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnMigracoes.UseVisualStyleBackColor = true;
             btnMigracoes.Click += btnMigracoes_Click;
-            btnMigracoes.Leave += btnMigracoes_Leave;
             // 
             // btnClientes
             // 
             btnClientes.Dock = DockStyle.Top;
             btnClientes.FlatAppearance.BorderSize = 0;
             btnClientes.FlatStyle = FlatStyle.Flat;
-            btnClientes.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnClientes.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             btnClientes.ForeColor = Color.FromArgb(0, 126, 249);
+            btnClientes.IconChar = FontAwesome.Sharp.IconChar.User;
+            btnClientes.IconColor = Color.FromArgb(0, 126, 249);
+            btnClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnClientes.IconSize = 34;
             btnClientes.ImageAlign = ContentAlignment.MiddleLeft;
-            btnClientes.Location = new Point(0, 190);
+            btnClientes.Location = new Point(0, 188);
             btnClientes.Name = "btnClientes";
-            btnClientes.Size = new Size(186, 42);
-            btnClientes.TabIndex = 1;
+            btnClientes.Padding = new Padding(10, 0, 0, 0);
+            btnClientes.Size = new Size(186, 40);
+            btnClientes.TabIndex = 5;
             btnClientes.Text = "Clientes";
-            btnClientes.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnClientes.UseVisualStyleBackColor = true;
             btnClientes.Click += btnClientes_Click;
-            btnClientes.Leave += btnClientes_Leave;
             // 
             // btnDashboard
             // 
             btnDashboard.Dock = DockStyle.Top;
             btnDashboard.FlatAppearance.BorderSize = 0;
             btnDashboard.FlatStyle = FlatStyle.Flat;
-            btnDashboard.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDashboard.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             btnDashboard.ForeColor = Color.FromArgb(0, 126, 249);
+            btnDashboard.IconChar = FontAwesome.Sharp.IconChar.ChartLine;
+            btnDashboard.IconColor = Color.FromArgb(0, 126, 249);
+            btnDashboard.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnDashboard.IconSize = 34;
             btnDashboard.ImageAlign = ContentAlignment.MiddleLeft;
             btnDashboard.Location = new Point(0, 148);
             btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(186, 42);
-            btnDashboard.TabIndex = 1;
+            btnDashboard.Padding = new Padding(10, 0, 0, 0);
+            btnDashboard.Size = new Size(186, 40);
+            btnDashboard.TabIndex = 4;
             btnDashboard.Text = "Dashboard";
-            btnDashboard.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnDashboard.UseVisualStyleBackColor = true;
             btnDashboard.Click += btnDashboard_Click;
-            btnDashboard.Leave += btnDashboard_Leave;
             // 
             // panel2
             // 
@@ -189,17 +197,6 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // errorProvider1
-            // 
-            errorProvider1.ContainerControl = this;
-            // 
-            // mySqlCommand1
-            // 
-            mySqlCommand1.CacheAge = 0;
-            mySqlCommand1.Connection = null;
-            mySqlCommand1.EnableCaching = false;
-            mySqlCommand1.Transaction = null;
-            // 
             // pnlFormLoader
             // 
             pnlFormLoader.Dock = DockStyle.Bottom;
@@ -218,6 +215,7 @@
             Controls.Add(pnlFormLoader);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmMenu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
@@ -226,7 +224,6 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
         }
 
@@ -236,14 +233,14 @@
         private Panel panel2;
         private Label lblSubNome;
         private PictureBox pictureBox1;
-        private Button btnDashboard;
-        private Button btnSair;
-        private Button btnMigracoes;
-        private Button btnClientes;
+        private Button btnMigracoe;
         private Panel pnlNav;
         private Label lblNome;
-        private ErrorProvider errorProvider1;
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
         private Panel pnlFormLoader;
+        private FontAwesome.Sharp.IconButton btnSair;
+        private FontAwesome.Sharp.IconButton btnMigracoes;
+        private FontAwesome.Sharp.IconButton btnClientes;
+        private FontAwesome.Sharp.IconButton btnDashboard;
     }
 }

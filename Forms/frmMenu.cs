@@ -44,12 +44,12 @@ namespace ISManager
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void pnlFormLoader_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -68,6 +68,9 @@ namespace ISManager
             pnlNav.Top = btnDashboard.Top;
             pnlNav.Left = btnDashboard.Left;
             btnDashboard.BackColor = Color.FromArgb(46, 51, 73);
+            btnClientes.BackColor = Color.FromArgb(24, 30, 54);
+            btnMigracoes.BackColor = Color.FromArgb(24, 30, 54);
+            btnSair.BackColor = Color.FromArgb(24, 30, 54);
 
             this.pnlFormLoader.Controls.Clear();
             frmDashboard FrmDashboard_Vrb = new frmDashboard() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -81,6 +84,9 @@ namespace ISManager
             pnlNav.Height = btnClientes.Height;
             pnlNav.Top = btnClientes.Top;
             btnClientes.BackColor = Color.FromArgb(46, 51, 73);
+            btnDashboard.BackColor = Color.FromArgb(24, 30, 54);
+            btnMigracoes.BackColor = Color.FromArgb(24, 30, 54);
+            btnSair.BackColor = Color.FromArgb(24, 30, 54);
 
             this.pnlFormLoader.Controls.Clear();
             frmClientes FrmClientes_Vrb = new frmClientes() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -94,6 +100,9 @@ namespace ISManager
             pnlNav.Height = btnMigracoes.Height;
             pnlNav.Top = btnMigracoes.Top;
             btnMigracoes.BackColor = Color.FromArgb(46, 51, 73);
+            btnClientes.BackColor = Color.FromArgb(24, 30, 54);
+            btnDashboard.BackColor = Color.FromArgb(24, 30, 54);
+            btnSair.BackColor = Color.FromArgb(24, 30, 54);
 
             this.pnlFormLoader.Controls.Clear();
             frmMigracoes FrmMigracoes_Vrb = new frmMigracoes() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -107,6 +116,9 @@ namespace ISManager
             pnlNav.Height = btnSair.Height;
             pnlNav.Top = btnSair.Top;
             btnSair.BackColor = Color.FromArgb(46, 51, 73);
+            btnClientes.BackColor = Color.FromArgb(24, 30, 54);
+            btnMigracoes.BackColor = Color.FromArgb(24, 30, 54);
+            btnDashboard.BackColor = Color.FromArgb(24, 30, 54);
 
             this.pnlFormLoader.Controls.Clear();
             frmSair FrmSair_Vrb = new frmSair() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -138,6 +150,10 @@ namespace ISManager
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
         }
     }
 }

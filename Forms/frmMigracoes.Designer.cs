@@ -1,6 +1,6 @@
 ﻿namespace ISManager
 {
-    partial class frmSair
+    partial class frmMigracoes
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             label1 = new Label();
             btnSair = new Button();
-            lblSair = new Label();
+            lblMigracoes = new Label();
             SuspendLayout();
             // 
             // label1
@@ -38,11 +38,11 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(319, 276);
+            label1.Location = new Point(260, 243);
             label1.Name = "label1";
-            label1.Size = new Size(120, 37);
-            label1.TabIndex = 1;
-            label1.Text = "Sair aqui";
+            label1.Size = new Size(208, 37);
+            label1.TabIndex = 0;
+            label1.Text = "Em construção...";
             // 
             // btnSair
             // 
@@ -58,29 +58,30 @@
             btnSair.UseVisualStyleBackColor = true;
             btnSair.Click += btnSair_Click;
             // 
-            // lblSair
+            // lblMigracoes
             // 
-            lblSair.AutoSize = true;
-            lblSair.Font = new Font("Segoe UI", 21F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblSair.ForeColor = Color.FromArgb(158, 161, 176);
-            lblSair.Location = new Point(12, 9);
-            lblSair.Name = "lblSair";
-            lblSair.Size = new Size(67, 38);
-            lblSair.TabIndex = 6;
-            lblSair.Text = "Sair";
+            lblMigracoes.AutoSize = true;
+            lblMigracoes.Font = new Font("Segoe UI", 21F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMigracoes.ForeColor = Color.White;
+            lblMigracoes.Location = new Point(12, 9);
+            lblMigracoes.Name = "lblMigracoes";
+            lblMigracoes.Size = new Size(152, 38);
+            lblMigracoes.TabIndex = 6;
+            lblMigracoes.Text = "Migrações";
             // 
-            // frmSair
+            // frmMigracoes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 51, 73);
             ClientSize = new Size(765, 577);
             Controls.Add(btnSair);
-            Controls.Add(lblSair);
+            Controls.Add(lblMigracoes);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "frmSair";
-            Text = "frmSair";
+            Name = "frmMigracoes";
+            Text = "frmMigracoes";
+            Load += frmMigracoes_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -89,6 +90,6 @@
 
         private Label label1;
         private Button btnSair;
-        private Label lblSair;
+        private Label lblMigracoes;
     }
 }

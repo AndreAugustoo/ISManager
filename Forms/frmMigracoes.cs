@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ISManager.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace ISManager
         public frmMigracoes()
         {
             InitializeComponent();
+            Exit.ConfigurarBotaoFechar(btnSair);
         }
 
         private void frmMigracoes_Load(object sender, EventArgs e)
@@ -24,7 +26,6 @@ namespace ISManager
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            Application.Exit();
         }
     }
 }

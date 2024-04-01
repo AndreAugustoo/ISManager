@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ISManager.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,16 +11,22 @@ using System.Windows.Forms;
 
 namespace ISManager
 {
-    public partial class frmDashboard : Form
+    public partial class frmSair : Form
     {
-        public frmDashboard()
+        public frmSair()
         {
             InitializeComponent();
+            Exit.ConfigurarBotaoFechar(btnSair);
         }
 
         private void btnSair_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void frmSair_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
