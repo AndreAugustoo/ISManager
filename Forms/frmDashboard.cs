@@ -44,14 +44,13 @@ namespace ISManager
 
         }
 
-        private void gunaChart1_Load(object sender, EventArgs e)
+        private void btnAtualizar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void chartControl1_Click(object sender, EventArgs e)
-        {
-
+          /*  this.pnlFormLoader.Controls.Clear();*/
+            frmDashboard FrmDashboard_Vrb = new frmDashboard() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            FrmDashboard_Vrb.FormBorderStyle = FormBorderStyle.None;
+         /*   this.pnlFormLoader.Controls.Add(FrmDashboard_Vrb);*/
+            FrmDashboard_Vrb.Show();
         }
     }
 }

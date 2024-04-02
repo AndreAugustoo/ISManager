@@ -28,7 +28,11 @@ namespace ISManager.Forms
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            if (tipoCrud == 1)
+            if (txtId.Text == "")
+            {
+                MessageBox.Show("Obrigatório preencher o ID do cliente!", "ISManager", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            } else if (tipoCrud == 1)
             {
                 // Cadastrar
                 this.clientes = new Clientes();
@@ -86,6 +90,9 @@ namespace ISManager.Forms
             FrmClientes_Vrb.FormBorderStyle = FormBorderStyle.None;
             this.pnlFormLoader.Controls.Add(FrmClientes_Vrb);
             FrmClientes_Vrb.Show();
+            {
+
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

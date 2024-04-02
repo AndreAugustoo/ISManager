@@ -49,14 +49,13 @@
             // 
             // txtFiltro
             // 
-            txtFiltro.BackColor = Color.FromArgb(74, 79, 99);
-            txtFiltro.BorderStyle = BorderStyle.None;
+            txtFiltro.BackColor = Color.FromArgb(46, 51, 73);
             txtFiltro.Font = new Font("Segoe UI", 14F);
             txtFiltro.ForeColor = Color.FromArgb(188, 191, 206);
             txtFiltro.Location = new Point(139, 85);
             txtFiltro.Name = "txtFiltro";
             txtFiltro.PlaceholderText = "  Filtro";
-            txtFiltro.Size = new Size(124, 25);
+            txtFiltro.Size = new Size(124, 32);
             txtFiltro.TabIndex = 1;
             // 
             // lblClientes
@@ -76,7 +75,7 @@
             btnSair.FlatStyle = FlatStyle.Flat;
             btnSair.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSair.ForeColor = Color.White;
-            btnSair.Location = new Point(729, 0);
+            btnSair.Location = new Point(732, 0);
             btnSair.Name = "btnSair";
             btnSair.Size = new Size(33, 33);
             btnSair.TabIndex = 6;
@@ -96,17 +95,17 @@
             // 
             // cbxFiltro
             // 
-            cbxFiltro.BackColor = Color.FromArgb(74, 79, 99);
+            cbxFiltro.BackColor = Color.FromArgb(46, 51, 73);
             cbxFiltro.FlatStyle = FlatStyle.Flat;
-            cbxFiltro.Font = new Font("Segoe UI", 12F);
+            cbxFiltro.Font = new Font("Segoe UI", 13F);
             cbxFiltro.ForeColor = Color.FromArgb(188, 191, 206);
             cbxFiltro.FormattingEnabled = true;
             cbxFiltro.IntegralHeight = false;
-            cbxFiltro.ItemHeight = 21;
+            cbxFiltro.ItemHeight = 23;
             cbxFiltro.Items.AddRange(new object[] { "ID", "Nome", "ISM", "Status" });
             cbxFiltro.Location = new Point(19, 85);
             cbxFiltro.Name = "cbxFiltro";
-            cbxFiltro.Size = new Size(104, 29);
+            cbxFiltro.Size = new Size(104, 31);
             cbxFiltro.TabIndex = 0;
             cbxFiltro.Text = "ID";
             // 
