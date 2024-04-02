@@ -200,6 +200,7 @@
             // 
             // pnlFormLoader
             // 
+            pnlFormLoader.BackColor = Color.FromArgb(46, 51, 73);
             pnlFormLoader.Dock = DockStyle.Fill;
             pnlFormLoader.Location = new Point(186, 0);
             pnlFormLoader.MinimumSize = new Size(765, 577);

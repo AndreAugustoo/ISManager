@@ -51,7 +51,7 @@
             // 
             txtFiltro.BackColor = Color.FromArgb(46, 51, 73);
             txtFiltro.Font = new Font("Segoe UI", 14F);
-            txtFiltro.ForeColor = Color.FromArgb(188, 191, 206);
+            txtFiltro.ForeColor = Color.White;
             txtFiltro.Location = new Point(165, 91);
             txtFiltro.Name = "txtFiltro";
             txtFiltro.PlaceholderText = "  Filtro";

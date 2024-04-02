@@ -56,7 +56,6 @@
             btnSair.TabIndex = 7;
             btnSair.Text = "X";
             btnSair.UseVisualStyleBackColor = true;
-            btnSair.Click += btnSair_Click;
             // 
             // lblMigracoes
             // 
@@ -81,7 +80,6 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmMigracoes";
             Text = "frmMigracoes";
-            Load += frmMigracoes_Load;
             ResumeLayout(false);
             PerformLayout();
         }

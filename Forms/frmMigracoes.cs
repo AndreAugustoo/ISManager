@@ -18,14 +18,5 @@ namespace ISManager
             InitializeComponent();
             Exit.ConfigurarBotaoFechar(btnSair);
         }
-
-        private void frmMigracoes_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSair_Click(object sender, EventArgs e)
-        {
-        }
     }
 }
