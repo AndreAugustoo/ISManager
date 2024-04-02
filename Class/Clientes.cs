@@ -84,7 +84,7 @@ namespace ISManager.Class
                 ", horas_utilizadas_cliente AS 'Horas'" +
                 ", data_fechamento_cliente AS 'Data fechamento'" +
                 ", observacao_cliente AS 'Observação'" +
-                "FROM cliente ORDER BY nome_cliente ASC");
+                "FROM cliente ORDER BY nome_cliente ASC LIMIT 500");
         }
 
         public MySqlDataReader ListarClientes(string campo, string filtro)
@@ -105,7 +105,7 @@ namespace ISManager.Class
                 ", horas_utilizadas_cliente AS 'Horas'" +
                 ", data_fechamento_cliente AS 'Data fechamento'" +
                 ", observacao_cliente AS 'Observação'" +
-                "FROM cliente WHERE " + campo + " LIKE '%" + filtro + "%' ORDER BY nome_cliente ASC");
+                "FROM cliente WHERE " + campo + " LIKE '%" + filtro + "%' ORDER BY nome_cliente ASC LIMIT 500");
         }
 
         public MySqlDataReader ListarNumeroRegistro()

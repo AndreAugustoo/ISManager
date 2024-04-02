@@ -37,7 +37,7 @@
             lblSair.AutoSize = true;
             lblSair.Font = new Font("Segoe UI", 21F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblSair.ForeColor = Color.White;
-            lblSair.Location = new Point(268, 171);
+            lblSair.Location = new Point(433, 229);
             lblSair.Name = "lblSair";
             lblSair.Size = new Size(252, 76);
             lblSair.TabIndex = 6;
@@ -54,7 +54,7 @@
             btnSair.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnSair.IconSize = 30;
             btnSair.ImageAlign = ContentAlignment.MiddleRight;
-            btnSair.Location = new Point(315, 261);
+            btnSair.Location = new Point(480, 319);
             btnSair.Name = "btnSair";
             btnSair.Size = new Size(115, 51);
             btnSair.TabIndex = 15;
@@ -68,7 +68,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 51, 73);
-            ClientSize = new Size(765, 577);
+            ClientSize = new Size(1114, 700);
             Controls.Add(btnSair);
             Controls.Add(lblSair);
             FormBorderStyle = FormBorderStyle.None;

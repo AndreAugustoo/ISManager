@@ -179,5 +179,14 @@ namespace ISManager
 
         }
 
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNumeroRegistro_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

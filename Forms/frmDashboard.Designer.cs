@@ -52,6 +52,14 @@
             panel5 = new Panel();
             label11 = new Label();
             label12 = new Label();
+            panel6 = new Panel();
+            pictureBox4 = new PictureBox();
+            label10 = new Label();
+            label13 = new Label();
+            label14 = new Label();
+            panel7 = new Panel();
+            label15 = new Label();
+            label16 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -60,6 +68,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel4.SuspendLayout();
             panel5.SuspendLayout();
+            panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            panel7.SuspendLayout();
             SuspendLayout();
             // 
             // label2
@@ -112,7 +123,7 @@
             btnSair.FlatStyle = FlatStyle.Flat;
             btnSair.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSair.ForeColor = Color.White;
-            btnSair.Location = new Point(731, 0);
+            btnSair.Location = new Point(1069, 9);
             btnSair.Name = "btnSair";
             btnSair.Size = new Size(33, 33);
             btnSair.TabIndex = 9;
@@ -124,7 +135,7 @@
             lblDashboard.AutoSize = true;
             lblDashboard.Font = new Font("Segoe UI", 21F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDashboard.ForeColor = Color.White;
-            lblDashboard.Location = new Point(12, 9);
+            lblDashboard.Location = new Point(19, 18);
             lblDashboard.Name = "lblDashboard";
             lblDashboard.Size = new Size(159, 38);
             lblDashboard.TabIndex = 8;
@@ -137,7 +148,7 @@
             panel1.Controls.Add(label4);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(lblTotalImplantacoes);
-            panel1.Location = new Point(35, 61);
+            panel1.Location = new Point(94, 131);
             panel1.Name = "panel1";
             panel1.Size = new Size(227, 142);
             panel1.TabIndex = 10;
@@ -149,7 +160,7 @@
             panel2.Controls.Add(label1);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(lblTotalAberto);
-            panel2.Location = new Point(501, 61);
+            panel2.Location = new Point(560, 131);
             panel2.Name = "panel2";
             panel2.Size = new Size(227, 142);
             panel2.TabIndex = 11;
@@ -205,7 +216,7 @@
             panel3.Controls.Add(label7);
             panel3.Controls.Add(label8);
             panel3.Controls.Add(lblTotalFechado);
-            panel3.Location = new Point(268, 61);
+            panel3.Location = new Point(327, 131);
             panel3.Name = "panel3";
             panel3.Size = new Size(227, 142);
             panel3.TabIndex = 11;
@@ -259,7 +270,7 @@
             panel4.BackColor = Color.FromArgb(37, 42, 64);
             panel4.Controls.Add(label5);
             panel4.Controls.Add(label9);
-            panel4.Location = new Point(35, 209);
+            panel4.Location = new Point(94, 279);
             panel4.Name = "panel4";
             panel4.Size = new Size(227, 332);
             panel4.TabIndex = 11;
@@ -292,7 +303,7 @@
             panel5.BackColor = Color.FromArgb(37, 42, 64);
             panel5.Controls.Add(label11);
             panel5.Controls.Add(label12);
-            panel5.Location = new Point(268, 209);
+            panel5.Location = new Point(327, 279);
             panel5.Name = "panel5";
             panel5.Size = new Size(460, 332);
             panel5.TabIndex = 11;
@@ -320,13 +331,104 @@
             label12.TabIndex = 0;
             label12.Text = "Gráfico 2";
             // 
+            // panel6
+            // 
+            panel6.BackColor = Color.FromArgb(37, 42, 64);
+            panel6.Controls.Add(pictureBox4);
+            panel6.Controls.Add(label10);
+            panel6.Controls.Add(label13);
+            panel6.Controls.Add(label14);
+            panel6.Location = new Point(793, 131);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(227, 142);
+            panel6.TabIndex = 12;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(172, 13);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(37, 38);
+            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox4.TabIndex = 3;
+            pictureBox4.TabStop = false;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.ForeColor = Color.FromArgb(158, 161, 176);
+            label10.Location = new Point(12, 107);
+            label10.Name = "label10";
+            label10.Size = new Size(136, 17);
+            label10.TabIndex = 2;
+            label10.Text = "Implantações abertas.";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.FlatStyle = FlatStyle.Flat;
+            label13.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label13.ForeColor = Color.White;
+            label13.Location = new Point(19, 13);
+            label13.Name = "label13";
+            label13.Size = new Size(98, 25);
+            label13.TabIndex = 0;
+            label13.Text = "Em aberto";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Segoe UI", 21F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label14.ForeColor = Color.FromArgb(50, 226, 178);
+            label14.Location = new Point(19, 51);
+            label14.Name = "label14";
+            label14.Size = new Size(65, 38);
+            label14.TabIndex = 1;
+            label14.Text = "999";
+            // 
+            // panel7
+            // 
+            panel7.BackColor = Color.FromArgb(37, 42, 64);
+            panel7.Controls.Add(label15);
+            panel7.Controls.Add(label16);
+            panel7.Location = new Point(793, 279);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(227, 332);
+            panel7.TabIndex = 12;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label15.ForeColor = Color.FromArgb(158, 161, 176);
+            label15.Location = new Point(12, 301);
+            label15.Name = "label15";
+            label15.Size = new Size(141, 17);
+            label15.TabIndex = 2;
+            label15.Text = "Descrição do gráfico 3";
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.FlatStyle = FlatStyle.Flat;
+            label16.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label16.ForeColor = Color.White;
+            label16.Location = new Point(19, 13);
+            label16.Name = "label16";
+            label16.Size = new Size(88, 25);
+            label16.TabIndex = 0;
+            label16.Text = "Gráfico 3";
+            // 
             // frmDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 51, 73);
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(765, 577);
+            ClientSize = new Size(1114, 700);
+            Controls.Add(panel7);
+            Controls.Add(panel6);
             Controls.Add(panel5);
             Controls.Add(panel4);
             Controls.Add(panel3);
@@ -351,6 +453,11 @@
             panel4.PerformLayout();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -380,5 +487,13 @@
         private Panel panel5;
         private Label label11;
         private Label label12;
+        private Panel panel6;
+        private PictureBox pictureBox4;
+        private Label label10;
+        private Label label13;
+        private Label label14;
+        private Panel panel7;
+        private Label label15;
+        private Label label16;
     }
 }

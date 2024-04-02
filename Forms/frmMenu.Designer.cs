@@ -57,7 +57,7 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(186, 577);
+            panel1.Size = new Size(186, 700);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
@@ -71,6 +71,7 @@
             // 
             // btnSair
             // 
+            btnSair.Dock = DockStyle.Bottom;
             btnSair.FlatAppearance.BorderSize = 0;
             btnSair.FlatStyle = FlatStyle.Flat;
             btnSair.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
@@ -80,7 +81,7 @@
             btnSair.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnSair.IconSize = 34;
             btnSair.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSair.Location = new Point(0, 538);
+            btnSair.Location = new Point(0, 660);
             btnSair.Name = "btnSair";
             btnSair.Padding = new Padding(10, 0, 0, 0);
             btnSair.Size = new Size(186, 40);
@@ -199,10 +200,11 @@
             // 
             // pnlFormLoader
             // 
-            pnlFormLoader.Dock = DockStyle.Bottom;
+            pnlFormLoader.Dock = DockStyle.Fill;
             pnlFormLoader.Location = new Point(186, 0);
+            pnlFormLoader.MinimumSize = new Size(765, 577);
             pnlFormLoader.Name = "pnlFormLoader";
-            pnlFormLoader.Size = new Size(765, 577);
+            pnlFormLoader.Size = new Size(1114, 700);
             pnlFormLoader.TabIndex = 4;
             pnlFormLoader.Paint += pnlFormLoader_Paint;
             // 
@@ -211,14 +213,14 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 51, 73);
-            ClientSize = new Size(951, 577);
+            ClientSize = new Size(1300, 700);
             Controls.Add(pnlFormLoader);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmMenu";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "ISManager";
             Load += Form1_Load;
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);

@@ -38,7 +38,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(260, 243);
+            label1.Location = new Point(452, 300);
             label1.Name = "label1";
             label1.Size = new Size(208, 37);
             label1.TabIndex = 0;
@@ -50,7 +50,7 @@
             btnSair.FlatStyle = FlatStyle.Flat;
             btnSair.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSair.ForeColor = Color.White;
-            btnSair.Location = new Point(731, 0);
+            btnSair.Location = new Point(1069, 9);
             btnSair.Name = "btnSair";
             btnSair.Size = new Size(33, 33);
             btnSair.TabIndex = 7;
@@ -63,7 +63,7 @@
             lblMigracoes.AutoSize = true;
             lblMigracoes.Font = new Font("Segoe UI", 21F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblMigracoes.ForeColor = Color.White;
-            lblMigracoes.Location = new Point(12, 9);
+            lblMigracoes.Location = new Point(19, 18);
             lblMigracoes.Name = "lblMigracoes";
             lblMigracoes.Size = new Size(152, 38);
             lblMigracoes.TabIndex = 6;
@@ -74,7 +74,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 51, 73);
-            ClientSize = new Size(765, 577);
+            ClientSize = new Size(1114, 700);
             Controls.Add(btnSair);
             Controls.Add(lblMigracoes);
             Controls.Add(label1);

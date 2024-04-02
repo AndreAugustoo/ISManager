@@ -37,12 +37,12 @@
             lblNumeroRegistro = new Label();
             cbxFiltro = new ComboBox();
             pnlClientes = new Panel();
+            label1 = new Label();
             btnFiltrar = new FontAwesome.Sharp.IconButton();
             btnExcluir = new FontAwesome.Sharp.IconButton();
             btnAlterar = new FontAwesome.Sharp.IconButton();
             btnCadastrar = new FontAwesome.Sharp.IconButton();
             dtGridClientes = new DataGridView();
-            mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             pnlClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtGridClientes).BeginInit();
             SuspendLayout();
@@ -52,10 +52,10 @@
             txtFiltro.BackColor = Color.FromArgb(46, 51, 73);
             txtFiltro.Font = new Font("Segoe UI", 14F);
             txtFiltro.ForeColor = Color.FromArgb(188, 191, 206);
-            txtFiltro.Location = new Point(139, 85);
+            txtFiltro.Location = new Point(165, 91);
             txtFiltro.Name = "txtFiltro";
             txtFiltro.PlaceholderText = "  Filtro";
-            txtFiltro.Size = new Size(124, 32);
+            txtFiltro.Size = new Size(262, 32);
             txtFiltro.TabIndex = 1;
             // 
             // lblClientes
@@ -63,7 +63,7 @@
             lblClientes.AutoSize = true;
             lblClientes.Font = new Font("Segoe UI", 21F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblClientes.ForeColor = Color.White;
-            lblClientes.Location = new Point(11, 8);
+            lblClientes.Location = new Point(19, 18);
             lblClientes.Name = "lblClientes";
             lblClientes.Size = new Size(352, 38);
             lblClientes.TabIndex = 3;
@@ -75,23 +75,25 @@
             btnSair.FlatStyle = FlatStyle.Flat;
             btnSair.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSair.ForeColor = Color.White;
-            btnSair.Location = new Point(732, 0);
+            btnSair.Location = new Point(1068, 11);
             btnSair.Name = "btnSair";
             btnSair.Size = new Size(33, 33);
             btnSair.TabIndex = 6;
             btnSair.Text = "X";
             btnSair.UseVisualStyleBackColor = true;
+            btnSair.Click += btnSair_Click;
             // 
             // lblNumeroRegistro
             // 
             lblNumeroRegistro.AutoSize = true;
             lblNumeroRegistro.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblNumeroRegistro.ForeColor = Color.FromArgb(158, 161, 176);
-            lblNumeroRegistro.Location = new Point(19, 538);
+            lblNumeroRegistro.Location = new Point(42, 656);
             lblNumeroRegistro.Name = "lblNumeroRegistro";
             lblNumeroRegistro.Size = new Size(262, 20);
             lblNumeroRegistro.TabIndex = 7;
             lblNumeroRegistro.Text = "Número de registros encontrados: 0";
+            lblNumeroRegistro.Click += lblNumeroRegistro_Click;
             // 
             // cbxFiltro
             // 
@@ -103,7 +105,7 @@
             cbxFiltro.IntegralHeight = false;
             cbxFiltro.ItemHeight = 23;
             cbxFiltro.Items.AddRange(new object[] { "ID", "Nome", "ISM", "Status" });
-            cbxFiltro.Location = new Point(19, 85);
+            cbxFiltro.Location = new Point(45, 91);
             cbxFiltro.Name = "cbxFiltro";
             cbxFiltro.Size = new Size(104, 31);
             cbxFiltro.TabIndex = 0;
@@ -111,6 +113,7 @@
             // 
             // pnlClientes
             // 
+            pnlClientes.Controls.Add(label1);
             pnlClientes.Controls.Add(btnFiltrar);
             pnlClientes.Controls.Add(btnExcluir);
             pnlClientes.Controls.Add(btnAlterar);
@@ -123,9 +126,20 @@
             pnlClientes.Controls.Add(dtGridClientes);
             pnlClientes.Location = new Point(1, 1);
             pnlClientes.Name = "pnlClientes";
-            pnlClientes.Size = new Size(765, 577);
+            pnlClientes.Size = new Size(1114, 700);
             pnlClientes.TabIndex = 14;
             pnlClientes.Paint += pnlClientes_Paint;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(158, 161, 176);
+            label1.Location = new Point(791, 656);
+            label1.Name = "label1";
+            label1.Size = new Size(275, 20);
+            label1.TabIndex = 8;
+            label1.Text = "Exibição de registros limitada em: 500";
             // 
             // btnFiltrar
             // 
@@ -138,7 +152,7 @@
             btnFiltrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnFiltrar.IconSize = 30;
             btnFiltrar.ImageAlign = ContentAlignment.MiddleRight;
-            btnFiltrar.Location = new Point(280, 84);
+            btnFiltrar.Location = new Point(604, 85);
             btnFiltrar.Name = "btnFiltrar";
             btnFiltrar.Size = new Size(104, 38);
             btnFiltrar.TabIndex = 2;
@@ -158,7 +172,7 @@
             btnExcluir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnExcluir.IconSize = 28;
             btnExcluir.ImageAlign = ContentAlignment.MiddleRight;
-            btnExcluir.Location = new Point(638, 84);
+            btnExcluir.Location = new Point(962, 85);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(104, 38);
             btnExcluir.TabIndex = 5;
@@ -178,7 +192,7 @@
             btnAlterar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnAlterar.IconSize = 30;
             btnAlterar.ImageAlign = ContentAlignment.MiddleRight;
-            btnAlterar.Location = new Point(519, 84);
+            btnAlterar.Location = new Point(843, 85);
             btnAlterar.Name = "btnAlterar";
             btnAlterar.Size = new Size(104, 38);
             btnAlterar.TabIndex = 4;
@@ -198,7 +212,7 @@
             btnCadastrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnCadastrar.IconSize = 30;
             btnCadastrar.ImageAlign = ContentAlignment.MiddleRight;
-            btnCadastrar.Location = new Point(400, 84);
+            btnCadastrar.Location = new Point(724, 85);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(104, 38);
             btnCadastrar.TabIndex = 3;
@@ -230,7 +244,7 @@
             dtGridClientes.EditMode = DataGridViewEditMode.EditProgrammatically;
             dtGridClientes.EnableHeadersVisualStyles = false;
             dtGridClientes.GridColor = Color.FromArgb(74, 79, 99);
-            dtGridClientes.Location = new Point(19, 142);
+            dtGridClientes.Location = new Point(42, 152);
             dtGridClientes.MultiSelect = false;
             dtGridClientes.Name = "dtGridClientes";
             dtGridClientes.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -246,24 +260,17 @@
             dataGridViewCellStyle3.SelectionForeColor = Color.White;
             dtGridClientes.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dtGridClientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dtGridClientes.Size = new Size(723, 383);
+            dtGridClientes.Size = new Size(1024, 482);
             dtGridClientes.TabIndex = 6;
             dtGridClientes.TabStop = false;
             dtGridClientes.CellMouseDoubleClick += dtGridClientes_CellMouseDoubleClick;
-            // 
-            // mySqlCommand1
-            // 
-            mySqlCommand1.CacheAge = 0;
-            mySqlCommand1.Connection = null;
-            mySqlCommand1.EnableCaching = false;
-            mySqlCommand1.Transaction = null;
             // 
             // frmClientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 51, 73);
-            ClientSize = new Size(765, 577);
+            ClientSize = new Size(1114, 700);
             Controls.Add(pnlClientes);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmClientes";
@@ -283,10 +290,10 @@
         private ComboBox cbxFiltro;
         private Panel pnlClientes;
         private DataGridView dtGridClientes;
-        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
         private FontAwesome.Sharp.IconButton btnCadastrar;
         private FontAwesome.Sharp.IconButton btnExcluir;
         private FontAwesome.Sharp.IconButton btnAlterar;
         private FontAwesome.Sharp.IconButton btnFiltrar;
+        private Label label1;
     }
 }
