@@ -166,6 +166,12 @@ namespace ISManager
             FrmCrudClientes_Vrb.cbxBackup.Enabled = false;
             FrmCrudClientes_Vrb.txtDataFechamento.Enabled = false;
             FrmCrudClientes_Vrb.txtObservacao.Enabled = false;
+            FrmCrudClientes_Vrb.chkDocumentacao.Enabled = false;
+            FrmCrudClientes_Vrb.chkInstalacao.Enabled = false;
+            FrmCrudClientes_Vrb.chkZendesk.Enabled = false;
+            FrmCrudClientes_Vrb.chkOpcao1.Enabled = false;
+            FrmCrudClientes_Vrb.chkOpcao2.Enabled = false;
+            FrmCrudClientes_Vrb.chkOpcao3.Enabled = false;
 
             FrmCrudClientes_Vrb.btnConfirmar.Text = "Excluir";
             FrmCrudClientes_Vrb.btnConfirmar.IconChar = FontAwesome.Sharp.IconChar.Trash;

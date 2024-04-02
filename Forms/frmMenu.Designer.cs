@@ -128,7 +128,7 @@
             btnClientes.Padding = new Padding(10, 0, 0, 0);
             btnClientes.Size = new Size(186, 40);
             btnClientes.TabIndex = 5;
-            btnClientes.Text = "Clientes";
+            btnClientes.Text = "Implantações";
             btnClientes.UseVisualStyleBackColor = true;
             btnClientes.Click += btnClientes_Click;
             // 

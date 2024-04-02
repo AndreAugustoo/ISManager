@@ -49,12 +49,20 @@
             btnSair = new Button();
             lblTitle = new Label();
             pnlFormLoader = new Panel();
+            groupBox2 = new GroupBox();
+            chkOpcao3 = new CheckBox();
+            chkInstalacao = new CheckBox();
+            chkOpcao2 = new CheckBox();
+            chkDocumentacao = new CheckBox();
+            chkOpcao1 = new CheckBox();
+            chkZendesk = new CheckBox();
             groupBox1 = new GroupBox();
             txtDataFechamento = new Class.CustomDatePicker();
             txtDataEntrada = new Class.CustomDatePicker();
             btnCancelar = new FontAwesome.Sharp.IconButton();
             btnConfirmar = new FontAwesome.Sharp.IconButton();
             pnlFormLoader.SuspendLayout();
+            groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -291,7 +299,7 @@
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Segoe UI", 21F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitle.ForeColor = Color.White;
-            lblTitle.Location = new Point(19, 18);
+            lblTitle.Location = new Point(47, 20);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(120, 38);
             lblTitle.TabIndex = 35;
@@ -299,15 +307,166 @@
             // 
             // pnlFormLoader
             // 
+            pnlFormLoader.Controls.Add(groupBox2);
             pnlFormLoader.Controls.Add(groupBox1);
             pnlFormLoader.Controls.Add(btnSair);
             pnlFormLoader.Controls.Add(lblTitle);
             pnlFormLoader.Dock = DockStyle.Fill;
+            pnlFormLoader.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
+            pnlFormLoader.ForeColor = Color.White;
             pnlFormLoader.Location = new Point(0, 0);
             pnlFormLoader.Name = "pnlFormLoader";
             pnlFormLoader.Size = new Size(1114, 700);
             pnlFormLoader.TabIndex = 59;
             pnlFormLoader.Paint += pnlFormLoader_Paint;
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(chkOpcao3);
+            groupBox2.Controls.Add(chkInstalacao);
+            groupBox2.Controls.Add(chkOpcao2);
+            groupBox2.Controls.Add(chkDocumentacao);
+            groupBox2.Controls.Add(chkOpcao1);
+            groupBox2.Controls.Add(chkZendesk);
+            groupBox2.ForeColor = Color.White;
+            groupBox2.Location = new Point(762, 86);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(295, 566);
+            groupBox2.TabIndex = 66;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Checklist";
+            // 
+            // chkOpcao3
+            // 
+            chkOpcao3.Appearance = Appearance.Button;
+            chkOpcao3.AutoSize = true;
+            chkOpcao3.FlatAppearance.BorderSize = 0;
+            chkOpcao3.FlatAppearance.CheckedBackColor = Color.Transparent;
+            chkOpcao3.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            chkOpcao3.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            chkOpcao3.FlatStyle = FlatStyle.Flat;
+            chkOpcao3.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            chkOpcao3.ForeColor = Color.White;
+            chkOpcao3.Image = Properties.Resources._unchecked;
+            chkOpcao3.Location = new Point(33, 443);
+            chkOpcao3.Name = "chkOpcao3";
+            chkOpcao3.Size = new Size(131, 35);
+            chkOpcao3.TabIndex = 66;
+            chkOpcao3.Text = "  Opção 3";
+            chkOpcao3.TextAlign = ContentAlignment.BottomCenter;
+            chkOpcao3.TextImageRelation = TextImageRelation.ImageBeforeText;
+            chkOpcao3.UseVisualStyleBackColor = true;
+            chkOpcao3.CheckedChanged += chkCheckedCh;
+            // 
+            // chkInstalacao
+            // 
+            chkInstalacao.Appearance = Appearance.Button;
+            chkInstalacao.AutoSize = true;
+            chkInstalacao.FlatAppearance.BorderSize = 0;
+            chkInstalacao.FlatAppearance.CheckedBackColor = Color.Transparent;
+            chkInstalacao.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            chkInstalacao.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            chkInstalacao.FlatStyle = FlatStyle.Flat;
+            chkInstalacao.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            chkInstalacao.ForeColor = Color.White;
+            chkInstalacao.Image = Properties.Resources._unchecked;
+            chkInstalacao.Location = new Point(31, 64);
+            chkInstalacao.Name = "chkInstalacao";
+            chkInstalacao.Size = new Size(147, 35);
+            chkInstalacao.TabIndex = 64;
+            chkInstalacao.Text = "  Instalação";
+            chkInstalacao.TextAlign = ContentAlignment.BottomCenter;
+            chkInstalacao.TextImageRelation = TextImageRelation.ImageBeforeText;
+            chkInstalacao.UseVisualStyleBackColor = true;
+            chkInstalacao.CheckedChanged += chkCheckedCh;
+            // 
+            // chkOpcao2
+            // 
+            chkOpcao2.Appearance = Appearance.Button;
+            chkOpcao2.AutoSize = true;
+            chkOpcao2.FlatAppearance.BorderSize = 0;
+            chkOpcao2.FlatAppearance.CheckedBackColor = Color.Transparent;
+            chkOpcao2.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            chkOpcao2.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            chkOpcao2.FlatStyle = FlatStyle.Flat;
+            chkOpcao2.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            chkOpcao2.ForeColor = Color.White;
+            chkOpcao2.Image = Properties.Resources._unchecked;
+            chkOpcao2.Location = new Point(31, 365);
+            chkOpcao2.Name = "chkOpcao2";
+            chkOpcao2.Size = new Size(131, 35);
+            chkOpcao2.TabIndex = 65;
+            chkOpcao2.Text = "  Opção 2";
+            chkOpcao2.TextAlign = ContentAlignment.BottomCenter;
+            chkOpcao2.TextImageRelation = TextImageRelation.ImageBeforeText;
+            chkOpcao2.UseVisualStyleBackColor = true;
+            chkOpcao2.CheckedChanged += chkCheckedCh;
+            // 
+            // chkDocumentacao
+            // 
+            chkDocumentacao.Appearance = Appearance.Button;
+            chkDocumentacao.AutoSize = true;
+            chkDocumentacao.FlatAppearance.BorderSize = 0;
+            chkDocumentacao.FlatAppearance.CheckedBackColor = Color.Transparent;
+            chkDocumentacao.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            chkDocumentacao.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            chkDocumentacao.FlatStyle = FlatStyle.Flat;
+            chkDocumentacao.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            chkDocumentacao.ForeColor = Color.White;
+            chkDocumentacao.Image = Properties.Resources._unchecked;
+            chkDocumentacao.Location = new Point(31, 210);
+            chkDocumentacao.Name = "chkDocumentacao";
+            chkDocumentacao.Size = new Size(192, 35);
+            chkDocumentacao.TabIndex = 60;
+            chkDocumentacao.Text = "  Documentação";
+            chkDocumentacao.TextAlign = ContentAlignment.BottomCenter;
+            chkDocumentacao.TextImageRelation = TextImageRelation.ImageBeforeText;
+            chkDocumentacao.UseVisualStyleBackColor = true;
+            chkDocumentacao.CheckedChanged += chkCheckedCh;
+            // 
+            // chkOpcao1
+            // 
+            chkOpcao1.Appearance = Appearance.Button;
+            chkOpcao1.AutoSize = true;
+            chkOpcao1.FlatAppearance.BorderSize = 0;
+            chkOpcao1.FlatAppearance.CheckedBackColor = Color.Transparent;
+            chkOpcao1.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            chkOpcao1.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            chkOpcao1.FlatStyle = FlatStyle.Flat;
+            chkOpcao1.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            chkOpcao1.ForeColor = Color.White;
+            chkOpcao1.Image = Properties.Resources._unchecked;
+            chkOpcao1.Location = new Point(31, 290);
+            chkOpcao1.Name = "chkOpcao1";
+            chkOpcao1.Size = new Size(131, 35);
+            chkOpcao1.TabIndex = 61;
+            chkOpcao1.Text = "  Opção 1";
+            chkOpcao1.TextAlign = ContentAlignment.BottomCenter;
+            chkOpcao1.TextImageRelation = TextImageRelation.ImageBeforeText;
+            chkOpcao1.UseVisualStyleBackColor = true;
+            chkOpcao1.CheckedChanged += chkCheckedCh;
+            // 
+            // chkZendesk
+            // 
+            chkZendesk.Appearance = Appearance.Button;
+            chkZendesk.AutoSize = true;
+            chkZendesk.FlatAppearance.BorderSize = 0;
+            chkZendesk.FlatAppearance.CheckedBackColor = Color.Transparent;
+            chkZendesk.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            chkZendesk.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            chkZendesk.FlatStyle = FlatStyle.Flat;
+            chkZendesk.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            chkZendesk.ForeColor = Color.White;
+            chkZendesk.Image = Properties.Resources._unchecked;
+            chkZendesk.Location = new Point(31, 137);
+            chkZendesk.Name = "chkZendesk";
+            chkZendesk.Size = new Size(133, 35);
+            chkZendesk.TabIndex = 63;
+            chkZendesk.Text = "  Zendesk";
+            chkZendesk.TextAlign = ContentAlignment.BottomCenter;
+            chkZendesk.TextImageRelation = TextImageRelation.ImageBeforeText;
+            chkZendesk.UseVisualStyleBackColor = true;
+            chkZendesk.CheckedChanged += chkCheckedCh;
             // 
             // groupBox1
             // 
@@ -335,7 +494,7 @@
             groupBox1.Controls.Add(lblDataEntrada);
             groupBox1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox1.ForeColor = Color.White;
-            groupBox1.Location = new Point(222, 74);
+            groupBox1.Location = new Point(47, 86);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(682, 566);
             groupBox1.TabIndex = 59;
@@ -427,6 +586,8 @@
             Load += frmCrudClientes_Load;
             pnlFormLoader.ResumeLayout(false);
             pnlFormLoader.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
@@ -460,5 +621,12 @@
         public Class.CustomDatePicker txtDataFechamento;
         public Class.CustomDatePicker txtDataEntrada;
         private GroupBox groupBox1;
+        private GroupBox groupBox2;
+        public CheckBox chkDocumentacao;
+        public CheckBox chkInstalacao;
+        public CheckBox chkZendesk;
+        public CheckBox chkOpcao1;
+        public CheckBox chkOpcao2;
+        public CheckBox chkOpcao3;
     }
 }

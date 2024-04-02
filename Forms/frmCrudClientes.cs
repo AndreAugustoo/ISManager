@@ -35,6 +35,7 @@ namespace ISManager.Forms
             } else if (tipoCrud == 1)
             {
                 // Cadastrar
+                lblTitle.Text = "Novo cadastro";
                 this.clientes = new Clientes();
                 this.clientes.Id_cliente = txtId.Text;
                 this.clientes.Nome_cliente = txtNome.Text;
@@ -52,6 +53,7 @@ namespace ISManager.Forms
             else if (tipoCrud == 3)
             {
                 // Alterar
+                lblTitle.Text = "Alteração de cadastro";
                 this.clientes = new Clientes();
                 this.clientes.Id_cliente = txtId.Text;
                 this.clientes.Nome_cliente = txtNome.Text;
@@ -69,6 +71,7 @@ namespace ISManager.Forms
             else if (tipoCrud == 4)
             {
                 // Excluir
+                lblTitle.Text = "Exclusão de cadastro";
                 this.clientes = new Clientes();
                 this.clientes.Id_cliente = txtId.Text;
                 this.clientes.Nome_cliente = txtNome.Text;
@@ -108,6 +111,19 @@ namespace ISManager.Forms
         private void pnlFormLoader_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void chkCheckedCh(object sender, EventArgs e)
+        {
+            CheckBox chk = sender as CheckBox;
+            if (chk.Checked)
+            {
+                chk.Image = Properties.Resources._checked;
+            }
+            else
+            {
+                chk.Image = Properties.Resources._unchecked;
+            }
         }
     }
 }
