@@ -41,6 +41,9 @@
             btnHome = new PictureBox();
             panelDesktop = new Panel();
             panelTitleBar = new Panel();
+            btnMinimaze = new FontAwesome.Sharp.IconPictureBox();
+            btnMaximaze = new FontAwesome.Sharp.IconPictureBox();
+            btnClose = new FontAwesome.Sharp.IconPictureBox();
             lblTitleChildForm = new Label();
             iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             panelShadow = new Panel();
@@ -48,6 +51,9 @@
             panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnHome).BeginInit();
             panelTitleBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)btnMinimaze).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnMaximaze).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnClose).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconCurrentChildForm).BeginInit();
             SuspendLayout();
             // 
@@ -77,6 +83,7 @@
             // 
             // btnSair
             // 
+            btnSair.Dock = DockStyle.Bottom;
             btnSair.FlatAppearance.BorderSize = 0;
             btnSair.FlatStyle = FlatStyle.Flat;
             btnSair.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
@@ -86,7 +93,7 @@
             btnSair.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnSair.IconSize = 34;
             btnSair.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSair.Location = new Point(0, 647);
+            btnSair.Location = new Point(0, 650);
             btnSair.Name = "btnSair";
             btnSair.Padding = new Padding(10, 0, 0, 0);
             btnSair.Size = new Size(186, 50);
@@ -215,6 +222,9 @@
             // panelTitleBar
             // 
             panelTitleBar.BackColor = Color.FromArgb(24, 30, 54);
+            panelTitleBar.Controls.Add(btnMinimaze);
+            panelTitleBar.Controls.Add(btnMaximaze);
+            panelTitleBar.Controls.Add(btnClose);
             panelTitleBar.Controls.Add(lblTitleChildForm);
             panelTitleBar.Controls.Add(iconCurrentChildForm);
             panelTitleBar.Dock = DockStyle.Top;
@@ -224,10 +234,55 @@
             panelTitleBar.TabIndex = 5;
             panelTitleBar.MouseDown += panelTitleBar_MouseDown;
             // 
+            // btnMinimaze
+            // 
+            btnMinimaze.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnMinimaze.BackColor = Color.FromArgb(24, 30, 54);
+            btnMinimaze.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            btnMinimaze.IconColor = Color.White;
+            btnMinimaze.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnMinimaze.IconSize = 25;
+            btnMinimaze.Location = new Point(1024, 3);
+            btnMinimaze.Name = "btnMinimaze";
+            btnMinimaze.Size = new Size(25, 25);
+            btnMinimaze.TabIndex = 4;
+            btnMinimaze.TabStop = false;
+            btnMinimaze.Click += btnMinimaze_Click;
+            // 
+            // btnMaximaze
+            // 
+            btnMaximaze.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnMaximaze.BackColor = Color.FromArgb(24, 30, 54);
+            btnMaximaze.IconChar = FontAwesome.Sharp.IconChar.WindowRestore;
+            btnMaximaze.IconColor = Color.White;
+            btnMaximaze.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnMaximaze.IconSize = 25;
+            btnMaximaze.Location = new Point(1055, 3);
+            btnMaximaze.Name = "btnMaximaze";
+            btnMaximaze.Size = new Size(25, 25);
+            btnMaximaze.TabIndex = 3;
+            btnMaximaze.TabStop = false;
+            btnMaximaze.Click += btnMaximaze_Click;
+            // 
+            // btnClose
+            // 
+            btnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnClose.BackColor = Color.FromArgb(24, 30, 54);
+            btnClose.IconChar = FontAwesome.Sharp.IconChar.X;
+            btnClose.IconColor = Color.White;
+            btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnClose.IconSize = 25;
+            btnClose.Location = new Point(1086, 3);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(25, 25);
+            btnClose.TabIndex = 2;
+            btnClose.TabStop = false;
+            btnClose.Click += btnClose_Click;
+            // 
             // lblTitleChildForm
             // 
             lblTitleChildForm.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            lblTitleChildForm.ForeColor = Color.FromArgb(158, 161, 176);
+            lblTitleChildForm.ForeColor = Color.White;
             lblTitleChildForm.Location = new Point(53, 16);
             lblTitleChildForm.Name = "lblTitleChildForm";
             lblTitleChildForm.Size = new Size(176, 34);
@@ -250,11 +305,11 @@
             // 
             // panelShadow
             // 
-            panelShadow.BackColor = Color.FromArgb(24, 30, 45);
+            panelShadow.BackColor = Color.FromArgb(24, 30, 67);
             panelShadow.Dock = DockStyle.Top;
             panelShadow.Location = new Point(186, 55);
             panelShadow.Name = "panelShadow";
-            panelShadow.Size = new Size(1114, 10);
+            panelShadow.Size = new Size(1114, 5);
             panelShadow.TabIndex = 6;
             // 
             // frmMenu
@@ -267,7 +322,6 @@
             Controls.Add(panelTitleBar);
             Controls.Add(panelDesktop);
             Controls.Add(panelMenu);
-            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmMenu";
             StartPosition = FormStartPosition.CenterScreen;
@@ -277,6 +331,9 @@
             panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)btnHome).EndInit();
             panelTitleBar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)btnMinimaze).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnMaximaze).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnClose).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconCurrentChildForm).EndInit();
             ResumeLayout(false);
         }
@@ -300,5 +357,8 @@
         private FontAwesome.Sharp.IconPictureBox iconCurrentChildForm;
         private Label lblTitleChildForm;
         private Panel panelShadow;
+        private FontAwesome.Sharp.IconPictureBox btnClose;
+        private FontAwesome.Sharp.IconPictureBox btnMinimaze;
+        private FontAwesome.Sharp.IconPictureBox btnMaximaze;
     }
 }

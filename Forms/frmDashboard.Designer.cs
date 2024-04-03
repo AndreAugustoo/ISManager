@@ -438,7 +438,7 @@
             Controls.Add(lblDashboard);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmDashboard";
-            Text = "frmDashboard";
+            Text = "Dashboard";
             Load += frmDashboard_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);

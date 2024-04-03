@@ -267,7 +267,7 @@
             Controls.Add(pnlMigracoes);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmMigracoes";
-            Text = "frmMigracoes";
+            Text = "Migracoes";
             pnlMigracoes.ResumeLayout(false);
             pnlMigracoes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dtGridMigracoes).EndInit();

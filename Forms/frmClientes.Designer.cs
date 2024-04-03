@@ -347,7 +347,7 @@
             Controls.Add(pnlClientes);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmClientes";
-            Text = "frmClientes";
+            Text = "Implantações";
             Load += frmClientes_Load;
             pnlClientes.ResumeLayout(false);
             pnlClientes.PerformLayout();
