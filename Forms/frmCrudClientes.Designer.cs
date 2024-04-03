@@ -46,8 +46,6 @@
             txtHoras = new TextBox();
             txtNome = new TextBox();
             txtId = new TextBox();
-            btnSair = new Button();
-            lblTitle = new Label();
             pnlFormLoader = new Panel();
             groupBox2 = new GroupBox();
             chkOpcao3 = new CheckBox();
@@ -281,42 +279,16 @@
             txtId.TabIndex = 0;
             txtId.TextAlign = HorizontalAlignment.Center;
             // 
-            // btnSair
-            // 
-            btnSair.FlatAppearance.BorderSize = 0;
-            btnSair.FlatStyle = FlatStyle.Flat;
-            btnSair.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSair.ForeColor = Color.White;
-            btnSair.Location = new Point(1069, 9);
-            btnSair.Name = "btnSair";
-            btnSair.Size = new Size(33, 33);
-            btnSair.TabIndex = 36;
-            btnSair.Text = "X";
-            btnSair.UseVisualStyleBackColor = true;
-            // 
-            // lblTitle
-            // 
-            lblTitle.AutoSize = true;
-            lblTitle.Font = new Font("Segoe UI", 21F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitle.ForeColor = Color.White;
-            lblTitle.Location = new Point(47, 20);
-            lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(301, 38);
-            lblTitle.TabIndex = 35;
-            lblTitle.Text = "Alteração de cadastro";
-            // 
             // pnlFormLoader
             // 
             pnlFormLoader.Controls.Add(groupBox2);
             pnlFormLoader.Controls.Add(groupBox1);
-            pnlFormLoader.Controls.Add(btnSair);
-            pnlFormLoader.Controls.Add(lblTitle);
             pnlFormLoader.Dock = DockStyle.Fill;
             pnlFormLoader.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
             pnlFormLoader.ForeColor = Color.White;
             pnlFormLoader.Location = new Point(0, 0);
             pnlFormLoader.Name = "pnlFormLoader";
-            pnlFormLoader.Size = new Size(1114, 700);
+            pnlFormLoader.Size = new Size(1114, 639);
             pnlFormLoader.TabIndex = 59;
             pnlFormLoader.Paint += pnlFormLoader_Paint;
             // 
@@ -329,7 +301,7 @@
             groupBox2.Controls.Add(chkOpcao1);
             groupBox2.Controls.Add(chkZendesk);
             groupBox2.ForeColor = Color.White;
-            groupBox2.Location = new Point(762, 86);
+            groupBox2.Location = new Point(767, 34);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(295, 566);
             groupBox2.TabIndex = 66;
@@ -494,7 +466,7 @@
             groupBox1.Controls.Add(lblDataEntrada);
             groupBox1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox1.ForeColor = Color.White;
-            groupBox1.Location = new Point(47, 86);
+            groupBox1.Location = new Point(52, 34);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(682, 566);
             groupBox1.TabIndex = 59;
@@ -578,14 +550,14 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 51, 73);
-            ClientSize = new Size(1114, 700);
+            ClientSize = new Size(1114, 639);
             Controls.Add(pnlFormLoader);
             FormBorderStyle = FormBorderStyle.None;
+            MinimumSize = new Size(1114, 639);
             Name = "frmCrudClientes";
             Text = "frmCrudClientes";
             Load += frmCrudClientes_Load;
             pnlFormLoader.ResumeLayout(false);
-            pnlFormLoader.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             groupBox1.ResumeLayout(false);
@@ -605,7 +577,6 @@
         private Label lblDataEntrada;
         private Label lblNome;
         private Label lblId;
-        private Button btnSair;
         public ComboBox cbxStatus;
         public ComboBox cbxBackup;
         public ComboBox cbxIsm;
@@ -614,7 +585,6 @@
         public TextBox txtHoras;
         public TextBox txtNome;
         public TextBox txtId;
-        public Label lblTitle;
         public Panel pnlFormLoader;
         public FontAwesome.Sharp.IconButton btnConfirmar;
         public FontAwesome.Sharp.IconButton btnCancelar;

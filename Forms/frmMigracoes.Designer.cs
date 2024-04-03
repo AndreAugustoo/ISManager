@@ -31,8 +31,6 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            btnSair = new Button();
-            lblMigracoes = new Label();
             pnlMigracoes = new Panel();
             label1 = new Label();
             btnFiltrar = new FontAwesome.Sharp.IconButton();
@@ -47,36 +45,10 @@
             ((System.ComponentModel.ISupportInitialize)dtGridMigracoes).BeginInit();
             SuspendLayout();
             // 
-            // btnSair
-            // 
-            btnSair.FlatAppearance.BorderSize = 0;
-            btnSair.FlatStyle = FlatStyle.Flat;
-            btnSair.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSair.ForeColor = Color.White;
-            btnSair.Location = new Point(1069, 12);
-            btnSair.Name = "btnSair";
-            btnSair.Size = new Size(33, 33);
-            btnSair.TabIndex = 7;
-            btnSair.Text = "X";
-            btnSair.UseVisualStyleBackColor = true;
-            // 
-            // lblMigracoes
-            // 
-            lblMigracoes.AutoSize = true;
-            lblMigracoes.Font = new Font("Segoe UI", 21F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMigracoes.ForeColor = Color.White;
-            lblMigracoes.Location = new Point(42, 21);
-            lblMigracoes.Name = "lblMigracoes";
-            lblMigracoes.Size = new Size(312, 38);
-            lblMigracoes.TabIndex = 6;
-            lblMigracoes.Text = "Controle de migrações";
-            // 
             // pnlMigracoes
             // 
             pnlMigracoes.Controls.Add(label1);
-            pnlMigracoes.Controls.Add(btnSair);
             pnlMigracoes.Controls.Add(btnFiltrar);
-            pnlMigracoes.Controls.Add(lblMigracoes);
             pnlMigracoes.Controls.Add(btnExcluir);
             pnlMigracoes.Controls.Add(btnAlterar);
             pnlMigracoes.Controls.Add(btnCadastrar);
@@ -87,7 +59,7 @@
             pnlMigracoes.Dock = DockStyle.Fill;
             pnlMigracoes.Location = new Point(0, 0);
             pnlMigracoes.Name = "pnlMigracoes";
-            pnlMigracoes.Size = new Size(1114, 700);
+            pnlMigracoes.Size = new Size(1114, 639);
             pnlMigracoes.TabIndex = 15;
             // 
             // label1
@@ -95,7 +67,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(158, 161, 176);
-            label1.Location = new Point(791, 656);
+            label1.Location = new Point(793, 594);
             label1.Name = "label1";
             label1.Size = new Size(275, 20);
             label1.TabIndex = 8;
@@ -112,7 +84,7 @@
             btnFiltrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnFiltrar.IconSize = 30;
             btnFiltrar.ImageAlign = ContentAlignment.MiddleRight;
-            btnFiltrar.Location = new Point(604, 85);
+            btnFiltrar.Location = new Point(606, 23);
             btnFiltrar.Name = "btnFiltrar";
             btnFiltrar.Size = new Size(104, 38);
             btnFiltrar.TabIndex = 2;
@@ -131,7 +103,7 @@
             btnExcluir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnExcluir.IconSize = 28;
             btnExcluir.ImageAlign = ContentAlignment.MiddleRight;
-            btnExcluir.Location = new Point(962, 85);
+            btnExcluir.Location = new Point(964, 23);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(104, 38);
             btnExcluir.TabIndex = 5;
@@ -150,7 +122,7 @@
             btnAlterar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnAlterar.IconSize = 30;
             btnAlterar.ImageAlign = ContentAlignment.MiddleRight;
-            btnAlterar.Location = new Point(843, 85);
+            btnAlterar.Location = new Point(845, 23);
             btnAlterar.Name = "btnAlterar";
             btnAlterar.Size = new Size(104, 38);
             btnAlterar.TabIndex = 4;
@@ -169,7 +141,7 @@
             btnCadastrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnCadastrar.IconSize = 30;
             btnCadastrar.ImageAlign = ContentAlignment.MiddleRight;
-            btnCadastrar.Location = new Point(724, 85);
+            btnCadastrar.Location = new Point(726, 23);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(104, 38);
             btnCadastrar.TabIndex = 3;
@@ -187,7 +159,7 @@
             cbxFiltro.IntegralHeight = false;
             cbxFiltro.ItemHeight = 23;
             cbxFiltro.Items.AddRange(new object[] { "ID", "Nome", "Status" });
-            cbxFiltro.Location = new Point(45, 91);
+            cbxFiltro.Location = new Point(47, 29);
             cbxFiltro.Name = "cbxFiltro";
             cbxFiltro.Size = new Size(104, 31);
             cbxFiltro.TabIndex = 0;
@@ -198,7 +170,7 @@
             lblNumeroRegistro.AutoSize = true;
             lblNumeroRegistro.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblNumeroRegistro.ForeColor = Color.FromArgb(158, 161, 176);
-            lblNumeroRegistro.Location = new Point(42, 656);
+            lblNumeroRegistro.Location = new Point(44, 594);
             lblNumeroRegistro.Name = "lblNumeroRegistro";
             lblNumeroRegistro.Size = new Size(262, 20);
             lblNumeroRegistro.TabIndex = 7;
@@ -209,7 +181,7 @@
             txtFiltro.BackColor = Color.FromArgb(46, 51, 73);
             txtFiltro.Font = new Font("Segoe UI", 14F);
             txtFiltro.ForeColor = Color.White;
-            txtFiltro.Location = new Point(165, 91);
+            txtFiltro.Location = new Point(167, 29);
             txtFiltro.Name = "txtFiltro";
             txtFiltro.PlaceholderText = "  Filtro";
             txtFiltro.Size = new Size(262, 32);
@@ -238,7 +210,7 @@
             dtGridMigracoes.EditMode = DataGridViewEditMode.EditProgrammatically;
             dtGridMigracoes.EnableHeadersVisualStyles = false;
             dtGridMigracoes.GridColor = Color.FromArgb(74, 79, 99);
-            dtGridMigracoes.Location = new Point(42, 152);
+            dtGridMigracoes.Location = new Point(44, 90);
             dtGridMigracoes.MultiSelect = false;
             dtGridMigracoes.Name = "dtGridMigracoes";
             dtGridMigracoes.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -263,9 +235,10 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 51, 73);
-            ClientSize = new Size(1114, 700);
+            ClientSize = new Size(1114, 639);
             Controls.Add(pnlMigracoes);
             FormBorderStyle = FormBorderStyle.None;
+            MinimumSize = new Size(1114, 639);
             Name = "frmMigracoes";
             Text = "Migracoes";
             pnlMigracoes.ResumeLayout(false);
@@ -275,8 +248,6 @@
         }
 
         #endregion
-        private Button btnSair;
-        private Label lblMigracoes;
         private Panel pnlMigracoes;
         private Label label1;
         private FontAwesome.Sharp.IconButton btnFiltrar;

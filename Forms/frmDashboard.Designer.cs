@@ -33,8 +33,6 @@
             lblTotalImplantacoes = new Label();
             label4 = new Label();
             pictureBox2 = new PictureBox();
-            btnSair = new Button();
-            lblDashboard = new Label();
             panel1 = new Panel();
             panel2 = new Panel();
             pictureBox1 = new PictureBox();
@@ -117,50 +115,30 @@
             pictureBox2.TabIndex = 3;
             pictureBox2.TabStop = false;
             // 
-            // btnSair
-            // 
-            btnSair.FlatAppearance.BorderSize = 0;
-            btnSair.FlatStyle = FlatStyle.Flat;
-            btnSair.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSair.ForeColor = Color.White;
-            btnSair.Location = new Point(1069, 9);
-            btnSair.Name = "btnSair";
-            btnSair.Size = new Size(33, 33);
-            btnSair.TabIndex = 9;
-            btnSair.Text = "X";
-            btnSair.UseVisualStyleBackColor = true;
-            // 
-            // lblDashboard
-            // 
-            lblDashboard.AutoSize = true;
-            lblDashboard.Font = new Font("Segoe UI", 21F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDashboard.ForeColor = Color.White;
-            lblDashboard.Location = new Point(19, 18);
-            lblDashboard.Name = "lblDashboard";
-            lblDashboard.Size = new Size(159, 38);
-            lblDashboard.TabIndex = 8;
-            lblDashboard.Text = "Dashboard";
-            // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel1.AutoSize = true;
             panel1.BackColor = Color.FromArgb(37, 42, 64);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(lblTotalImplantacoes);
-            panel1.Location = new Point(94, 131);
+            panel1.Location = new Point(95, 88);
             panel1.Name = "panel1";
             panel1.Size = new Size(227, 142);
             panel1.TabIndex = 10;
             // 
             // panel2
             // 
+            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel2.AutoSize = true;
             panel2.BackColor = Color.FromArgb(37, 42, 64);
             panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(label1);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(lblTotalAberto);
-            panel2.Location = new Point(560, 131);
+            panel2.Location = new Point(561, 88);
             panel2.Name = "panel2";
             panel2.Size = new Size(227, 142);
             panel2.TabIndex = 11;
@@ -211,12 +189,14 @@
             // 
             // panel3
             // 
+            panel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel3.AutoSize = true;
             panel3.BackColor = Color.FromArgb(37, 42, 64);
             panel3.Controls.Add(pictureBox3);
             panel3.Controls.Add(label7);
             panel3.Controls.Add(label8);
             panel3.Controls.Add(lblTotalFechado);
-            panel3.Location = new Point(327, 131);
+            panel3.Location = new Point(328, 88);
             panel3.Name = "panel3";
             panel3.Size = new Size(227, 142);
             panel3.TabIndex = 11;
@@ -267,10 +247,12 @@
             // 
             // panel4
             // 
+            panel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel4.AutoSize = true;
             panel4.BackColor = Color.FromArgb(37, 42, 64);
             panel4.Controls.Add(label5);
             panel4.Controls.Add(label9);
-            panel4.Location = new Point(94, 279);
+            panel4.Location = new Point(95, 236);
             panel4.Name = "panel4";
             panel4.Size = new Size(227, 332);
             panel4.TabIndex = 11;
@@ -300,10 +282,12 @@
             // 
             // panel5
             // 
+            panel5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel5.AutoSize = true;
             panel5.BackColor = Color.FromArgb(37, 42, 64);
             panel5.Controls.Add(label11);
             panel5.Controls.Add(label12);
-            panel5.Location = new Point(327, 279);
+            panel5.Location = new Point(328, 236);
             panel5.Name = "panel5";
             panel5.Size = new Size(460, 332);
             panel5.TabIndex = 11;
@@ -333,12 +317,14 @@
             // 
             // panel6
             // 
+            panel6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel6.AutoSize = true;
             panel6.BackColor = Color.FromArgb(37, 42, 64);
             panel6.Controls.Add(pictureBox4);
             panel6.Controls.Add(label10);
             panel6.Controls.Add(label13);
             panel6.Controls.Add(label14);
-            panel6.Location = new Point(793, 131);
+            panel6.Location = new Point(794, 88);
             panel6.Name = "panel6";
             panel6.Size = new Size(227, 142);
             panel6.TabIndex = 12;
@@ -389,10 +375,12 @@
             // 
             // panel7
             // 
+            panel7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel7.AutoSize = true;
             panel7.BackColor = Color.FromArgb(37, 42, 64);
             panel7.Controls.Add(label15);
             panel7.Controls.Add(label16);
-            panel7.Location = new Point(793, 279);
+            panel7.Location = new Point(794, 236);
             panel7.Name = "panel7";
             panel7.Size = new Size(227, 332);
             panel7.TabIndex = 12;
@@ -426,7 +414,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 51, 73);
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(1114, 700);
+            ClientSize = new Size(1114, 639);
             Controls.Add(panel7);
             Controls.Add(panel6);
             Controls.Add(panel5);
@@ -434,9 +422,8 @@
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Controls.Add(btnSair);
-            Controls.Add(lblDashboard);
             FormBorderStyle = FormBorderStyle.None;
+            MinimumSize = new Size(1114, 639);
             Name = "frmDashboard";
             Text = "Dashboard";
             Load += frmDashboard_Load;
@@ -468,8 +455,6 @@
         private Label lblTotalImplantacoes;
         private Label label4;
         private PictureBox pictureBox2;
-        private Button btnSair;
-        private Label lblDashboard;
         private Panel panel1;
         private Panel panel2;
         private PictureBox pictureBox1;

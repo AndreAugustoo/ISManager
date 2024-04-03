@@ -32,8 +32,6 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             txtFiltro = new TextBox();
-            lblClientes = new Label();
-            btnSair = new Button();
             lblNumeroRegistro = new Label();
             cbxFiltro = new ComboBox();
             pnlClientes = new Panel();
@@ -54,45 +52,23 @@
             // 
             // txtFiltro
             // 
+            txtFiltro.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtFiltro.BackColor = Color.FromArgb(46, 51, 73);
             txtFiltro.Font = new Font("Segoe UI", 14F);
             txtFiltro.ForeColor = Color.White;
-            txtFiltro.Location = new Point(213, 90);
+            txtFiltro.Location = new Point(214, 30);
             txtFiltro.Name = "txtFiltro";
             txtFiltro.PlaceholderText = "  Filtro";
             txtFiltro.Size = new Size(371, 32);
             txtFiltro.TabIndex = 1;
             // 
-            // lblClientes
-            // 
-            lblClientes.AutoSize = true;
-            lblClientes.Font = new Font("Segoe UI", 21F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblClientes.ForeColor = Color.White;
-            lblClientes.Location = new Point(42, 8);
-            lblClientes.Name = "lblClientes";
-            lblClientes.Size = new Size(352, 38);
-            lblClientes.TabIndex = 3;
-            lblClientes.Text = "Controle de implantações";
-            // 
-            // btnSair
-            // 
-            btnSair.FlatAppearance.BorderSize = 0;
-            btnSair.FlatStyle = FlatStyle.Flat;
-            btnSair.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSair.ForeColor = Color.White;
-            btnSair.Location = new Point(1068, 11);
-            btnSair.Name = "btnSair";
-            btnSair.Size = new Size(33, 33);
-            btnSair.TabIndex = 6;
-            btnSair.Text = "X";
-            btnSair.UseVisualStyleBackColor = true;
-            // 
             // lblNumeroRegistro
             // 
+            lblNumeroRegistro.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblNumeroRegistro.AutoSize = true;
             lblNumeroRegistro.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblNumeroRegistro.ForeColor = Color.FromArgb(158, 161, 176);
-            lblNumeroRegistro.Location = new Point(42, 656);
+            lblNumeroRegistro.Location = new Point(43, 596);
             lblNumeroRegistro.Name = "lblNumeroRegistro";
             lblNumeroRegistro.Size = new Size(208, 20);
             lblNumeroRegistro.TabIndex = 7;
@@ -100,6 +76,7 @@
             // 
             // cbxFiltro
             // 
+            cbxFiltro.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             cbxFiltro.BackColor = Color.FromArgb(46, 51, 73);
             cbxFiltro.FlatStyle = FlatStyle.Flat;
             cbxFiltro.Font = new Font("Segoe UI", 13F);
@@ -108,7 +85,7 @@
             cbxFiltro.IntegralHeight = false;
             cbxFiltro.ItemHeight = 23;
             cbxFiltro.Items.AddRange(new object[] { "ID", "Nome", "ISM", "Status", "Data entrada", "Data fechamento" });
-            cbxFiltro.Location = new Point(45, 91);
+            cbxFiltro.Location = new Point(46, 31);
             cbxFiltro.Name = "cbxFiltro";
             cbxFiltro.Size = new Size(147, 31);
             cbxFiltro.TabIndex = 0;
@@ -127,23 +104,23 @@
             pnlClientes.Controls.Add(btnExcluir);
             pnlClientes.Controls.Add(btnAlterar);
             pnlClientes.Controls.Add(btnCadastrar);
-            pnlClientes.Controls.Add(btnSair);
             pnlClientes.Controls.Add(cbxFiltro);
             pnlClientes.Controls.Add(lblNumeroRegistro);
             pnlClientes.Controls.Add(txtFiltro);
-            pnlClientes.Controls.Add(lblClientes);
             pnlClientes.Controls.Add(dtGridClientes);
             pnlClientes.Location = new Point(1, 1);
+            pnlClientes.MinimumSize = new Size(1114, 639);
             pnlClientes.Name = "pnlClientes";
             pnlClientes.Size = new Size(1114, 700);
             pnlClientes.TabIndex = 14;
             // 
             // lblRegistroExibido
             // 
+            lblRegistroExibido.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblRegistroExibido.AutoSize = true;
             lblRegistroExibido.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblRegistroExibido.ForeColor = Color.FromArgb(158, 161, 176);
-            lblRegistroExibido.Location = new Point(408, 656);
+            lblRegistroExibido.Location = new Point(409, 596);
             lblRegistroExibido.Name = "lblRegistroExibido";
             lblRegistroExibido.Size = new Size(233, 20);
             lblRegistroExibido.TabIndex = 13;
@@ -151,10 +128,11 @@
             // 
             // lblDataFim
             // 
+            lblDataFim.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblDataFim.AutoSize = true;
             lblDataFim.Font = new Font("Segoe UI", 14F);
             lblDataFim.ForeColor = Color.White;
-            lblDataFim.Location = new Point(421, 92);
+            lblDataFim.Location = new Point(422, 32);
             lblDataFim.Name = "lblDataFim";
             lblDataFim.Size = new Size(38, 25);
             lblDataFim.TabIndex = 12;
@@ -162,10 +140,11 @@
             // 
             // lblDataInicio
             // 
+            lblDataInicio.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblDataInicio.AutoSize = true;
             lblDataInicio.Font = new Font("Segoe UI", 14F);
             lblDataInicio.ForeColor = Color.White;
-            lblDataInicio.Location = new Point(206, 92);
+            lblDataInicio.Location = new Point(207, 32);
             lblDataInicio.Name = "lblDataInicio";
             lblDataInicio.Size = new Size(81, 25);
             lblDataInicio.TabIndex = 11;
@@ -173,13 +152,14 @@
             // 
             // dtpDataFim
             // 
+            dtpDataFim.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dtpDataFim.BorderColor = Color.White;
             dtpDataFim.BorderSize = 1;
             dtpDataFim.CalendarFont = new Font("Segoe UI", 11F);
             dtpDataFim.CustomFormat = "yyyy-MM-dd";
             dtpDataFim.Font = new Font("Segoe UI", 11F);
             dtpDataFim.Format = DateTimePickerFormat.Custom;
-            dtpDataFim.Location = new Point(465, 87);
+            dtpDataFim.Location = new Point(466, 27);
             dtpDataFim.MinimumSize = new Size(0, 35);
             dtpDataFim.Name = "dtpDataFim";
             dtpDataFim.Size = new Size(120, 35);
@@ -189,13 +169,14 @@
             // 
             // dtpDataInicio
             // 
+            dtpDataInicio.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dtpDataInicio.BorderColor = Color.White;
             dtpDataInicio.BorderSize = 1;
             dtpDataInicio.CalendarFont = new Font("Segoe UI", 11F);
             dtpDataInicio.CustomFormat = "yyyy-MM-dd";
             dtpDataInicio.Font = new Font("Segoe UI", 11F);
             dtpDataInicio.Format = DateTimePickerFormat.Custom;
-            dtpDataInicio.Location = new Point(293, 87);
+            dtpDataInicio.Location = new Point(294, 27);
             dtpDataInicio.MinimumSize = new Size(0, 35);
             dtpDataInicio.Name = "dtpDataInicio";
             dtpDataInicio.Size = new Size(122, 35);
@@ -205,10 +186,11 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(158, 161, 176);
-            label1.Location = new Point(791, 656);
+            label1.Location = new Point(792, 596);
             label1.Name = "label1";
             label1.Size = new Size(275, 20);
             label1.TabIndex = 8;
@@ -216,6 +198,7 @@
             // 
             // btnFiltrar
             // 
+            btnFiltrar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             btnFiltrar.BackColor = Color.Silver;
             btnFiltrar.FlatStyle = FlatStyle.Flat;
             btnFiltrar.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -225,7 +208,7 @@
             btnFiltrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnFiltrar.IconSize = 30;
             btnFiltrar.ImageAlign = ContentAlignment.MiddleRight;
-            btnFiltrar.Location = new Point(604, 85);
+            btnFiltrar.Location = new Point(605, 25);
             btnFiltrar.Name = "btnFiltrar";
             btnFiltrar.Size = new Size(104, 38);
             btnFiltrar.TabIndex = 2;
@@ -236,6 +219,7 @@
             // 
             // btnExcluir
             // 
+            btnExcluir.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             btnExcluir.BackColor = Color.IndianRed;
             btnExcluir.FlatStyle = FlatStyle.Flat;
             btnExcluir.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -245,7 +229,7 @@
             btnExcluir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnExcluir.IconSize = 28;
             btnExcluir.ImageAlign = ContentAlignment.MiddleRight;
-            btnExcluir.Location = new Point(962, 85);
+            btnExcluir.Location = new Point(963, 25);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(104, 38);
             btnExcluir.TabIndex = 5;
@@ -256,6 +240,7 @@
             // 
             // btnAlterar
             // 
+            btnAlterar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             btnAlterar.BackColor = Color.LightSteelBlue;
             btnAlterar.FlatStyle = FlatStyle.Flat;
             btnAlterar.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -265,7 +250,7 @@
             btnAlterar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnAlterar.IconSize = 30;
             btnAlterar.ImageAlign = ContentAlignment.MiddleRight;
-            btnAlterar.Location = new Point(843, 85);
+            btnAlterar.Location = new Point(844, 25);
             btnAlterar.Name = "btnAlterar";
             btnAlterar.Size = new Size(104, 38);
             btnAlterar.TabIndex = 4;
@@ -276,6 +261,7 @@
             // 
             // btnCadastrar
             // 
+            btnCadastrar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             btnCadastrar.BackColor = Color.SeaGreen;
             btnCadastrar.FlatStyle = FlatStyle.Flat;
             btnCadastrar.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -285,7 +271,7 @@
             btnCadastrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnCadastrar.IconSize = 30;
             btnCadastrar.ImageAlign = ContentAlignment.MiddleRight;
-            btnCadastrar.Location = new Point(724, 85);
+            btnCadastrar.Location = new Point(725, 25);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(104, 38);
             btnCadastrar.TabIndex = 3;
@@ -300,6 +286,7 @@
             dtGridClientes.AllowUserToDeleteRows = false;
             dtGridClientes.AllowUserToOrderColumns = true;
             dtGridClientes.AllowUserToResizeRows = false;
+            dtGridClientes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dtGridClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dtGridClientes.BackgroundColor = Color.FromArgb(46, 51, 73);
             dtGridClientes.BorderStyle = BorderStyle.None;
@@ -317,7 +304,7 @@
             dtGridClientes.EditMode = DataGridViewEditMode.EditProgrammatically;
             dtGridClientes.EnableHeadersVisualStyles = false;
             dtGridClientes.GridColor = Color.FromArgb(74, 79, 99);
-            dtGridClientes.Location = new Point(42, 152);
+            dtGridClientes.Location = new Point(43, 92);
             dtGridClientes.MultiSelect = false;
             dtGridClientes.Name = "dtGridClientes";
             dtGridClientes.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -343,7 +330,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 51, 73);
-            ClientSize = new Size(1114, 700);
+            ClientSize = new Size(1114, 639);
             Controls.Add(pnlClientes);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmClientes";
@@ -357,8 +344,6 @@
 
         #endregion
         private TextBox txtFiltro;
-        private Label lblClientes;
-        private Button btnSair;
         private Label lblNumeroRegistro;
         private ComboBox cbxFiltro;
         private Panel pnlClientes;

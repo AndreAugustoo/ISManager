@@ -212,11 +212,10 @@
             // panelDesktop
             // 
             panelDesktop.BackColor = Color.FromArgb(46, 51, 73);
-            panelDesktop.Dock = DockStyle.Fill;
-            panelDesktop.Location = new Point(186, 0);
-            panelDesktop.MinimumSize = new Size(765, 577);
+            panelDesktop.Location = new Point(186, 61);
+            panelDesktop.MinimumSize = new Size(1114, 639);
             panelDesktop.Name = "panelDesktop";
-            panelDesktop.Size = new Size(1114, 700);
+            panelDesktop.Size = new Size(1114, 639);
             panelDesktop.TabIndex = 4;
             // 
             // panelTitleBar
@@ -316,7 +315,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(46, 51, 73);
+            BackColor = Color.White;
             ClientSize = new Size(1300, 700);
             Controls.Add(panelShadow);
             Controls.Add(panelTitleBar);
