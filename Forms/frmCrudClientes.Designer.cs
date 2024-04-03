@@ -51,7 +51,7 @@
             pnlFormLoader = new Panel();
             groupBox2 = new GroupBox();
             chkOpcao3 = new CheckBox();
-            chkInstalacao = new CheckBox();
+            chkPesquisa = new CheckBox();
             chkOpcao2 = new CheckBox();
             chkDocumentacao = new CheckBox();
             chkOpcao1 = new CheckBox();
@@ -323,7 +323,7 @@
             // groupBox2
             // 
             groupBox2.Controls.Add(chkOpcao3);
-            groupBox2.Controls.Add(chkInstalacao);
+            groupBox2.Controls.Add(chkPesquisa);
             groupBox2.Controls.Add(chkOpcao2);
             groupBox2.Controls.Add(chkDocumentacao);
             groupBox2.Controls.Add(chkOpcao1);
@@ -348,7 +348,7 @@
             chkOpcao3.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             chkOpcao3.ForeColor = Color.White;
             chkOpcao3.Image = Properties.Resources._unchecked;
-            chkOpcao3.Location = new Point(33, 443);
+            chkOpcao3.Location = new Point(37, 493);
             chkOpcao3.Name = "chkOpcao3";
             chkOpcao3.Size = new Size(131, 35);
             chkOpcao3.TabIndex = 66;
@@ -358,27 +358,27 @@
             chkOpcao3.UseVisualStyleBackColor = true;
             chkOpcao3.CheckedChanged += chkCheckedCh;
             // 
-            // chkInstalacao
+            // chkPesquisa
             // 
-            chkInstalacao.Appearance = Appearance.Button;
-            chkInstalacao.AutoSize = true;
-            chkInstalacao.FlatAppearance.BorderSize = 0;
-            chkInstalacao.FlatAppearance.CheckedBackColor = Color.Transparent;
-            chkInstalacao.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            chkInstalacao.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            chkInstalacao.FlatStyle = FlatStyle.Flat;
-            chkInstalacao.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            chkInstalacao.ForeColor = Color.White;
-            chkInstalacao.Image = Properties.Resources._unchecked;
-            chkInstalacao.Location = new Point(31, 64);
-            chkInstalacao.Name = "chkInstalacao";
-            chkInstalacao.Size = new Size(147, 35);
-            chkInstalacao.TabIndex = 64;
-            chkInstalacao.Text = "  Instalação";
-            chkInstalacao.TextAlign = ContentAlignment.BottomCenter;
-            chkInstalacao.TextImageRelation = TextImageRelation.ImageBeforeText;
-            chkInstalacao.UseVisualStyleBackColor = true;
-            chkInstalacao.CheckedChanged += chkCheckedCh;
+            chkPesquisa.Appearance = Appearance.Button;
+            chkPesquisa.AutoSize = true;
+            chkPesquisa.FlatAppearance.BorderSize = 0;
+            chkPesquisa.FlatAppearance.CheckedBackColor = Color.Transparent;
+            chkPesquisa.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            chkPesquisa.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            chkPesquisa.FlatStyle = FlatStyle.Flat;
+            chkPesquisa.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            chkPesquisa.ForeColor = Color.White;
+            chkPesquisa.Image = Properties.Resources._unchecked;
+            chkPesquisa.Location = new Point(37, 225);
+            chkPesquisa.Name = "chkPesquisa";
+            chkPesquisa.Size = new Size(134, 35);
+            chkPesquisa.TabIndex = 64;
+            chkPesquisa.Text = "  Pesquisa";
+            chkPesquisa.TextAlign = ContentAlignment.BottomCenter;
+            chkPesquisa.TextImageRelation = TextImageRelation.ImageBeforeText;
+            chkPesquisa.UseVisualStyleBackColor = true;
+            chkPesquisa.CheckedChanged += chkCheckedCh;
             // 
             // chkOpcao2
             // 
@@ -392,7 +392,7 @@
             chkOpcao2.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             chkOpcao2.ForeColor = Color.White;
             chkOpcao2.Image = Properties.Resources._unchecked;
-            chkOpcao2.Location = new Point(31, 365);
+            chkOpcao2.Location = new Point(37, 402);
             chkOpcao2.Name = "chkOpcao2";
             chkOpcao2.Size = new Size(131, 35);
             chkOpcao2.TabIndex = 65;
@@ -414,7 +414,7 @@
             chkDocumentacao.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             chkDocumentacao.ForeColor = Color.White;
             chkDocumentacao.Image = Properties.Resources._unchecked;
-            chkDocumentacao.Location = new Point(31, 210);
+            chkDocumentacao.Location = new Point(37, 135);
             chkDocumentacao.Name = "chkDocumentacao";
             chkDocumentacao.Size = new Size(192, 35);
             chkDocumentacao.TabIndex = 60;
@@ -436,7 +436,7 @@
             chkOpcao1.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             chkOpcao1.ForeColor = Color.White;
             chkOpcao1.Image = Properties.Resources._unchecked;
-            chkOpcao1.Location = new Point(31, 290);
+            chkOpcao1.Location = new Point(37, 312);
             chkOpcao1.Name = "chkOpcao1";
             chkOpcao1.Size = new Size(131, 35);
             chkOpcao1.TabIndex = 61;
@@ -458,7 +458,7 @@
             chkZendesk.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             chkZendesk.ForeColor = Color.White;
             chkZendesk.Image = Properties.Resources._unchecked;
-            chkZendesk.Location = new Point(31, 137);
+            chkZendesk.Location = new Point(37, 48);
             chkZendesk.Name = "chkZendesk";
             chkZendesk.Size = new Size(133, 35);
             chkZendesk.TabIndex = 63;
@@ -623,7 +623,7 @@
         private GroupBox groupBox1;
         private GroupBox groupBox2;
         public CheckBox chkDocumentacao;
-        public CheckBox chkInstalacao;
+        public CheckBox chkPesquisa;
         public CheckBox chkZendesk;
         public CheckBox chkOpcao1;
         public CheckBox chkOpcao2;

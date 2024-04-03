@@ -59,11 +59,10 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(186, 700);
             panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
             // 
             // pnlNav
             // 
-            pnlNav.BackColor = Color.SteelBlue;
+            pnlNav.BackColor = Color.White;
             pnlNav.Location = new Point(0, 193);
             pnlNav.Name = "pnlNav";
             pnlNav.Size = new Size(5, 100);
@@ -74,9 +73,9 @@
             btnSair.FlatAppearance.BorderSize = 0;
             btnSair.FlatStyle = FlatStyle.Flat;
             btnSair.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            btnSair.ForeColor = Color.FromArgb(0, 126, 249);
+            btnSair.ForeColor = Color.White;
             btnSair.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket;
-            btnSair.IconColor = Color.FromArgb(0, 126, 249);
+            btnSair.IconColor = Color.White;
             btnSair.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnSair.IconSize = 34;
             btnSair.ImageAlign = ContentAlignment.MiddleLeft;
@@ -95,9 +94,9 @@
             btnMigracoes.FlatAppearance.BorderSize = 0;
             btnMigracoes.FlatStyle = FlatStyle.Flat;
             btnMigracoes.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            btnMigracoes.ForeColor = Color.FromArgb(0, 126, 249);
+            btnMigracoes.ForeColor = Color.White;
             btnMigracoes.IconChar = FontAwesome.Sharp.IconChar.NetworkWired;
-            btnMigracoes.IconColor = Color.FromArgb(0, 126, 249);
+            btnMigracoes.IconColor = Color.White;
             btnMigracoes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnMigracoes.IconSize = 34;
             btnMigracoes.ImageAlign = ContentAlignment.MiddleLeft;
@@ -116,9 +115,9 @@
             btnClientes.FlatAppearance.BorderSize = 0;
             btnClientes.FlatStyle = FlatStyle.Flat;
             btnClientes.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            btnClientes.ForeColor = Color.FromArgb(0, 126, 249);
+            btnClientes.ForeColor = Color.White;
             btnClientes.IconChar = FontAwesome.Sharp.IconChar.User;
-            btnClientes.IconColor = Color.FromArgb(0, 126, 249);
+            btnClientes.IconColor = Color.White;
             btnClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnClientes.IconSize = 34;
             btnClientes.ImageAlign = ContentAlignment.MiddleLeft;
@@ -137,9 +136,9 @@
             btnDashboard.FlatAppearance.BorderSize = 0;
             btnDashboard.FlatStyle = FlatStyle.Flat;
             btnDashboard.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            btnDashboard.ForeColor = Color.FromArgb(0, 126, 249);
+            btnDashboard.ForeColor = Color.White;
             btnDashboard.IconChar = FontAwesome.Sharp.IconChar.ChartLine;
-            btnDashboard.IconColor = Color.FromArgb(0, 126, 249);
+            btnDashboard.IconColor = Color.White;
             btnDashboard.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnDashboard.IconSize = 34;
             btnDashboard.ImageAlign = ContentAlignment.MiddleLeft;
@@ -166,9 +165,8 @@
             // lblNome
             // 
             lblNome.AutoSize = true;
-            lblNome.BackColor = Color.FromArgb(24, 30, 54);
             lblNome.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNome.ForeColor = Color.FromArgb(0, 126, 249);
+            lblNome.ForeColor = Color.White;
             lblNome.Location = new Point(52, 88);
             lblNome.Name = "lblNome";
             lblNome.Size = new Size(79, 17);
@@ -185,7 +183,6 @@
             lblSubNome.Size = new Size(63, 13);
             lblSubNome.TabIndex = 2;
             lblSubNome.Text = "ISManager";
-            lblSubNome.Click += lblSubNome_Click;
             // 
             // pictureBox1
             // 
@@ -206,7 +203,6 @@
             pnlFormLoader.Name = "pnlFormLoader";
             pnlFormLoader.Size = new Size(1114, 700);
             pnlFormLoader.TabIndex = 4;
-            pnlFormLoader.Paint += pnlFormLoader_Paint;
             // 
             // frmMenu
             // 
@@ -221,7 +217,6 @@
             Name = "frmMenu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ISManager";
-            Load += Form1_Load;
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();

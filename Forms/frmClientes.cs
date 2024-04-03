@@ -106,7 +106,7 @@ namespace ISManager
         private void dtGridClientes_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             Crud.Instance.TipoCrud = 3;
-            frmCrudClientes FrmCrudClientes_Vrb = new frmCrudClientes() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            CarregarDadosParaFrmCrud();
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)

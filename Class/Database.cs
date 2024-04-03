@@ -9,12 +9,15 @@ namespace ISManager.Class
 {
     internal class Database
     {
+
         private string host = "localhost";
+        private string port = "3306";
         private string nomeBanco = "ismanager";
         private string usuario = "root";
         private string senha = "061127";
         private MySqlConnection con;
         private MySqlCommand cmd;
+
         public Database()
         {
             try

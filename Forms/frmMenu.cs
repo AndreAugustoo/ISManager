@@ -1,3 +1,4 @@
+using ISManager.Forms;
 using MySql.Data.MySqlClient;
 using System.Runtime.InteropServices;
 
@@ -40,26 +41,6 @@ namespace ISManager
             FrmDashboard_Vrb.FormBorderStyle = FormBorderStyle.None;
             this.pnlFormLoader.Controls.Add(FrmDashboard_Vrb);
             FrmDashboard_Vrb.Show();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlFormLoader_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblSubNome_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -145,15 +126,6 @@ namespace ISManager
         private void btnSair_Leave(object sender, EventArgs e)
         {
             btnSair.BackColor = Color.FromArgb(24, 30, 54);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
         }
     }
 }
