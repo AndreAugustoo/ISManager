@@ -301,9 +301,9 @@
             lblTitle.ForeColor = Color.White;
             lblTitle.Location = new Point(47, 20);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(120, 38);
+            lblTitle.Size = new Size(301, 38);
             lblTitle.TabIndex = 35;
-            lblTitle.Text = "Clientes";
+            lblTitle.Text = "Alteração de cadastro";
             // 
             // pnlFormLoader
             // 

@@ -42,6 +42,7 @@ namespace ISManager
             resultadoSelect.Read();
             int numeroRegistros = resultadoSelect.GetInt32(0);
             resultadoSelect.Close();
+            lblNumeroRegistro.Text = "Número total de registros: " + numeroRegistros.ToString();
 
             if (numeroRegistros >= 500) 
             {
@@ -49,7 +50,7 @@ namespace ISManager
             }
             else
             {
-                lblNumeroRegistro.Text = "Número total de registros: " + numeroRegistros.ToString();
+                lblRegistroExibido.Text = "Número de registros exibidos: " + numeroRegistros.ToString();
             }
             
 
@@ -105,25 +106,23 @@ namespace ISManager
         private void dtGridClientes_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             Crud.Instance.TipoCrud = 3;
-
-            CarregarDadosParaFrmCrud();
+            frmCrudClientes FrmCrudClientes_Vrb = new frmCrudClientes() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             Crud.Instance.TipoCrud = 1;
-
             this.pnlClientes.Controls.Clear();
             frmCrudClientes FrmCrudClientes_Vrb = new frmCrudClientes() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             FrmCrudClientes_Vrb.FormBorderStyle = FormBorderStyle.None;
             this.pnlClientes.Controls.Add(FrmCrudClientes_Vrb);
+            FrmCrudClientes_Vrb.lblTitle.Text = "Novo cadastro";
             FrmCrudClientes_Vrb.Show();
 
         }
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             Crud.Instance.TipoCrud = 3;
-
             CarregarDadosParaFrmCrud();
         }
 
@@ -160,6 +159,7 @@ namespace ISManager
             FrmCrudClientes_Vrb.txtDataFechamento.Enabled = false;
             FrmCrudClientes_Vrb.txtObservacao.Enabled = false;
 
+            FrmCrudClientes_Vrb.lblTitle.Text = "Exclusão de cadastro";
             FrmCrudClientes_Vrb.btnConfirmar.Text = "Excluir";
             FrmCrudClientes_Vrb.btnConfirmar.IconChar = FontAwesome.Sharp.IconChar.Trash;
             FrmCrudClientes_Vrb.btnConfirmar.BackColor = Color.IndianRed;

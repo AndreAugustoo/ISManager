@@ -35,7 +35,6 @@ namespace ISManager.Forms
             } else if (tipoCrud == 1)
             {
                 // Cadastrar
-                lblTitle.Text = "Novo cadastro";
                 this.clientes = new Clientes();
                 this.clientes.Id_cliente = txtId.Text;
                 this.clientes.Nome_cliente = txtNome.Text;
@@ -53,7 +52,6 @@ namespace ISManager.Forms
             else if (tipoCrud == 3)
             {
                 // Alterar
-                lblTitle.Text = "Alteração de cadastro";
                 this.clientes = new Clientes();
                 this.clientes.Id_cliente = txtId.Text;
                 this.clientes.Nome_cliente = txtNome.Text;
@@ -71,7 +69,6 @@ namespace ISManager.Forms
             else if (tipoCrud == 4)
             {
                 // Excluir
-                lblTitle.Text = "Exclusão de cadastro";
                 this.clientes = new Clientes();
                 this.clientes.Id_cliente = txtId.Text;
                 this.clientes.Nome_cliente = txtNome.Text;

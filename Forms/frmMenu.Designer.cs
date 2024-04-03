@@ -71,7 +71,6 @@
             // 
             // btnSair
             // 
-            btnSair.Dock = DockStyle.Bottom;
             btnSair.FlatAppearance.BorderSize = 0;
             btnSair.FlatStyle = FlatStyle.Flat;
             btnSair.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
@@ -81,10 +80,10 @@
             btnSair.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnSair.IconSize = 34;
             btnSair.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSair.Location = new Point(0, 660);
+            btnSair.Location = new Point(0, 657);
             btnSair.Name = "btnSair";
             btnSair.Padding = new Padding(10, 0, 0, 0);
-            btnSair.Size = new Size(186, 40);
+            btnSair.Size = new Size(186, 44);
             btnSair.TabIndex = 7;
             btnSair.Text = "Sair";
             btnSair.UseVisualStyleBackColor = true;
@@ -102,10 +101,10 @@
             btnMigracoes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnMigracoes.IconSize = 34;
             btnMigracoes.ImageAlign = ContentAlignment.MiddleLeft;
-            btnMigracoes.Location = new Point(0, 228);
+            btnMigracoes.Location = new Point(0, 236);
             btnMigracoes.Name = "btnMigracoes";
             btnMigracoes.Padding = new Padding(10, 0, 0, 0);
-            btnMigracoes.Size = new Size(186, 40);
+            btnMigracoes.Size = new Size(186, 44);
             btnMigracoes.TabIndex = 6;
             btnMigracoes.Text = "Migrações";
             btnMigracoes.UseVisualStyleBackColor = true;
@@ -123,10 +122,10 @@
             btnClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnClientes.IconSize = 34;
             btnClientes.ImageAlign = ContentAlignment.MiddleLeft;
-            btnClientes.Location = new Point(0, 188);
+            btnClientes.Location = new Point(0, 192);
             btnClientes.Name = "btnClientes";
             btnClientes.Padding = new Padding(10, 0, 0, 0);
-            btnClientes.Size = new Size(186, 40);
+            btnClientes.Size = new Size(186, 44);
             btnClientes.TabIndex = 5;
             btnClientes.Text = "Implantações";
             btnClientes.UseVisualStyleBackColor = true;
@@ -147,7 +146,7 @@
             btnDashboard.Location = new Point(0, 148);
             btnDashboard.Name = "btnDashboard";
             btnDashboard.Padding = new Padding(10, 0, 0, 0);
-            btnDashboard.Size = new Size(186, 40);
+            btnDashboard.Size = new Size(186, 44);
             btnDashboard.TabIndex = 4;
             btnDashboard.Text = "Dashboard";
             btnDashboard.UseVisualStyleBackColor = true;
