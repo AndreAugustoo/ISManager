@@ -37,6 +37,11 @@
             lblNumeroRegistro = new Label();
             cbxFiltro = new ComboBox();
             pnlClientes = new Panel();
+            lblRegistroExibido = new Label();
+            lblDataFim = new Label();
+            lblDataInicio = new Label();
+            dtpDataFim = new Class.CustomDatePicker();
+            dtpDataInicio = new Class.CustomDatePicker();
             label1 = new Label();
             btnFiltrar = new FontAwesome.Sharp.IconButton();
             btnExcluir = new FontAwesome.Sharp.IconButton();
@@ -52,10 +57,10 @@
             txtFiltro.BackColor = Color.FromArgb(46, 51, 73);
             txtFiltro.Font = new Font("Segoe UI", 14F);
             txtFiltro.ForeColor = Color.White;
-            txtFiltro.Location = new Point(165, 91);
+            txtFiltro.Location = new Point(213, 90);
             txtFiltro.Name = "txtFiltro";
             txtFiltro.PlaceholderText = "  Filtro";
-            txtFiltro.Size = new Size(262, 32);
+            txtFiltro.Size = new Size(371, 32);
             txtFiltro.TabIndex = 1;
             // 
             // lblClientes
@@ -81,7 +86,6 @@
             btnSair.TabIndex = 6;
             btnSair.Text = "X";
             btnSair.UseVisualStyleBackColor = true;
-            btnSair.Click += btnSair_Click;
             // 
             // lblNumeroRegistro
             // 
@@ -90,10 +94,9 @@
             lblNumeroRegistro.ForeColor = Color.FromArgb(158, 161, 176);
             lblNumeroRegistro.Location = new Point(42, 656);
             lblNumeroRegistro.Name = "lblNumeroRegistro";
-            lblNumeroRegistro.Size = new Size(262, 20);
+            lblNumeroRegistro.Size = new Size(208, 20);
             lblNumeroRegistro.TabIndex = 7;
-            lblNumeroRegistro.Text = "Número de registros encontrados: 0";
-            lblNumeroRegistro.Click += lblNumeroRegistro_Click;
+            lblNumeroRegistro.Text = "Número total de registros: 0";
             // 
             // cbxFiltro
             // 
@@ -104,15 +107,21 @@
             cbxFiltro.FormattingEnabled = true;
             cbxFiltro.IntegralHeight = false;
             cbxFiltro.ItemHeight = 23;
-            cbxFiltro.Items.AddRange(new object[] { "ID", "Nome", "ISM", "Status" });
+            cbxFiltro.Items.AddRange(new object[] { "ID", "Nome", "ISM", "Status", "Data entrada", "Data fechamento" });
             cbxFiltro.Location = new Point(45, 91);
             cbxFiltro.Name = "cbxFiltro";
-            cbxFiltro.Size = new Size(104, 31);
+            cbxFiltro.Size = new Size(147, 31);
             cbxFiltro.TabIndex = 0;
             cbxFiltro.Text = "ID";
+            cbxFiltro.SelectedValueChanged += cbxFiltro_SelectedValueChanged;
             // 
             // pnlClientes
             // 
+            pnlClientes.Controls.Add(lblRegistroExibido);
+            pnlClientes.Controls.Add(lblDataFim);
+            pnlClientes.Controls.Add(lblDataInicio);
+            pnlClientes.Controls.Add(dtpDataFim);
+            pnlClientes.Controls.Add(dtpDataInicio);
             pnlClientes.Controls.Add(label1);
             pnlClientes.Controls.Add(btnFiltrar);
             pnlClientes.Controls.Add(btnExcluir);
@@ -128,7 +137,71 @@
             pnlClientes.Name = "pnlClientes";
             pnlClientes.Size = new Size(1114, 700);
             pnlClientes.TabIndex = 14;
-            pnlClientes.Paint += pnlClientes_Paint;
+            // 
+            // lblRegistroExibido
+            // 
+            lblRegistroExibido.AutoSize = true;
+            lblRegistroExibido.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblRegistroExibido.ForeColor = Color.FromArgb(158, 161, 176);
+            lblRegistroExibido.Location = new Point(408, 656);
+            lblRegistroExibido.Name = "lblRegistroExibido";
+            lblRegistroExibido.Size = new Size(233, 20);
+            lblRegistroExibido.TabIndex = 13;
+            lblRegistroExibido.Text = "Número de registros exibidos: 0";
+            // 
+            // lblDataFim
+            // 
+            lblDataFim.AutoSize = true;
+            lblDataFim.Font = new Font("Segoe UI", 14F);
+            lblDataFim.ForeColor = Color.White;
+            lblDataFim.Location = new Point(421, 92);
+            lblDataFim.Name = "lblDataFim";
+            lblDataFim.Size = new Size(38, 25);
+            lblDataFim.TabIndex = 12;
+            lblDataFim.Text = "até";
+            // 
+            // lblDataInicio
+            // 
+            lblDataInicio.AutoSize = true;
+            lblDataInicio.Font = new Font("Segoe UI", 14F);
+            lblDataInicio.ForeColor = Color.White;
+            lblDataInicio.Location = new Point(206, 92);
+            lblDataInicio.Name = "lblDataInicio";
+            lblDataInicio.Size = new Size(81, 25);
+            lblDataInicio.TabIndex = 11;
+            lblDataInicio.Text = "Data de:";
+            // 
+            // dtpDataFim
+            // 
+            dtpDataFim.BorderColor = Color.White;
+            dtpDataFim.BorderSize = 1;
+            dtpDataFim.CalendarFont = new Font("Segoe UI", 11F);
+            dtpDataFim.CustomFormat = "yyyy-MM-dd";
+            dtpDataFim.Font = new Font("Segoe UI", 11F);
+            dtpDataFim.Format = DateTimePickerFormat.Custom;
+            dtpDataFim.Location = new Point(465, 87);
+            dtpDataFim.MinimumSize = new Size(0, 35);
+            dtpDataFim.Name = "dtpDataFim";
+            dtpDataFim.Size = new Size(120, 35);
+            dtpDataFim.SkinColor = Color.FromArgb(46, 51, 73);
+            dtpDataFim.TabIndex = 10;
+            dtpDataFim.TextColor = Color.White;
+            // 
+            // dtpDataInicio
+            // 
+            dtpDataInicio.BorderColor = Color.White;
+            dtpDataInicio.BorderSize = 1;
+            dtpDataInicio.CalendarFont = new Font("Segoe UI", 11F);
+            dtpDataInicio.CustomFormat = "yyyy-MM-dd";
+            dtpDataInicio.Font = new Font("Segoe UI", 11F);
+            dtpDataInicio.Format = DateTimePickerFormat.Custom;
+            dtpDataInicio.Location = new Point(293, 87);
+            dtpDataInicio.MinimumSize = new Size(0, 35);
+            dtpDataInicio.Name = "dtpDataInicio";
+            dtpDataInicio.Size = new Size(122, 35);
+            dtpDataInicio.SkinColor = Color.FromArgb(46, 51, 73);
+            dtpDataInicio.TabIndex = 9;
+            dtpDataInicio.TextColor = Color.White;
             // 
             // label1
             // 
@@ -295,5 +368,10 @@
         private FontAwesome.Sharp.IconButton btnAlterar;
         private FontAwesome.Sharp.IconButton btnFiltrar;
         private Label label1;
+        private Label lblDataFim;
+        private Label lblDataInicio;
+        public Class.CustomDatePicker dtpDataFim;
+        public Class.CustomDatePicker dtpDataInicio;
+        private Label lblRegistroExibido;
     }
 }

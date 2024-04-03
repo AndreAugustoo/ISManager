@@ -1,4 +1,5 @@
-﻿using ISManager.Class;
+﻿using Bunifu.UI.WinForms.Helpers.Transitions;
+using ISManager.Class;
 using ISManager.Forms;
 using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Asn1.Cmp;
@@ -41,13 +42,26 @@ namespace ISManager
             resultadoSelect.Read();
             int numeroRegistros = resultadoSelect.GetInt32(0);
             resultadoSelect.Close();
-            lblNumeroRegistro.Text = "Número de registros encontrados: " + numeroRegistros.ToString();
+
+            if (numeroRegistros >= 500) 
+            {
+                lblRegistroExibido.Text = "Número de registros exibidos: " + 500;
+            }
+            else
+            {
+                lblNumeroRegistro.Text = "Número total de registros: " + numeroRegistros.ToString();
+            }
+            
+
+            ExibirFiltroData();
 
         }
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
             String filtro = txtFiltro.Text;
+            String filtro2 = "";
             String campo = cbxFiltro.Text;
+
             if (campo == "ID")
             {
                 campo = "id_cliente";
@@ -64,39 +78,35 @@ namespace ISManager
             {
                 campo = "status_implantacao_cliente";
             }
+            else if (campo == "Data entrada")
+            {
+                campo = "data_entrada_cliente";
+                filtro = dtpDataInicio.Text.ToString();
+                filtro2 = dtpDataFim.Text.ToString();
+            }
+            else if (campo == "Data fechamento")
+            {
+                campo = "data_fechamento_cliente";
+                filtro = dtpDataInicio.Text.ToString();
+                filtro2 = dtpDataFim.Text.ToString();
+            }
             else
             {
                 MessageBox.Show("Erro");
             }
 
-            MySqlDataReader temp = this.clientes.ListarClientes(campo, filtro);
+            MySqlDataReader temp = this.clientes.ListarClientes(campo, filtro, filtro2);
             DataTable dt = new DataTable();
             dt.Load(temp);
             dtGridClientes.DataSource = dt;
+            lblRegistroExibido.Text = "Número de registros exibidos: " + dt.Rows.Count.ToString();
         }
 
         private void dtGridClientes_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             Crud.Instance.TipoCrud = 3;
 
-            this.pnlClientes.Controls.Clear();
-            frmCrudClientes FrmCrudClientes_Vrb = new frmCrudClientes() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            FrmCrudClientes_Vrb.FormBorderStyle = FormBorderStyle.None;
-            this.pnlClientes.Controls.Add(FrmCrudClientes_Vrb);
-            FrmCrudClientes_Vrb.Show();
-
-            DataGridViewRow linha = dtGridClientes.Rows[e.RowIndex];
-            FrmCrudClientes_Vrb.txtId.Text = linha.Cells["ID"].Value.ToString();
-            FrmCrudClientes_Vrb.txtNome.Text = linha.Cells["Nome"].Value.ToString();
-            FrmCrudClientes_Vrb.txtDataEntrada.Text = linha.Cells["Data entrada"].Value.ToString();
-            FrmCrudClientes_Vrb.cbxNecessidade.Text = linha.Cells["Necessidade"].Value.ToString();
-            FrmCrudClientes_Vrb.cbxIsm.Text = linha.Cells["ISM"].Value.ToString();
-            FrmCrudClientes_Vrb.cbxStatus.Text = linha.Cells["Status"].Value.ToString();
-            FrmCrudClientes_Vrb.cbxBackup.Text = linha.Cells["Backup"].Value.ToString();
-            FrmCrudClientes_Vrb.txtHoras.Text = linha.Cells["Horas"].Value.ToString();
-            FrmCrudClientes_Vrb.txtDataFechamento.Text = linha.Cells["Data fechamento"].Value.ToString();
-            FrmCrudClientes_Vrb.txtObservacao.Text = linha.Cells["Observação"].Value.ToString();
-            FrmCrudClientes_Vrb.txtId.Enabled = false;
+            CarregarDadosParaFrmCrud();
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -114,24 +124,7 @@ namespace ISManager
         {
             Crud.Instance.TipoCrud = 3;
 
-            this.pnlClientes.Controls.Clear();
-            frmCrudClientes FrmCrudClientes_Vrb = new frmCrudClientes() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            FrmCrudClientes_Vrb.FormBorderStyle = FormBorderStyle.None;
-            this.pnlClientes.Controls.Add(FrmCrudClientes_Vrb);
-            FrmCrudClientes_Vrb.Show();
-
-            DataGridViewRow linha = dtGridClientes.SelectedRows[0];
-            FrmCrudClientes_Vrb.txtId.Text = linha.Cells["ID"].Value.ToString();
-            FrmCrudClientes_Vrb.txtNome.Text = linha.Cells["Nome"].Value.ToString();
-            FrmCrudClientes_Vrb.txtDataEntrada.Text = linha.Cells["Data entrada"].Value.ToString();
-            FrmCrudClientes_Vrb.cbxNecessidade.Text = linha.Cells["Necessidade"].Value.ToString();
-            FrmCrudClientes_Vrb.cbxIsm.Text = linha.Cells["ISM"].Value.ToString();
-            FrmCrudClientes_Vrb.cbxStatus.Text = linha.Cells["Status"].Value.ToString();
-            FrmCrudClientes_Vrb.cbxBackup.Text = linha.Cells["Backup"].Value.ToString();
-            FrmCrudClientes_Vrb.txtHoras.Text = linha.Cells["Horas"].Value.ToString();
-            FrmCrudClientes_Vrb.txtDataFechamento.Text = linha.Cells["Data fechamento"].Value.ToString();
-            FrmCrudClientes_Vrb.txtObservacao.Text = linha.Cells["Observação"].Value.ToString();
-            FrmCrudClientes_Vrb.txtId.Enabled = false;
+            CarregarDadosParaFrmCrud();
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -166,12 +159,6 @@ namespace ISManager
             FrmCrudClientes_Vrb.cbxBackup.Enabled = false;
             FrmCrudClientes_Vrb.txtDataFechamento.Enabled = false;
             FrmCrudClientes_Vrb.txtObservacao.Enabled = false;
-            FrmCrudClientes_Vrb.chkDocumentacao.Enabled = false;
-            FrmCrudClientes_Vrb.chkInstalacao.Enabled = false;
-            FrmCrudClientes_Vrb.chkZendesk.Enabled = false;
-            FrmCrudClientes_Vrb.chkOpcao1.Enabled = false;
-            FrmCrudClientes_Vrb.chkOpcao2.Enabled = false;
-            FrmCrudClientes_Vrb.chkOpcao3.Enabled = false;
 
             FrmCrudClientes_Vrb.btnConfirmar.Text = "Excluir";
             FrmCrudClientes_Vrb.btnConfirmar.IconChar = FontAwesome.Sharp.IconChar.Trash;
@@ -180,19 +167,51 @@ namespace ISManager
 
         }
 
-        private void pnlClientes_Paint(object sender, PaintEventArgs e)
+        private void cbxFiltro_SelectedValueChanged(object sender, EventArgs e)
         {
-
+            ExibirFiltroData();
         }
 
-        private void btnSair_Click(object sender, EventArgs e)
+        private void ExibirFiltroData()
         {
-
+            if ((cbxFiltro.Text == "Data entrada") || (cbxFiltro.Text == "Data fechamento"))
+            {
+                dtpDataInicio.Visible = true;
+                dtpDataFim.Visible = true;
+                lblDataInicio.Visible = true;
+                lblDataFim.Visible = true;
+                txtFiltro.Visible = false;
+            }
+            else
+            {
+                dtpDataInicio.Visible = false;
+                dtpDataFim.Visible = false;
+                lblDataInicio.Visible = false;
+                lblDataFim.Visible = false;
+                txtFiltro.Visible = true;
+            }
         }
-
-        private void lblNumeroRegistro_Click(object sender, EventArgs e)
+        public void CarregarDadosParaFrmCrud()
         {
+            this.pnlClientes.Controls.Clear();
+            frmCrudClientes FrmCrudClientes_Vrb = new frmCrudClientes() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            FrmCrudClientes_Vrb.FormBorderStyle = FormBorderStyle.None;
+            this.pnlClientes.Controls.Add(FrmCrudClientes_Vrb);
+            FrmCrudClientes_Vrb.Show();
 
-        }
+            DataGridViewRow linha = dtGridClientes.SelectedRows[0];
+            FrmCrudClientes_Vrb.txtId.Text = linha.Cells["ID"].Value.ToString();
+            FrmCrudClientes_Vrb.txtNome.Text = linha.Cells["Nome"].Value.ToString();
+            FrmCrudClientes_Vrb.txtDataEntrada.Text = linha.Cells["Data entrada"].Value.ToString();
+            FrmCrudClientes_Vrb.cbxNecessidade.Text = linha.Cells["Necessidade"].Value.ToString();
+            FrmCrudClientes_Vrb.cbxIsm.Text = linha.Cells["ISM"].Value.ToString();
+            FrmCrudClientes_Vrb.cbxStatus.Text = linha.Cells["Status"].Value.ToString();
+            FrmCrudClientes_Vrb.txtHoras.Text = linha.Cells["Horas"].Value.ToString();
+            FrmCrudClientes_Vrb.cbxBackup.Text = linha.Cells["Backup"].Value.ToString();
+            FrmCrudClientes_Vrb.txtDataFechamento.Text = linha.Cells["Data fechamento"].Value.ToString();
+            FrmCrudClientes_Vrb.txtObservacao.Text = linha.Cells["Observação"].Value.ToString();
+
+            FrmCrudClientes_Vrb.txtId.Enabled = false;
+        } 
     }
 }

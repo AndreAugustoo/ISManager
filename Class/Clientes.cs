@@ -87,25 +87,43 @@ namespace ISManager.Class
                 "FROM cliente ORDER BY nome_cliente ASC LIMIT 500");
         }
 
-        public MySqlDataReader ListarClientes(string campo, string filtro)
+        public MySqlDataReader ListarClientes(string campo, string filtro, string filtro2 = "")
         {
             if (filtro == "")
             {
                 return ListarClientes();
             }
+            else if ((campo == "data_entrada_cliente") || (campo == "data_fechamento_cliente"))
+            {
+                return database.Query(
+                    "SELECT id_cliente AS 'ID'" +
+                    ", nome_cliente AS 'Nome'" +
+                    ", data_entrada_cliente AS 'Data entrada'" +
+                    ", necessidade_cliente AS 'Necessidade'" +
+                    ", ism_responsavel_cliente AS 'ISM'" +
+                    ", status_implantacao_cliente AS 'Status'" +
+                    ", tipo_backup_cliente AS 'Backup'" +
+                    ", horas_utilizadas_cliente AS 'Horas'" +
+                    ", data_fechamento_cliente AS 'Data fechamento'" +
+                    ", observacao_cliente AS 'Observação'" +
+                    "FROM cliente WHERE " + campo + " BETWEEN '" + filtro + "' AND '"+ filtro2 + "' ORDER BY nome_cliente ASC LIMIT 500");
+            }
+            else
+            {
 
-            return database.Query(
-                "SELECT id_cliente AS 'ID'" +
-                ", nome_cliente AS 'Nome'" +
-                ", data_entrada_cliente AS 'Data entrada'" +
-                ", necessidade_cliente AS 'Necessidade'" +
-                ", ism_responsavel_cliente AS 'ISM'" +
-                ", status_implantacao_cliente AS 'Status'" +
-                ", tipo_backup_cliente AS 'Backup'" +
-                ", horas_utilizadas_cliente AS 'Horas'" +
-                ", data_fechamento_cliente AS 'Data fechamento'" +
-                ", observacao_cliente AS 'Observação'" +
-                "FROM cliente WHERE " + campo + " LIKE '%" + filtro + "%' ORDER BY nome_cliente ASC LIMIT 500");
+                    return database.Query(
+                    "SELECT id_cliente AS 'ID'" +
+                    ", nome_cliente AS 'Nome'" +
+                    ", data_entrada_cliente AS 'Data entrada'" +
+                    ", necessidade_cliente AS 'Necessidade'" +
+                    ", ism_responsavel_cliente AS 'ISM'" +
+                    ", status_implantacao_cliente AS 'Status'" +
+                    ", tipo_backup_cliente AS 'Backup'" +
+                    ", horas_utilizadas_cliente AS 'Horas'" +
+                    ", data_fechamento_cliente AS 'Data fechamento'" +
+                    ", observacao_cliente AS 'Observação'" +
+                    "FROM cliente WHERE " + campo + " LIKE '%" + filtro + "%' ORDER BY nome_cliente ASC LIMIT 500");
+            }
         }
 
         public MySqlDataReader ListarNumeroRegistro()
