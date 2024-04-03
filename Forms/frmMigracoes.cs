@@ -16,7 +16,6 @@ namespace ISManager
         public frmMigracoes()
         {
             InitializeComponent();
-            Exit.ConfigurarBotaoFechar(btnSair);
         }
     }
 }

@@ -19,7 +19,6 @@ namespace ISManager.Forms
         public frmCrudClientes()
         {
             InitializeComponent();
-            Exit.ConfigurarBotaoFechar(btnSair);
         }
 
         private void frmCrudClientes_Load(object sender, EventArgs e)

@@ -18,7 +18,6 @@ namespace ISManager
         public frmDashboard()
         {
             InitializeComponent();
-            Exit.ConfigurarBotaoFechar(btnSair);
         }
 
         private void frmDashboard_Load(object sender, EventArgs e)

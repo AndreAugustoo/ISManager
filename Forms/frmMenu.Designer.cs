@@ -315,12 +315,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
+            BackColor = Color.FromArgb(24, 30, 54);
             ClientSize = new Size(1300, 700);
             Controls.Add(panelShadow);
             Controls.Add(panelTitleBar);
             Controls.Add(panelDesktop);
             Controls.Add(panelMenu);
+            ForeColor = Color.FromArgb(24, 30, 54);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmMenu";
             StartPosition = FormStartPosition.CenterScreen;

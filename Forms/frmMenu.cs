@@ -35,6 +35,7 @@ namespace ISManager
         {
             //public static Color color1 = Color.FromArgb(158, 161, 176);
             public static Color color1 = Color.White;
+            //public static Color color1 = Color.Coral;
         }
         private void ActivateButton(object senderBtn, Color color)
         {
