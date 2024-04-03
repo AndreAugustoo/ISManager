@@ -21,7 +21,6 @@
     <PackageReference Include="LiveCharts.WinForms" Version="0.9.7.1" />
     <PackageReference Include="Microsoft.Chart.Controls" Version="4.7.2046" />
     <PackageReference Include="MySql.Data" Version="8.3.0" />
-    <PackageReference Include="Syncfusion.Chart.Windows" Version="25.1.37" />
   </ItemGroup>
 
   <ItemGroup>

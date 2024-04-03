@@ -29,36 +29,42 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
-            panel1 = new Panel();
+            panelMenu = new Panel();
             pnlNav = new Panel();
             btnSair = new FontAwesome.Sharp.IconButton();
             btnMigracoes = new FontAwesome.Sharp.IconButton();
             btnClientes = new FontAwesome.Sharp.IconButton();
             btnDashboard = new FontAwesome.Sharp.IconButton();
-            panel2 = new Panel();
+            panelLogo = new Panel();
             lblNome = new Label();
             lblSubNome = new Label();
-            pictureBox1 = new PictureBox();
-            pnlFormLoader = new Panel();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            btnHome = new PictureBox();
+            panelDesktop = new Panel();
+            panelTitleBar = new Panel();
+            lblTitleChildForm = new Label();
+            iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
+            panelShadow = new Panel();
+            panelMenu.SuspendLayout();
+            panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)btnHome).BeginInit();
+            panelTitleBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)iconCurrentChildForm).BeginInit();
             SuspendLayout();
             // 
-            // panel1
+            // panelMenu
             // 
-            panel1.BackColor = Color.FromArgb(24, 30, 54);
-            panel1.Controls.Add(pnlNav);
-            panel1.Controls.Add(btnSair);
-            panel1.Controls.Add(btnMigracoes);
-            panel1.Controls.Add(btnClientes);
-            panel1.Controls.Add(btnDashboard);
-            panel1.Controls.Add(panel2);
-            panel1.Dock = DockStyle.Left;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(186, 700);
-            panel1.TabIndex = 0;
+            panelMenu.BackColor = Color.FromArgb(24, 30, 54);
+            panelMenu.Controls.Add(pnlNav);
+            panelMenu.Controls.Add(btnSair);
+            panelMenu.Controls.Add(btnMigracoes);
+            panelMenu.Controls.Add(btnClientes);
+            panelMenu.Controls.Add(btnDashboard);
+            panelMenu.Controls.Add(panelLogo);
+            panelMenu.Dock = DockStyle.Left;
+            panelMenu.Location = new Point(0, 0);
+            panelMenu.Name = "panelMenu";
+            panelMenu.Size = new Size(186, 700);
+            panelMenu.TabIndex = 0;
             // 
             // pnlNav
             // 
@@ -67,6 +73,7 @@
             pnlNav.Name = "pnlNav";
             pnlNav.Size = new Size(5, 100);
             pnlNav.TabIndex = 3;
+            pnlNav.Visible = false;
             // 
             // btnSair
             // 
@@ -79,10 +86,10 @@
             btnSair.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnSair.IconSize = 34;
             btnSair.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSair.Location = new Point(0, 657);
+            btnSair.Location = new Point(0, 647);
             btnSair.Name = "btnSair";
             btnSair.Padding = new Padding(10, 0, 0, 0);
-            btnSair.Size = new Size(186, 44);
+            btnSair.Size = new Size(186, 50);
             btnSair.TabIndex = 7;
             btnSair.Text = "Sair";
             btnSair.UseVisualStyleBackColor = true;
@@ -100,10 +107,10 @@
             btnMigracoes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnMigracoes.IconSize = 34;
             btnMigracoes.ImageAlign = ContentAlignment.MiddleLeft;
-            btnMigracoes.Location = new Point(0, 236);
+            btnMigracoes.Location = new Point(0, 248);
             btnMigracoes.Name = "btnMigracoes";
             btnMigracoes.Padding = new Padding(10, 0, 0, 0);
-            btnMigracoes.Size = new Size(186, 44);
+            btnMigracoes.Size = new Size(186, 50);
             btnMigracoes.TabIndex = 6;
             btnMigracoes.Text = "Migrações";
             btnMigracoes.UseVisualStyleBackColor = true;
@@ -121,10 +128,10 @@
             btnClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnClientes.IconSize = 34;
             btnClientes.ImageAlign = ContentAlignment.MiddleLeft;
-            btnClientes.Location = new Point(0, 192);
+            btnClientes.Location = new Point(0, 198);
             btnClientes.Name = "btnClientes";
             btnClientes.Padding = new Padding(10, 0, 0, 0);
-            btnClientes.Size = new Size(186, 44);
+            btnClientes.Size = new Size(186, 50);
             btnClientes.TabIndex = 5;
             btnClientes.Text = "Implantações";
             btnClientes.UseVisualStyleBackColor = true;
@@ -145,22 +152,22 @@
             btnDashboard.Location = new Point(0, 148);
             btnDashboard.Name = "btnDashboard";
             btnDashboard.Padding = new Padding(10, 0, 0, 0);
-            btnDashboard.Size = new Size(186, 44);
+            btnDashboard.Size = new Size(186, 50);
             btnDashboard.TabIndex = 4;
             btnDashboard.Text = "Dashboard";
             btnDashboard.UseVisualStyleBackColor = true;
             btnDashboard.Click += btnDashboard_Click;
             // 
-            // panel2
+            // panelLogo
             // 
-            panel2.Controls.Add(lblNome);
-            panel2.Controls.Add(lblSubNome);
-            panel2.Controls.Add(pictureBox1);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(186, 148);
-            panel2.TabIndex = 0;
+            panelLogo.Controls.Add(lblNome);
+            panelLogo.Controls.Add(lblSubNome);
+            panelLogo.Controls.Add(btnHome);
+            panelLogo.Dock = DockStyle.Top;
+            panelLogo.Location = new Point(0, 0);
+            panelLogo.Name = "panelLogo";
+            panelLogo.Size = new Size(186, 148);
+            panelLogo.TabIndex = 0;
             // 
             // lblNome
             // 
@@ -184,25 +191,71 @@
             lblSubNome.TabIndex = 2;
             lblSubNome.Text = "ISManager";
             // 
-            // pictureBox1
+            // btnHome
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(60, 22);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(63, 63);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            btnHome.Image = (Image)resources.GetObject("btnHome.Image");
+            btnHome.Location = new Point(60, 22);
+            btnHome.Name = "btnHome";
+            btnHome.Size = new Size(63, 63);
+            btnHome.SizeMode = PictureBoxSizeMode.Zoom;
+            btnHome.TabIndex = 0;
+            btnHome.TabStop = false;
+            btnHome.Click += btnHome_Click;
             // 
-            // pnlFormLoader
+            // panelDesktop
             // 
-            pnlFormLoader.BackColor = Color.FromArgb(46, 51, 73);
-            pnlFormLoader.Dock = DockStyle.Fill;
-            pnlFormLoader.Location = new Point(186, 0);
-            pnlFormLoader.MinimumSize = new Size(765, 577);
-            pnlFormLoader.Name = "pnlFormLoader";
-            pnlFormLoader.Size = new Size(1114, 700);
-            pnlFormLoader.TabIndex = 4;
+            panelDesktop.BackColor = Color.FromArgb(46, 51, 73);
+            panelDesktop.Dock = DockStyle.Fill;
+            panelDesktop.Location = new Point(186, 0);
+            panelDesktop.MinimumSize = new Size(765, 577);
+            panelDesktop.Name = "panelDesktop";
+            panelDesktop.Size = new Size(1114, 700);
+            panelDesktop.TabIndex = 4;
+            // 
+            // panelTitleBar
+            // 
+            panelTitleBar.BackColor = Color.FromArgb(24, 30, 54);
+            panelTitleBar.Controls.Add(lblTitleChildForm);
+            panelTitleBar.Controls.Add(iconCurrentChildForm);
+            panelTitleBar.Dock = DockStyle.Top;
+            panelTitleBar.Location = new Point(186, 0);
+            panelTitleBar.Name = "panelTitleBar";
+            panelTitleBar.Size = new Size(1114, 55);
+            panelTitleBar.TabIndex = 5;
+            panelTitleBar.MouseDown += panelTitleBar_MouseDown;
+            // 
+            // lblTitleChildForm
+            // 
+            lblTitleChildForm.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblTitleChildForm.ForeColor = Color.FromArgb(158, 161, 176);
+            lblTitleChildForm.Location = new Point(53, 16);
+            lblTitleChildForm.Name = "lblTitleChildForm";
+            lblTitleChildForm.Size = new Size(176, 34);
+            lblTitleChildForm.TabIndex = 1;
+            lblTitleChildForm.Text = "Home";
+            lblTitleChildForm.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // iconCurrentChildForm
+            // 
+            iconCurrentChildForm.BackColor = Color.FromArgb(24, 30, 54);
+            iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.HomeLgAlt;
+            iconCurrentChildForm.IconColor = Color.White;
+            iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconCurrentChildForm.IconSize = 34;
+            iconCurrentChildForm.Location = new Point(13, 16);
+            iconCurrentChildForm.Name = "iconCurrentChildForm";
+            iconCurrentChildForm.Size = new Size(34, 34);
+            iconCurrentChildForm.TabIndex = 0;
+            iconCurrentChildForm.TabStop = false;
+            // 
+            // panelShadow
+            // 
+            panelShadow.BackColor = Color.FromArgb(24, 30, 45);
+            panelShadow.Dock = DockStyle.Top;
+            panelShadow.Location = new Point(186, 55);
+            panelShadow.Name = "panelShadow";
+            panelShadow.Size = new Size(1114, 10);
+            panelShadow.TabIndex = 6;
             // 
             // frmMenu
             // 
@@ -210,34 +263,42 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 51, 73);
             ClientSize = new Size(1300, 700);
-            Controls.Add(pnlFormLoader);
-            Controls.Add(panel1);
+            Controls.Add(panelShadow);
+            Controls.Add(panelTitleBar);
+            Controls.Add(panelDesktop);
+            Controls.Add(panelMenu);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmMenu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ISManager";
-            panel1.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panelMenu.ResumeLayout(false);
+            panelLogo.ResumeLayout(false);
+            panelLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)btnHome).EndInit();
+            panelTitleBar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)iconCurrentChildForm).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel1;
-        private Panel panel2;
+        private Panel panelMenu;
+        private Panel panelLogo;
         private Label lblSubNome;
-        private PictureBox pictureBox1;
+        private PictureBox btnHome;
         private Button btnMigracoe;
         private Panel pnlNav;
         private Label lblNome;
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
-        private Panel pnlFormLoader;
+        private Panel panelDesktop;
         private FontAwesome.Sharp.IconButton btnSair;
         private FontAwesome.Sharp.IconButton btnMigracoes;
         private FontAwesome.Sharp.IconButton btnClientes;
         private FontAwesome.Sharp.IconButton btnDashboard;
+        private Panel panelTitleBar;
+        private FontAwesome.Sharp.IconPictureBox iconCurrentChildForm;
+        private Label lblTitleChildForm;
+        private Panel panelShadow;
     }
 }
