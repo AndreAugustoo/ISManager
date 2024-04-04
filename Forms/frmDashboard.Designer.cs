@@ -38,6 +38,7 @@
             pictureBox1 = new PictureBox();
             label1 = new Label();
             label3 = new Label();
+            lblTotalCancelado = new Label();
             lblTotalAberto = new Label();
             panel3 = new Panel();
             pictureBox3 = new PictureBox();
@@ -54,7 +55,6 @@
             pictureBox4 = new PictureBox();
             label10 = new Label();
             label13 = new Label();
-            label14 = new Label();
             panel7 = new Panel();
             label15 = new Label();
             label16 = new Label();
@@ -86,11 +86,11 @@
             // lblTotalImplantacoes
             // 
             lblTotalImplantacoes.AutoSize = true;
-            lblTotalImplantacoes.Font = new Font("Segoe UI", 21F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotalImplantacoes.ForeColor = Color.FromArgb(0, 126, 249);
-            lblTotalImplantacoes.Location = new Point(19, 51);
+            lblTotalImplantacoes.Font = new Font("Segoe UI", 28F, FontStyle.Bold);
+            lblTotalImplantacoes.ForeColor = Color.FromArgb(255, 128, 40);
+            lblTotalImplantacoes.Location = new Point(12, 38);
             lblTotalImplantacoes.Name = "lblTotalImplantacoes";
-            lblTotalImplantacoes.Size = new Size(65, 38);
+            lblTotalImplantacoes.Size = new Size(88, 51);
             lblTotalImplantacoes.TabIndex = 1;
             lblTotalImplantacoes.Text = "999";
             // 
@@ -101,9 +101,9 @@
             label4.ForeColor = Color.FromArgb(158, 161, 176);
             label4.Location = new Point(12, 107);
             label4.Name = "label4";
-            label4.Size = new Size(212, 17);
+            label4.Size = new Size(139, 17);
             label4.TabIndex = 2;
-            label4.Text = "Implantações finalizadas e abertas.";
+            label4.Text = "Total de implantações.";
             // 
             // pictureBox2
             // 
@@ -137,7 +137,7 @@
             panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(label1);
             panel2.Controls.Add(label3);
-            panel2.Controls.Add(lblTotalAberto);
+            panel2.Controls.Add(lblTotalCancelado);
             panel2.Location = new Point(561, 88);
             panel2.Name = "panel2";
             panel2.Size = new Size(227, 142);
@@ -160,9 +160,9 @@
             label1.ForeColor = Color.FromArgb(158, 161, 176);
             label1.Location = new Point(12, 107);
             label1.Name = "label1";
-            label1.Size = new Size(136, 17);
+            label1.Size = new Size(156, 17);
             label1.TabIndex = 2;
-            label1.Text = "Implantações abertas.";
+            label1.Text = "Implantações canceladas.";
             // 
             // label3
             // 
@@ -172,18 +172,29 @@
             label3.ForeColor = Color.White;
             label3.Location = new Point(19, 13);
             label3.Name = "label3";
-            label3.Size = new Size(98, 25);
+            label3.Size = new Size(108, 25);
             label3.TabIndex = 0;
-            label3.Text = "Em aberto";
+            label3.Text = "Canceladas";
+            // 
+            // lblTotalCancelado
+            // 
+            lblTotalCancelado.AutoSize = true;
+            lblTotalCancelado.Font = new Font("Segoe UI", 28F, FontStyle.Bold);
+            lblTotalCancelado.ForeColor = Color.FromArgb(226, 50, 90);
+            lblTotalCancelado.Location = new Point(12, 38);
+            lblTotalCancelado.Name = "lblTotalCancelado";
+            lblTotalCancelado.Size = new Size(88, 51);
+            lblTotalCancelado.TabIndex = 1;
+            lblTotalCancelado.Text = "999";
             // 
             // lblTotalAberto
             // 
             lblTotalAberto.AutoSize = true;
-            lblTotalAberto.Font = new Font("Segoe UI", 21F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotalAberto.ForeColor = Color.FromArgb(50, 226, 178);
-            lblTotalAberto.Location = new Point(19, 51);
+            lblTotalAberto.Font = new Font("Segoe UI", 28F, FontStyle.Bold);
+            lblTotalAberto.ForeColor = Color.FromArgb(0, 126, 249);
+            lblTotalAberto.Location = new Point(12, 38);
             lblTotalAberto.Name = "lblTotalAberto";
-            lblTotalAberto.Size = new Size(65, 38);
+            lblTotalAberto.Size = new Size(88, 51);
             lblTotalAberto.TabIndex = 1;
             lblTotalAberto.Text = "999";
             // 
@@ -230,18 +241,18 @@
             label8.ForeColor = Color.White;
             label8.Location = new Point(19, 13);
             label8.Name = "label8";
-            label8.Size = new Size(90, 25);
+            label8.Size = new Size(105, 25);
             label8.TabIndex = 0;
-            label8.Text = "Fechadas";
+            label8.Text = "Finalizadas";
             // 
             // lblTotalFechado
             // 
             lblTotalFechado.AutoSize = true;
-            lblTotalFechado.Font = new Font("Segoe UI", 21F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotalFechado.ForeColor = Color.FromArgb(226, 50, 90);
-            lblTotalFechado.Location = new Point(19, 51);
+            lblTotalFechado.Font = new Font("Segoe UI", 28F, FontStyle.Bold);
+            lblTotalFechado.ForeColor = Color.FromArgb(50, 226, 178);
+            lblTotalFechado.Location = new Point(12, 38);
             lblTotalFechado.Name = "lblTotalFechado";
-            lblTotalFechado.Size = new Size(65, 38);
+            lblTotalFechado.Size = new Size(88, 51);
             lblTotalFechado.TabIndex = 1;
             lblTotalFechado.Text = "999";
             // 
@@ -323,7 +334,7 @@
             panel6.Controls.Add(pictureBox4);
             panel6.Controls.Add(label10);
             panel6.Controls.Add(label13);
-            panel6.Controls.Add(label14);
+            panel6.Controls.Add(lblTotalAberto);
             panel6.Location = new Point(794, 88);
             panel6.Name = "panel6";
             panel6.Size = new Size(227, 142);
@@ -346,9 +357,9 @@
             label10.ForeColor = Color.FromArgb(158, 161, 176);
             label10.Location = new Point(12, 107);
             label10.Name = "label10";
-            label10.Size = new Size(136, 17);
+            label10.Size = new Size(180, 17);
             label10.TabIndex = 2;
-            label10.Text = "Implantações abertas.";
+            label10.Text = "Implantações em andamento.";
             // 
             // label13
             // 
@@ -358,20 +369,9 @@
             label13.ForeColor = Color.White;
             label13.Location = new Point(19, 13);
             label13.Name = "label13";
-            label13.Size = new Size(98, 25);
+            label13.Size = new Size(139, 25);
             label13.TabIndex = 0;
-            label13.Text = "Em aberto";
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI", 21F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label14.ForeColor = Color.FromArgb(50, 226, 178);
-            label14.Location = new Point(19, 51);
-            label14.Name = "label14";
-            label14.Size = new Size(65, 38);
-            label14.TabIndex = 1;
-            label14.Text = "999";
+            label13.Text = "Em andamento";
             // 
             // panel7
             // 
@@ -476,7 +476,7 @@
         private PictureBox pictureBox4;
         private Label label10;
         private Label label13;
-        private Label label14;
+        private Label lblTotalCancelado;
         private Panel panel7;
         private Label label15;
         private Label label16;

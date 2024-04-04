@@ -95,13 +95,12 @@ namespace ISManager.Class
                 ", status_implantacao_cliente AS 'Status'" +
                 ", tipo_backup_cliente AS 'Backup'" +
                 ", horas_utilizadas_cliente AS 'Horas'" +
-                ", data_fechamento_cliente AS 'Data fechamento'" +
-                ", observacao_cliente AS 'Observação'" +
-                ", tipo_backup_cliente AS 'Backup'" +
+                ", data_fechamento_cliente AS 'Data fechamento'" + 
                 ", documentacao_cliente AS 'Documentação'" +
                 ", zendesk_cliente AS 'Zendesk'" +
                 ", pesquisa_cliente AS 'Pesquisa'" +
-                "FROM cliente ORDER BY nome_cliente ASC LIMIT 500");
+                ", observacao_cliente AS 'Observação'" +
+                "FROM cliente ORDER BY data_entrada_cliente ASC LIMIT 100");
         }
 
         public MySqlDataReader ListarClientes(string campo, string filtro, string filtro2 = "")
@@ -122,11 +121,11 @@ namespace ISManager.Class
                     ", tipo_backup_cliente AS 'Backup'" +
                     ", horas_utilizadas_cliente AS 'Horas'" +
                     ", data_fechamento_cliente AS 'Data fechamento'" +
-                    ", observacao_cliente AS 'Observação'" +
                     ", documentacao_cliente AS 'Documentação'" +
                     ", zendesk_cliente AS 'Zendesk'" +
                     ", pesquisa_cliente AS 'Pesquisa'" +
-                    "FROM cliente WHERE " + campo + " BETWEEN '" + filtro + "' AND '"+ filtro2 + "' ORDER BY nome_cliente ASC LIMIT 500");
+                    ", observacao_cliente AS 'Observação'" +
+                    "FROM cliente WHERE " + campo + " BETWEEN '" + filtro + "' AND '"+ filtro2 + "' ORDER BY data_entrada_cliente ASC LIMIT 100");
             }
             else
             {
@@ -141,11 +140,11 @@ namespace ISManager.Class
                     ", tipo_backup_cliente AS 'Backup'" +
                     ", horas_utilizadas_cliente AS 'Horas'" +
                     ", data_fechamento_cliente AS 'Data fechamento'" +
-                    ", observacao_cliente AS 'Observação'" +
                     ", documentacao_cliente AS 'Documentação'" +
                     ", zendesk_cliente AS 'Zendesk'" +
                     ", pesquisa_cliente AS 'Pesquisa'" +
-                    "FROM cliente WHERE " + campo + " LIKE '%" + filtro + "%' ORDER BY nome_cliente ASC LIMIT 500");
+                    ", observacao_cliente AS 'Observação'" +
+                    "FROM cliente WHERE " + campo + " LIKE '%" + filtro + "%' ORDER BY data_entrada_cliente ASC LIMIT 100");
             }
         }
 
@@ -164,7 +163,13 @@ namespace ISManager.Class
         public MySqlDataReader ListarTotalFechado()
         {
             return database.Query(
-                "SELECT COUNT(*) FROM cliente WHERE status_implantacao_cliente IN ('Finalizada', 'Cancelada')");
+                "SELECT COUNT(*) FROM cliente WHERE status_implantacao_cliente IN ('Finalizada')");
+        }
+
+        public MySqlDataReader ListarTotalCancelado()
+        {
+            return database.Query(
+                "SELECT COUNT(*) FROM cliente WHERE status_implantacao_cliente IN ('Cancelada')");
         }
 
         public string? Id_cliente { get => id_cliente; set => id_cliente = value; }

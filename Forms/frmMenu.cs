@@ -1,4 +1,5 @@
 using FontAwesome.Sharp;
+using ISManager.Class;
 using ISManager.Forms;
 using MySql.Data.MySqlClient;
 using System.Runtime.InteropServices;
@@ -18,10 +19,16 @@ namespace ISManager
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
+        private Database database;
 
         public frmMenu()
         {
             InitializeComponent();
+
+            btnDashboard.Enabled = false;
+            btnClientes.Enabled = false;
+            btnMigracoes.Enabled = false;
+
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 50);
             panelMenu.Controls.Add(leftBorderBtn);
@@ -178,6 +185,23 @@ namespace ISManager
             {
                 WindowState = FormWindowState.Normal;
             }
+        }
+
+        private void btnConectar_Click(object sender, EventArgs e)
+        {
+            Database.host = txtHost.Text;
+            Database.porta = txtPort.Text;
+            Database.nomeBanco = txtDatabase.Text;
+            Database.usuario = txtUser.Text;
+            Database.senha = txtPassword.Text;
+
+            this.database = new Database();
+            database.Conectar();
+            MessageBox.Show("Conectado com sucesso!", "ISManager", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            btnDashboard.Enabled = true;
+            btnClientes.Enabled = true;
+            btnMigracoes.Enabled = true;
+
         }
     }
 }

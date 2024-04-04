@@ -40,6 +40,20 @@
             lblSubNome = new Label();
             btnHome = new PictureBox();
             panelDesktop = new Panel();
+            label2 = new Label();
+            label1 = new Label();
+            gbxConexaoBanco = new GroupBox();
+            txtPort = new TextBox();
+            btnConectar = new FontAwesome.Sharp.IconButton();
+            lblPort = new Label();
+            txtHost = new TextBox();
+            lblPassword = new Label();
+            txtDatabase = new TextBox();
+            lblDatabase = new Label();
+            txtUser = new TextBox();
+            lblUser = new Label();
+            txtPassword = new TextBox();
+            lblHost = new Label();
             panelTitleBar = new Panel();
             btnMinimaze = new FontAwesome.Sharp.IconPictureBox();
             btnMaximaze = new FontAwesome.Sharp.IconPictureBox();
@@ -50,6 +64,8 @@
             panelMenu.SuspendLayout();
             panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnHome).BeginInit();
+            panelDesktop.SuspendLayout();
+            gbxConexaoBanco.SuspendLayout();
             panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnMinimaze).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnMaximaze).BeginInit();
@@ -212,11 +228,199 @@
             // panelDesktop
             // 
             panelDesktop.BackColor = Color.FromArgb(46, 51, 73);
+            panelDesktop.Controls.Add(label2);
+            panelDesktop.Controls.Add(label1);
+            panelDesktop.Controls.Add(gbxConexaoBanco);
             panelDesktop.Location = new Point(186, 61);
             panelDesktop.MinimumSize = new Size(1114, 639);
             panelDesktop.Name = "panelDesktop";
             panelDesktop.Size = new Size(1114, 639);
             panelDesktop.TabIndex = 4;
+            // 
+            // label2
+            // 
+            label2.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            label2.ForeColor = Color.Silver;
+            label2.Location = new Point(81, 165);
+            label2.Name = "label2";
+            label2.Size = new Size(520, 312);
+            label2.TabIndex = 72;
+            label2.Text = "Para fazer uso do sistema \r\né necessário realizar \r\numa conexão com banco\r\nde dados  ao lado.\r\n\r\nCaso não possua\r\num acesso, será preciso\r\ncontatar o responsável.";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            label1.Font = new Font("Segoe UI", 25F, FontStyle.Bold);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(103, 59);
+            label1.Name = "label1";
+            label1.Size = new Size(520, 62);
+            label1.TabIndex = 5;
+            label1.Text = "Bem-vindo(a) ao ISManager!";
+            label1.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // gbxConexaoBanco
+            // 
+            gbxConexaoBanco.Controls.Add(txtPort);
+            gbxConexaoBanco.Controls.Add(btnConectar);
+            gbxConexaoBanco.Controls.Add(lblPort);
+            gbxConexaoBanco.Controls.Add(txtHost);
+            gbxConexaoBanco.Controls.Add(lblPassword);
+            gbxConexaoBanco.Controls.Add(txtDatabase);
+            gbxConexaoBanco.Controls.Add(lblDatabase);
+            gbxConexaoBanco.Controls.Add(txtUser);
+            gbxConexaoBanco.Controls.Add(lblUser);
+            gbxConexaoBanco.Controls.Add(txtPassword);
+            gbxConexaoBanco.Controls.Add(lblHost);
+            gbxConexaoBanco.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gbxConexaoBanco.ForeColor = Color.White;
+            gbxConexaoBanco.Location = new Point(763, 49);
+            gbxConexaoBanco.Name = "gbxConexaoBanco";
+            gbxConexaoBanco.Size = new Size(257, 512);
+            gbxConexaoBanco.TabIndex = 71;
+            gbxConexaoBanco.TabStop = false;
+            gbxConexaoBanco.Text = "Conectar ao MySQL";
+            // 
+            // txtPort
+            // 
+            txtPort.BackColor = Color.FromArgb(46, 51, 73);
+            txtPort.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPort.ForeColor = Color.White;
+            txtPort.Location = new Point(60, 133);
+            txtPort.MaxLength = 80;
+            txtPort.Name = "txtPort";
+            txtPort.Size = new Size(132, 33);
+            txtPort.TabIndex = 64;
+            txtPort.Text = "3306";
+            txtPort.TextAlign = HorizontalAlignment.Center;
+            // 
+            // btnConectar
+            // 
+            btnConectar.BackColor = Color.SeaGreen;
+            btnConectar.FlatStyle = FlatStyle.Flat;
+            btnConectar.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnConectar.ForeColor = Color.FromArgb(46, 51, 73);
+            btnConectar.IconChar = FontAwesome.Sharp.IconChar.Database;
+            btnConectar.IconColor = Color.FromArgb(46, 51, 73);
+            btnConectar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnConectar.IconSize = 30;
+            btnConectar.ImageAlign = ContentAlignment.MiddleRight;
+            btnConectar.Location = new Point(62, 440);
+            btnConectar.Name = "btnConectar";
+            btnConectar.Size = new Size(132, 38);
+            btnConectar.TabIndex = 59;
+            btnConectar.Text = "    Conectar";
+            btnConectar.TextAlign = ContentAlignment.MiddleLeft;
+            btnConectar.UseVisualStyleBackColor = false;
+            btnConectar.Click += btnConectar_Click;
+            // 
+            // lblPort
+            // 
+            lblPort.AutoSize = true;
+            lblPort.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPort.ForeColor = Color.White;
+            lblPort.Location = new Point(101, 110);
+            lblPort.Name = "lblPort";
+            lblPort.Size = new Size(51, 25);
+            lblPort.TabIndex = 68;
+            lblPort.Text = "Port";
+            // 
+            // txtHost
+            // 
+            txtHost.BackColor = Color.FromArgb(46, 51, 73);
+            txtHost.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtHost.ForeColor = Color.White;
+            txtHost.Location = new Point(60, 60);
+            txtHost.MaxLength = 80;
+            txtHost.Name = "txtHost";
+            txtHost.Size = new Size(132, 33);
+            txtHost.TabIndex = 60;
+            txtHost.Text = "localhost";
+            txtHost.TextAlign = HorizontalAlignment.Center;
+            // 
+            // lblPassword
+            // 
+            lblPassword.AutoSize = true;
+            lblPassword.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPassword.ForeColor = Color.White;
+            lblPassword.Location = new Point(79, 264);
+            lblPassword.Name = "lblPassword";
+            lblPassword.Size = new Size(97, 25);
+            lblPassword.TabIndex = 69;
+            lblPassword.Text = "Password";
+            // 
+            // txtDatabase
+            // 
+            txtDatabase.BackColor = Color.FromArgb(46, 51, 73);
+            txtDatabase.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtDatabase.ForeColor = Color.White;
+            txtDatabase.Location = new Point(62, 375);
+            txtDatabase.MaxLength = 80;
+            txtDatabase.Name = "txtDatabase";
+            txtDatabase.Size = new Size(132, 33);
+            txtDatabase.TabIndex = 61;
+            txtDatabase.Text = "ismanager";
+            txtDatabase.TextAlign = HorizontalAlignment.Center;
+            // 
+            // lblDatabase
+            // 
+            lblDatabase.AutoSize = true;
+            lblDatabase.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDatabase.ForeColor = Color.White;
+            lblDatabase.Location = new Point(79, 347);
+            lblDatabase.Name = "lblDatabase";
+            lblDatabase.Size = new Size(93, 25);
+            lblDatabase.TabIndex = 65;
+            lblDatabase.Text = "Database";
+            // 
+            // txtUser
+            // 
+            txtUser.BackColor = Color.FromArgb(46, 51, 73);
+            txtUser.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtUser.ForeColor = Color.White;
+            txtUser.Location = new Point(62, 213);
+            txtUser.MaxLength = 80;
+            txtUser.Name = "txtUser";
+            txtUser.Size = new Size(132, 33);
+            txtUser.TabIndex = 62;
+            txtUser.Text = "root";
+            txtUser.TextAlign = HorizontalAlignment.Center;
+            // 
+            // lblUser
+            // 
+            lblUser.AutoSize = true;
+            lblUser.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblUser.ForeColor = Color.White;
+            lblUser.Location = new Point(101, 185);
+            lblUser.Name = "lblUser";
+            lblUser.Size = new Size(52, 25);
+            lblUser.TabIndex = 66;
+            lblUser.Text = "User";
+            // 
+            // txtPassword
+            // 
+            txtPassword.BackColor = Color.FromArgb(46, 51, 73);
+            txtPassword.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPassword.ForeColor = Color.White;
+            txtPassword.Location = new Point(62, 292);
+            txtPassword.MaxLength = 80;
+            txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
+            txtPassword.Size = new Size(132, 33);
+            txtPassword.TabIndex = 63;
+            txtPassword.Text = "061127";
+            txtPassword.TextAlign = HorizontalAlignment.Center;
+            // 
+            // lblHost
+            // 
+            lblHost.AutoSize = true;
+            lblHost.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblHost.ForeColor = Color.White;
+            lblHost.Location = new Point(101, 35);
+            lblHost.Name = "lblHost";
+            lblHost.Size = new Size(54, 25);
+            lblHost.TabIndex = 67;
+            lblHost.Text = "Host";
             // 
             // panelTitleBar
             // 
@@ -330,6 +534,9 @@
             panelLogo.ResumeLayout(false);
             panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)btnHome).EndInit();
+            panelDesktop.ResumeLayout(false);
+            gbxConexaoBanco.ResumeLayout(false);
+            gbxConexaoBanco.PerformLayout();
             panelTitleBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)btnMinimaze).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnMaximaze).EndInit();
@@ -360,5 +567,19 @@
         private FontAwesome.Sharp.IconPictureBox btnClose;
         private FontAwesome.Sharp.IconPictureBox btnMinimaze;
         private FontAwesome.Sharp.IconPictureBox btnMaximaze;
+        private GroupBox gbxConexaoBanco;
+        public TextBox txtPort;
+        private FontAwesome.Sharp.IconButton btnConectar;
+        private Label lblPort;
+        public TextBox txtHost;
+        private Label lblPassword;
+        public TextBox txtDatabase;
+        private Label lblDatabase;
+        public TextBox txtUser;
+        private Label lblUser;
+        public TextBox txtPassword;
+        private Label lblHost;
+        private Label label2;
+        private Label label1;
     }
 }

@@ -40,8 +40,8 @@ namespace ISManager
             lblRegistroExibido = new Label();
             lblDataFim = new Label();
             lblDataInicio = new Label();
-            dtpDataFim = new Class.CustomDatePicker();
-            dtpDataInicio = new Class.CustomDatePicker();
+            dtpDataFim = new CustomDatePicker();
+            dtpDataInicio = new CustomDatePicker();
             label1 = new Label();
             btnFiltrar = new FontAwesome.Sharp.IconButton();
             btnExcluir = new FontAwesome.Sharp.IconButton();
@@ -196,7 +196,7 @@ namespace ISManager
             label1.Name = "label1";
             label1.Size = new Size(275, 20);
             label1.TabIndex = 8;
-            label1.Text = "Exibição de registros limitada em: 500";
+            label1.Text = "Exibição de registros limitada em: 100";
             // 
             // btnFiltrar
             // 

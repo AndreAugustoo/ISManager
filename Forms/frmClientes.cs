@@ -43,9 +43,9 @@ namespace ISManager
             resultadoSelect.Close();
             lblNumeroRegistro.Text = "Número total de registros: " + numeroRegistros.ToString();
 
-            if (numeroRegistros >= 500) 
+            if (numeroRegistros >= 100) 
             {
-                lblRegistroExibido.Text = "Número de registros exibidos: " + 500;
+                lblRegistroExibido.Text = "Número de registros exibidos: " + 100;
             }
             else
             {

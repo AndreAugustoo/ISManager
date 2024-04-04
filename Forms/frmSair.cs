@@ -16,7 +16,6 @@ namespace ISManager
         public frmSair()
         {
             InitializeComponent();
-            Exit.ConfigurarBotaoFechar(btnSair);
         }
 
         private void btnSair_Click(object sender, EventArgs e)

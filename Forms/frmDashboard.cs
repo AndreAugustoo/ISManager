@@ -29,17 +29,23 @@ namespace ISManager
             resultadoSelect.Close();
             lblTotalImplantacoes.Text = numeroRegistros.ToString();
 
-            resultadoSelect = this.clientes.ListarTotalAberto();
-            resultadoSelect.Read();
-            numeroRegistros = resultadoSelect.GetInt32(0);
-            resultadoSelect.Close();
-            lblTotalAberto.Text = numeroRegistros.ToString();
-
             resultadoSelect = this.clientes.ListarTotalFechado();
             resultadoSelect.Read();
             numeroRegistros = resultadoSelect.GetInt32(0);
             resultadoSelect.Close();
             lblTotalFechado.Text = numeroRegistros.ToString();
+
+            resultadoSelect = this.clientes.ListarTotalCancelado();
+            resultadoSelect.Read();
+            numeroRegistros = resultadoSelect.GetInt32(0);
+            resultadoSelect.Close();
+            lblTotalCancelado.Text = numeroRegistros.ToString();
+
+            resultadoSelect = this.clientes.ListarTotalAberto();
+            resultadoSelect.Read();
+            numeroRegistros = resultadoSelect.GetInt32(0);
+            resultadoSelect.Close();
+            lblTotalAberto.Text = numeroRegistros.ToString();
 
         }
 
