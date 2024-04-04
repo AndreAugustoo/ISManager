@@ -217,15 +217,15 @@
             // 
             // panelDesktop
             // 
-            panelDesktop.BackColor = Color.FromArgb(241, 243, 244);
+            panelDesktop.BackColor = Color.White;
             panelDesktop.Controls.Add(label3);
             panelDesktop.Controls.Add(label2);
             panelDesktop.Controls.Add(label1);
             panelDesktop.Controls.Add(gbxConexaoBanco);
-            panelDesktop.Location = new Point(189, 62);
-            panelDesktop.MinimumSize = new Size(1111, 640);
+            panelDesktop.Location = new Point(187, 61);
+            panelDesktop.MinimumSize = new Size(1113, 640);
             panelDesktop.Name = "panelDesktop";
-            panelDesktop.Size = new Size(1111, 640);
+            panelDesktop.Size = new Size(1113, 640);
             panelDesktop.TabIndex = 4;
             // 
             // label3
@@ -534,7 +534,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(82, 67, 254);
+            BackColor = Color.FromArgb(57, 57, 57);
             ClientSize = new Size(1300, 700);
             Controls.Add(panelShadow);
             Controls.Add(panelTitleBar);

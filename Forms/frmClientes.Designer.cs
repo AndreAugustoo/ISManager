@@ -33,6 +33,7 @@ namespace ISManager
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             txtFiltro = new TextBox();
             lblNumeroRegistro = new Label();
             cbxFiltro = new ComboBox();
@@ -55,7 +56,7 @@ namespace ISManager
             // txtFiltro
             // 
             txtFiltro.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtFiltro.BackColor = Color.White;
+            txtFiltro.BackColor = Color.FromArgb(241, 243, 244);
             txtFiltro.Font = new Font("Segoe UI", 14F);
             txtFiltro.ForeColor = Color.FromArgb(57, 57, 57);
             txtFiltro.Location = new Point(214, 30);
@@ -79,7 +80,7 @@ namespace ISManager
             // cbxFiltro
             // 
             cbxFiltro.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            cbxFiltro.BackColor = Color.White;
+            cbxFiltro.BackColor = Color.FromArgb(241, 243, 244);
             cbxFiltro.Font = new Font("Segoe UI", 13F);
             cbxFiltro.ForeColor = Color.FromArgb(57, 57, 57);
             cbxFiltro.FormattingEnabled = true;
@@ -111,9 +112,9 @@ namespace ISManager
             pnlClientes.Controls.Add(txtFiltro);
             pnlClientes.Controls.Add(dtGridClientes);
             pnlClientes.Location = new Point(1, 1);
-            pnlClientes.MinimumSize = new Size(1114, 639);
+            pnlClientes.MinimumSize = new Size(1114, 640);
             pnlClientes.Name = "pnlClientes";
-            pnlClientes.Size = new Size(1114, 700);
+            pnlClientes.Size = new Size(1114, 640);
             pnlClientes.TabIndex = 14;
             // 
             // lblRegistroExibido
@@ -165,7 +166,7 @@ namespace ISManager
             dtpDataFim.MinimumSize = new Size(0, 35);
             dtpDataFim.Name = "dtpDataFim";
             dtpDataFim.Size = new Size(120, 35);
-            dtpDataFim.SkinColor = Color.White;
+            dtpDataFim.SkinColor = Color.FromArgb(241, 243, 244);
             dtpDataFim.TabIndex = 10;
             dtpDataFim.TextColor = Color.FromArgb(57, 57, 57);
             // 
@@ -182,7 +183,7 @@ namespace ISManager
             dtpDataInicio.MinimumSize = new Size(0, 35);
             dtpDataInicio.Name = "dtpDataInicio";
             dtpDataInicio.Size = new Size(122, 35);
-            dtpDataInicio.SkinColor = Color.White;
+            dtpDataInicio.SkinColor = Color.FromArgb(241, 243, 244);
             dtpDataInicio.TabIndex = 9;
             dtpDataInicio.TextColor = Color.FromArgb(57, 57, 57);
             // 
@@ -295,32 +296,40 @@ namespace ISManager
             dtGridClientes.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dtGridClientes.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(24, 30, 54);
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(57, 57, 57);
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(24, 30, 54);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(57, 57, 57);
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dtGridClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dtGridClientes.ColumnHeadersHeight = 30;
             dtGridClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(241, 243, 244);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(57, 57, 57);
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dtGridClientes.DefaultCellStyle = dataGridViewCellStyle2;
             dtGridClientes.EditMode = DataGridViewEditMode.EditProgrammatically;
             dtGridClientes.EnableHeadersVisualStyles = false;
-            dtGridClientes.GridColor = Color.FromArgb(74, 79, 99);
+            dtGridClientes.GridColor = Color.FromArgb(241, 243, 244);
             dtGridClientes.Location = new Point(43, 92);
             dtGridClientes.MultiSelect = false;
             dtGridClientes.Name = "dtGridClientes";
             dtGridClientes.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.TopLeft;
-            dtGridClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.TopLeft;
+            dtGridClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dtGridClientes.RowHeadersVisible = false;
             dtGridClientes.RowHeadersWidth = 4;
             dtGridClientes.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(46, 51, 73);
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(74, 79, 99);
-            dataGridViewCellStyle3.SelectionForeColor = Color.White;
-            dtGridClientes.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(57, 57, 57);
+            dataGridViewCellStyle4.SelectionBackColor = Color.Gainsboro;
+            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(57, 57, 57);
+            dtGridClientes.RowsDefaultCellStyle = dataGridViewCellStyle4;
             dtGridClientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dtGridClientes.Size = new Size(1024, 482);
             dtGridClientes.TabIndex = 6;
@@ -332,9 +341,10 @@ namespace ISManager
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 51, 73);
-            ClientSize = new Size(1114, 639);
+            ClientSize = new Size(1113, 640);
             Controls.Add(pnlClientes);
             FormBorderStyle = FormBorderStyle.None;
+            MinimumSize = new Size(1113, 640);
             Name = "frmClientes";
             Text = "Implantações";
             Load += frmClientes_Load;

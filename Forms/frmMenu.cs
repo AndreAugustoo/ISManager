@@ -33,8 +33,9 @@ namespace ISManager
         private struct RGBColors
         {
             public static Color activeForeColor = Color.FromArgb(82, 67, 254);
-            /*public static Color defaultBackColor = Color.FromArgb(24, 30, 54);
-            public static Color selectedBackColor = Color.FromArgb(46, 51, 73);*/
+            //secundaryBackColor: Color.FromArgb(241, 243, 244);	241; 243; 244   branco
+           // font: Color.FromArgb(57, 57, 57);	57; 57; 57   cinza
+           // destaque: Color.FromArgb(82, 67, 254);		82; 67; 254  azul
         }
         private void ActivateButton(object senderBtn, Color color)
         {
