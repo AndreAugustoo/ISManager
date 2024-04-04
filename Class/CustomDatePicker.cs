@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using ISManager.Properties;
 
 namespace ISManager.Class
 {
@@ -20,7 +21,7 @@ namespace ISManager.Class
 
         //-> Other Values
         private bool droppedDown = false;
-        private Image calendarIcon = Properties.Resources.calendarWhite;
+        private Image calendarIcon = Resources.calendarWhite;
         private RectangleF iconButtonArea;
         private const int calendarIconWidth = 34;
         private const int arrowIconWidth = 17;
@@ -33,9 +34,9 @@ namespace ISManager.Class
             {
                 skinColor = value;
                 if (skinColor.GetBrightness() >= 0.8F)
-                    calendarIcon = Properties.Resources.calendarDark;
-                else calendarIcon = Properties.Resources.calendarWhite;
-                this.Invalidate();
+                    calendarIcon = Resources.calendarDark;
+                else calendarIcon = Resources.calendarWhite;
+                Invalidate();
             }
         }
 
@@ -45,7 +46,7 @@ namespace ISManager.Class
             set
             {
                 textColor = value;
-                this.Invalidate();
+                Invalidate();
             }
         }
 
@@ -55,7 +56,7 @@ namespace ISManager.Class
             set
             {
                 borderColor = value;
-                this.Invalidate();
+                Invalidate();
             }
         }
 
@@ -65,16 +66,16 @@ namespace ISManager.Class
             set
             {
                 borderSize = value;
-                this.Invalidate();
+                Invalidate();
             }
         }
 
         //Constructor
         public CustomDatePicker()
         {
-            this.SetStyle(ControlStyles.UserPaint, true);
-            this.MinimumSize = new Size(0, 35);
-            this.Font = new Font(this.Font.Name, 9.5F);
+            SetStyle(ControlStyles.UserPaint, true);
+            MinimumSize = new Size(0, 35);
+            Font = new Font(Font.Name, 9.5F);
         }
 
         //Overridden methods
@@ -95,14 +96,14 @@ namespace ISManager.Class
         }
         protected override void OnPaint(PaintEventArgs e)
         {
-            using (Graphics graphics = this.CreateGraphics())
+            using (Graphics graphics = CreateGraphics())
             using (Pen penBorder = new Pen(borderColor, borderSize))
             using (SolidBrush skinBrush = new SolidBrush(skinColor))
             using (SolidBrush openIconBrush = new SolidBrush(Color.FromArgb(50, 64, 64, 64)))
             using (SolidBrush textBrush = new SolidBrush(textColor))
             using (StringFormat textFormat = new StringFormat())
             {
-                RectangleF clientArea = new RectangleF(0, 0, this.Width - 0.5F, this.Height - 0.5F);
+                RectangleF clientArea = new RectangleF(0, 0, Width - 0.5F, Height - 0.5F);
                 RectangleF iconArea = new RectangleF(clientArea.Width - calendarIconWidth, 0, calendarIconWidth, clientArea.Height);
                 penBorder.Alignment = PenAlignment.Inset;
                 textFormat.LineAlignment = StringAlignment.Center;
@@ -110,13 +111,13 @@ namespace ISManager.Class
                 //Draw surface
                 graphics.FillRectangle(skinBrush, clientArea);
                 //Draw text
-                graphics.DrawString("   " + this.Text, this.Font, textBrush, clientArea, textFormat);
+                graphics.DrawString("   " + Text, Font, textBrush, clientArea, textFormat);
                 //Draw open calendar icon highlight
                 if (droppedDown == true) graphics.FillRectangle(openIconBrush, iconArea);
                 //Draw border 
                 if (borderSize >= 1) graphics.DrawRectangle(penBorder, clientArea.X, clientArea.Y, clientArea.Width, clientArea.Height);
                 //Draw icon
-                graphics.DrawImage(calendarIcon, this.Width - calendarIcon.Width - 9, (this.Height - calendarIcon.Height) / 2);
+                graphics.DrawImage(calendarIcon, Width - calendarIcon.Width - 9, (Height - calendarIcon.Height) / 2);
 
             }
         }
@@ -124,21 +125,21 @@ namespace ISManager.Class
         {
             base.OnHandleCreated(e);
             int iconWidth = GetIconButtonWidth();
-            iconButtonArea = new RectangleF(this.Width - iconWidth, 0, iconWidth, this.Height);
+            iconButtonArea = new RectangleF(Width - iconWidth, 0, iconWidth, Height);
         }
         protected override void OnMouseMove(MouseEventArgs e)
         {
             base.OnMouseMove(e);
             if (iconButtonArea.Contains(e.Location))
-                this.Cursor = Cursors.Hand;
-            else this.Cursor = Cursors.Default;
+                Cursor = Cursors.Hand;
+            else Cursor = Cursors.Default;
         }
 
         //Private methods
         private int GetIconButtonWidth()
         {
-            int textWidh = TextRenderer.MeasureText(this.Text, this.Font).Width;
-            if (textWidh <= this.Width - (calendarIconWidth + 20))
+            int textWidh = TextRenderer.MeasureText(Text, Font).Width;
+            if (textWidh <= Width - (calendarIconWidth + 20))
                 return calendarIconWidth;
             else return arrowIconWidth;
         }

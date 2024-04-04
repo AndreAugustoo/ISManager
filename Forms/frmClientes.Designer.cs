@@ -1,4 +1,6 @@
-﻿namespace ISManager
+﻿using ISManager.Class;
+
+namespace ISManager
 {
     partial class frmClientes
     {
@@ -355,8 +357,8 @@
         private Label label1;
         private Label lblDataFim;
         private Label lblDataInicio;
-        public Class.CustomDatePicker dtpDataFim;
-        public Class.CustomDatePicker dtpDataInicio;
+        public CustomDatePicker dtpDataFim;
+        public CustomDatePicker dtpDataInicio;
         private Label lblRegistroExibido;
     }
 }

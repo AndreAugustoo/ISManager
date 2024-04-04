@@ -20,6 +20,10 @@ namespace ISManager.Class
         private string horas_utilizadas_cliente;
         private string data_fechamento_cliente;
         private string observacao_cliente;
+        private int documentacao_cliente;
+        private int zendesk_cliente;
+        private int pesquisa_cliente;
+
         private Database database;
         public Clientes()
         {
@@ -43,6 +47,9 @@ namespace ISManager.Class
                 ", horas_utilizadas_cliente = '" + this.horas_utilizadas_cliente + "'" +
                 ", data_fechamento_cliente = '" + this.data_fechamento_cliente + "'" +
                 ", observacao_cliente = '" + this.observacao_cliente + "'" +
+                ", documentacao_cliente = '" + this.documentacao_cliente + "'" +
+                ", zendesk_cliente = '" + this.zendesk_cliente + "'" +
+                ", pesquisa_cliente = '" + this.pesquisa_cliente + "'" +
                 " WHERE id_cliente = '" + this.id_cliente + "';");
         }
 
@@ -58,7 +65,10 @@ namespace ISManager.Class
                 ", status_implantacao_cliente" +
                 ", horas_utilizadas_cliente" +
                 ", data_fechamento_cliente" +
-                ", observacao_cliente) " +
+                ", observacao_cliente " +
+                ", documentacao_cliente" +
+                ", zendesk_cliente" +
+                ", pesquisa_cliente) " +
                 "VALUES ('" + this.id_cliente + "'" +
                 ", '" + this.nome_cliente + "'" +
                 ", '" + this.data_entrada_cliente + "'" +
@@ -68,7 +78,10 @@ namespace ISManager.Class
                 ", '" + this.status_implantacao_cliente + "'" +
                 ", '" + this.horas_utilizadas_cliente + "'" +
                 ", '" + this.data_fechamento_cliente + "'" +
-                ", '" + this.observacao_cliente + "');");
+                ", '" + this.observacao_cliente + "'" +
+                ", '" + this.documentacao_cliente + "'" +
+                ", '" + this.zendesk_cliente + "'" +
+                ", '" + this.pesquisa_cliente + "');");
         }
 
         public MySqlDataReader ListarClientes()
@@ -84,6 +97,10 @@ namespace ISManager.Class
                 ", horas_utilizadas_cliente AS 'Horas'" +
                 ", data_fechamento_cliente AS 'Data fechamento'" +
                 ", observacao_cliente AS 'Observação'" +
+                ", tipo_backup_cliente AS 'Backup'" +
+                ", documentacao_cliente AS 'Documentação'" +
+                ", zendesk_cliente AS 'Zendesk'" +
+                ", pesquisa_cliente AS 'Pesquisa'" +
                 "FROM cliente ORDER BY nome_cliente ASC LIMIT 500");
         }
 
@@ -106,6 +123,9 @@ namespace ISManager.Class
                     ", horas_utilizadas_cliente AS 'Horas'" +
                     ", data_fechamento_cliente AS 'Data fechamento'" +
                     ", observacao_cliente AS 'Observação'" +
+                    ", documentacao_cliente AS 'Documentação'" +
+                    ", zendesk_cliente AS 'Zendesk'" +
+                    ", pesquisa_cliente AS 'Pesquisa'" +
                     "FROM cliente WHERE " + campo + " BETWEEN '" + filtro + "' AND '"+ filtro2 + "' ORDER BY nome_cliente ASC LIMIT 500");
             }
             else
@@ -122,6 +142,9 @@ namespace ISManager.Class
                     ", horas_utilizadas_cliente AS 'Horas'" +
                     ", data_fechamento_cliente AS 'Data fechamento'" +
                     ", observacao_cliente AS 'Observação'" +
+                    ", documentacao_cliente AS 'Documentação'" +
+                    ", zendesk_cliente AS 'Zendesk'" +
+                    ", pesquisa_cliente AS 'Pesquisa'" +
                     "FROM cliente WHERE " + campo + " LIKE '%" + filtro + "%' ORDER BY nome_cliente ASC LIMIT 500");
             }
         }
@@ -154,5 +177,9 @@ namespace ISManager.Class
         public string? Horas_utilizadas_cliente { get => horas_utilizadas_cliente; set => horas_utilizadas_cliente = value; }
         public string? Data_fechamento_cliente { get => data_fechamento_cliente; set => data_fechamento_cliente = value; }
         public string? Observacao_cliente { get => observacao_cliente; set => observacao_cliente = value; }
+        public int Documentacao_cliente { get => documentacao_cliente; set => documentacao_cliente = value; }
+        public int Zendesk_cliente { get => zendesk_cliente; set => zendesk_cliente = value; }
+        public int Pesquisa_cliente { get => pesquisa_cliente; set => pesquisa_cliente = value; }
+
     }
 }

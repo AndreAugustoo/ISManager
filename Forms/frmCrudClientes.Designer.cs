@@ -1,4 +1,6 @@
-﻿namespace ISManager.Forms
+﻿using ISManager.Class;
+
+namespace ISManager.Forms
 {
     partial class frmCrudClientes
     {
@@ -588,8 +590,8 @@
         public Panel pnlFormLoader;
         public FontAwesome.Sharp.IconButton btnConfirmar;
         public FontAwesome.Sharp.IconButton btnCancelar;
-        public Class.CustomDatePicker txtDataFechamento;
-        public Class.CustomDatePicker txtDataEntrada;
+        public CustomDatePicker txtDataFechamento;
+        public CustomDatePicker txtDataEntrada;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
         public CheckBox chkDocumentacao;

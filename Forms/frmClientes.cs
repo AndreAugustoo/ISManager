@@ -207,6 +207,9 @@ namespace ISManager
             FrmCrudClientes_Vrb.cbxBackup.Text = linha.Cells["Backup"].Value.ToString();
             FrmCrudClientes_Vrb.txtDataFechamento.Text = linha.Cells["Data fechamento"].Value.ToString();
             FrmCrudClientes_Vrb.txtObservacao.Text = linha.Cells["Observação"].Value.ToString();
+            FrmCrudClientes_Vrb.chkDocumentacao.Checked = Convert.ToBoolean(linha.Cells["Documentação"].Value);
+            FrmCrudClientes_Vrb.chkZendesk.Checked = Convert.ToBoolean(linha.Cells["Zendesk"].Value);
+            FrmCrudClientes_Vrb.chkPesquisa.Checked = Convert.ToBoolean(linha.Cells["Pesquisa"].Value);
 
             FrmCrudClientes_Vrb.txtId.Enabled = false;
         } 

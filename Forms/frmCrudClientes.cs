@@ -34,34 +34,46 @@ namespace ISManager.Forms
             } else if (tipoCrud == 1)
             {
                 // Cadastrar
-                this.clientes = new Clientes();
-                this.clientes.Id_cliente = txtId.Text;
-                this.clientes.Nome_cliente = txtNome.Text;
-                this.clientes.Data_entrada_cliente = txtDataEntrada.Text;
-                this.clientes.Necessidade_cliente = cbxNecessidade.Text;
-                this.clientes.Ism_responsavel_cliente = cbxIsm.Text;
-                this.clientes.Status_implantacao_cliente = cbxStatus.Text;
-                this.clientes.Tipo_backup_cliente = cbxBackup.Text;
-                this.clientes.Horas_utilizadas_cliente = txtHoras.Text;
-                this.clientes.Data_fechamento_cliente = txtDataFechamento.Text;
-                this.clientes.Observacao_cliente = txtObservacao.Text;
+                this.clientes = new Clientes()
+                {
+                    Id_cliente = txtId.Text,
+                    Nome_cliente = txtNome.Text,
+                    Data_entrada_cliente = txtDataEntrada.Text,
+                    Necessidade_cliente = cbxNecessidade.Text,
+                    Ism_responsavel_cliente = cbxIsm.Text,
+                    Status_implantacao_cliente = cbxStatus.Text,
+                    Tipo_backup_cliente = cbxBackup.Text,
+                    Horas_utilizadas_cliente = txtHoras.Text,
+                    Data_fechamento_cliente = txtDataFechamento.Text,
+                    Observacao_cliente = txtObservacao.Text,
+                    Documentacao_cliente = chkDocumentacao.Checked ? 1 : 0,
+                    Zendesk_cliente = chkZendesk.Checked ? 1 : 0,
+                    Pesquisa_cliente = chkPesquisa.Checked ? 1 : 0
+                };
+
                 this.clientes.CadastrarClientes();
                 MessageBox.Show("Cliente cadastrado com sucesso!", "ISManager", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (tipoCrud == 3)
             {
                 // Alterar
-                this.clientes = new Clientes();
-                this.clientes.Id_cliente = txtId.Text;
-                this.clientes.Nome_cliente = txtNome.Text;
-                this.clientes.Data_entrada_cliente = txtDataEntrada.Text;
-                this.clientes.Necessidade_cliente = cbxNecessidade.Text;
-                this.clientes.Ism_responsavel_cliente = cbxIsm.Text;
-                this.clientes.Status_implantacao_cliente = cbxStatus.Text;
-                this.clientes.Tipo_backup_cliente = cbxBackup.Text;
-                this.clientes.Horas_utilizadas_cliente = txtHoras.Text;
-                this.clientes.Data_fechamento_cliente = txtDataFechamento.Text;
-                this.clientes.Observacao_cliente = txtObservacao.Text;
+                this.clientes = new Clientes()
+                {
+                    Id_cliente = txtId.Text,
+                    Nome_cliente = txtNome.Text,
+                    Data_entrada_cliente = txtDataEntrada.Text,
+                    Necessidade_cliente = cbxNecessidade.Text,
+                    Ism_responsavel_cliente = cbxIsm.Text,
+                    Status_implantacao_cliente = cbxStatus.Text,
+                    Tipo_backup_cliente = cbxBackup.Text,
+                    Horas_utilizadas_cliente = txtHoras.Text,
+                    Data_fechamento_cliente = txtDataFechamento.Text,
+                    Observacao_cliente = txtObservacao.Text,
+                    Documentacao_cliente = chkDocumentacao.Checked ? 1 : 0,
+                    Zendesk_cliente = chkZendesk.Checked ? 1 : 0,
+                    Pesquisa_cliente = chkPesquisa.Checked ? 1 : 0
+                };
+
                 this.clientes.AlterarClientes();
                 MessageBox.Show("Cliente alterado com sucesso!", "ISManager", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -69,16 +81,23 @@ namespace ISManager.Forms
             {
                 // Excluir
                 this.clientes = new Clientes();
-                this.clientes.Id_cliente = txtId.Text;
-                this.clientes.Nome_cliente = txtNome.Text;
-                this.clientes.Data_entrada_cliente = txtDataEntrada.Text;
-                this.clientes.Necessidade_cliente = cbxNecessidade.Text;
-                this.clientes.Ism_responsavel_cliente = cbxIsm.Text;
-                this.clientes.Status_implantacao_cliente = cbxStatus.Text;
-                this.clientes.Tipo_backup_cliente = cbxBackup.Text;
-                this.clientes.Horas_utilizadas_cliente = txtHoras.Text;
-                this.clientes.Data_fechamento_cliente = txtDataFechamento.Text;
-                this.clientes.Observacao_cliente = txtObservacao.Text;
+                this.clientes = new Clientes()
+                {
+                    Id_cliente = txtId.Text,
+                    Nome_cliente = txtNome.Text,
+                    Data_entrada_cliente = txtDataEntrada.Text,
+                    Necessidade_cliente = cbxNecessidade.Text,
+                    Ism_responsavel_cliente = cbxIsm.Text,
+                    Status_implantacao_cliente = cbxStatus.Text,
+                    Tipo_backup_cliente = cbxBackup.Text,
+                    Horas_utilizadas_cliente = txtHoras.Text,
+                    Data_fechamento_cliente = txtDataFechamento.Text,
+                    Observacao_cliente = txtObservacao.Text,
+                    Documentacao_cliente = chkDocumentacao.Checked ? 1 : 0,
+                    Zendesk_cliente = chkZendesk.Checked ? 1 : 0,
+                    Pesquisa_cliente = chkPesquisa.Checked ? 1 : 0
+                };
+
                 this.clientes.ExcluirClientes();
                 MessageBox.Show("Cliente excluído com sucesso!", "ISManager", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
