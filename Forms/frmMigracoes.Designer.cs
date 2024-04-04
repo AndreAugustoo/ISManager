@@ -240,7 +240,7 @@
             FormBorderStyle = FormBorderStyle.None;
             MinimumSize = new Size(1114, 639);
             Name = "frmMigracoes";
-            Text = "Migracoes";
+            Text = "Migrações";
             pnlMigracoes.ResumeLayout(false);
             pnlMigracoes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dtGridMigracoes).EndInit();

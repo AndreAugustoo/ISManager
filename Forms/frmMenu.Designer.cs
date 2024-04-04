@@ -40,6 +40,7 @@
             lblSubNome = new Label();
             btnHome = new PictureBox();
             panelDesktop = new Panel();
+            label3 = new Label();
             label2 = new Label();
             label1 = new Label();
             gbxConexaoBanco = new GroupBox();
@@ -228,6 +229,7 @@
             // panelDesktop
             // 
             panelDesktop.BackColor = Color.FromArgb(46, 51, 73);
+            panelDesktop.Controls.Add(label3);
             panelDesktop.Controls.Add(label2);
             panelDesktop.Controls.Add(label1);
             panelDesktop.Controls.Add(gbxConexaoBanco);
@@ -236,6 +238,17 @@
             panelDesktop.Name = "panelDesktop";
             panelDesktop.Size = new Size(1114, 639);
             panelDesktop.TabIndex = 4;
+            // 
+            // label3
+            // 
+            label3.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            label3.ForeColor = Color.Silver;
+            label3.Location = new Point(763, 564);
+            label3.Name = "label3";
+            label3.Size = new Size(267, 34);
+            label3.TabIndex = 5;
+            label3.Text = "Desenvolvido por: André Oliveira";
+            label3.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
@@ -484,7 +497,7 @@
             // 
             // lblTitleChildForm
             // 
-            lblTitleChildForm.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblTitleChildForm.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             lblTitleChildForm.ForeColor = Color.White;
             lblTitleChildForm.Location = new Point(53, 16);
             lblTitleChildForm.Name = "lblTitleChildForm";
@@ -581,5 +594,6 @@
         private Label lblHost;
         private Label label2;
         private Label label1;
+        private Label label3;
     }
 }

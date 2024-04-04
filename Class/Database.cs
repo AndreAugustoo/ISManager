@@ -29,6 +29,7 @@ namespace ISManager.Class
             try
             {
                 Conectar();
+
             }
             catch (Exception ex)
             {
