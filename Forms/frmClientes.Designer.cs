@@ -55,9 +55,9 @@ namespace ISManager
             // txtFiltro
             // 
             txtFiltro.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtFiltro.BackColor = Color.FromArgb(46, 51, 73);
+            txtFiltro.BackColor = Color.White;
             txtFiltro.Font = new Font("Segoe UI", 14F);
-            txtFiltro.ForeColor = Color.White;
+            txtFiltro.ForeColor = Color.FromArgb(57, 57, 57);
             txtFiltro.Location = new Point(214, 30);
             txtFiltro.Name = "txtFiltro";
             txtFiltro.PlaceholderText = "  Filtro";
@@ -69,7 +69,7 @@ namespace ISManager
             lblNumeroRegistro.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblNumeroRegistro.AutoSize = true;
             lblNumeroRegistro.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNumeroRegistro.ForeColor = Color.FromArgb(158, 161, 176);
+            lblNumeroRegistro.ForeColor = Color.FromArgb(57, 57, 57);
             lblNumeroRegistro.Location = new Point(43, 596);
             lblNumeroRegistro.Name = "lblNumeroRegistro";
             lblNumeroRegistro.Size = new Size(208, 20);
@@ -79,10 +79,9 @@ namespace ISManager
             // cbxFiltro
             // 
             cbxFiltro.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            cbxFiltro.BackColor = Color.FromArgb(46, 51, 73);
-            cbxFiltro.FlatStyle = FlatStyle.Flat;
+            cbxFiltro.BackColor = Color.White;
             cbxFiltro.Font = new Font("Segoe UI", 13F);
-            cbxFiltro.ForeColor = Color.FromArgb(188, 191, 206);
+            cbxFiltro.ForeColor = Color.FromArgb(57, 57, 57);
             cbxFiltro.FormattingEnabled = true;
             cbxFiltro.IntegralHeight = false;
             cbxFiltro.ItemHeight = 23;
@@ -96,6 +95,7 @@ namespace ISManager
             // 
             // pnlClientes
             // 
+            pnlClientes.BackColor = Color.White;
             pnlClientes.Controls.Add(lblRegistroExibido);
             pnlClientes.Controls.Add(lblDataFim);
             pnlClientes.Controls.Add(lblDataInicio);
@@ -121,7 +121,7 @@ namespace ISManager
             lblRegistroExibido.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblRegistroExibido.AutoSize = true;
             lblRegistroExibido.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblRegistroExibido.ForeColor = Color.FromArgb(158, 161, 176);
+            lblRegistroExibido.ForeColor = Color.FromArgb(57, 57, 57);
             lblRegistroExibido.Location = new Point(409, 596);
             lblRegistroExibido.Name = "lblRegistroExibido";
             lblRegistroExibido.Size = new Size(233, 20);
@@ -133,7 +133,7 @@ namespace ISManager
             lblDataFim.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblDataFim.AutoSize = true;
             lblDataFim.Font = new Font("Segoe UI", 14F);
-            lblDataFim.ForeColor = Color.White;
+            lblDataFim.ForeColor = Color.FromArgb(57, 57, 57);
             lblDataFim.Location = new Point(422, 32);
             lblDataFim.Name = "lblDataFim";
             lblDataFim.Size = new Size(38, 25);
@@ -145,7 +145,7 @@ namespace ISManager
             lblDataInicio.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblDataInicio.AutoSize = true;
             lblDataInicio.Font = new Font("Segoe UI", 14F);
-            lblDataInicio.ForeColor = Color.White;
+            lblDataInicio.ForeColor = Color.FromArgb(57, 57, 57);
             lblDataInicio.Location = new Point(207, 32);
             lblDataInicio.Name = "lblDataInicio";
             lblDataInicio.Size = new Size(81, 25);
@@ -155,7 +155,7 @@ namespace ISManager
             // dtpDataFim
             // 
             dtpDataFim.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dtpDataFim.BorderColor = Color.White;
+            dtpDataFim.BorderColor = Color.FromArgb(57, 57, 57);
             dtpDataFim.BorderSize = 1;
             dtpDataFim.CalendarFont = new Font("Segoe UI", 11F);
             dtpDataFim.CustomFormat = "yyyy-MM-dd";
@@ -165,14 +165,14 @@ namespace ISManager
             dtpDataFim.MinimumSize = new Size(0, 35);
             dtpDataFim.Name = "dtpDataFim";
             dtpDataFim.Size = new Size(120, 35);
-            dtpDataFim.SkinColor = Color.FromArgb(46, 51, 73);
+            dtpDataFim.SkinColor = Color.White;
             dtpDataFim.TabIndex = 10;
-            dtpDataFim.TextColor = Color.White;
+            dtpDataFim.TextColor = Color.FromArgb(57, 57, 57);
             // 
             // dtpDataInicio
             // 
             dtpDataInicio.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dtpDataInicio.BorderColor = Color.White;
+            dtpDataInicio.BorderColor = Color.FromArgb(57, 57, 57);
             dtpDataInicio.BorderSize = 1;
             dtpDataInicio.CalendarFont = new Font("Segoe UI", 11F);
             dtpDataInicio.CustomFormat = "yyyy-MM-dd";
@@ -182,16 +182,16 @@ namespace ISManager
             dtpDataInicio.MinimumSize = new Size(0, 35);
             dtpDataInicio.Name = "dtpDataInicio";
             dtpDataInicio.Size = new Size(122, 35);
-            dtpDataInicio.SkinColor = Color.FromArgb(46, 51, 73);
+            dtpDataInicio.SkinColor = Color.White;
             dtpDataInicio.TabIndex = 9;
-            dtpDataInicio.TextColor = Color.White;
+            dtpDataInicio.TextColor = Color.FromArgb(57, 57, 57);
             // 
             // label1
             // 
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(158, 161, 176);
+            label1.ForeColor = Color.FromArgb(57, 57, 57);
             label1.Location = new Point(792, 596);
             label1.Name = "label1";
             label1.Size = new Size(275, 20);
@@ -204,9 +204,9 @@ namespace ISManager
             btnFiltrar.BackColor = Color.Silver;
             btnFiltrar.FlatStyle = FlatStyle.Flat;
             btnFiltrar.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnFiltrar.ForeColor = Color.FromArgb(46, 51, 73);
+            btnFiltrar.ForeColor = Color.FromArgb(57, 57, 57);
             btnFiltrar.IconChar = FontAwesome.Sharp.IconChar.Filter;
-            btnFiltrar.IconColor = Color.FromArgb(46, 51, 73);
+            btnFiltrar.IconColor = Color.FromArgb(57, 57, 57);
             btnFiltrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnFiltrar.IconSize = 30;
             btnFiltrar.ImageAlign = ContentAlignment.MiddleRight;
@@ -225,9 +225,9 @@ namespace ISManager
             btnExcluir.BackColor = Color.IndianRed;
             btnExcluir.FlatStyle = FlatStyle.Flat;
             btnExcluir.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnExcluir.ForeColor = Color.FromArgb(46, 51, 73);
+            btnExcluir.ForeColor = Color.FromArgb(57, 57, 57);
             btnExcluir.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            btnExcluir.IconColor = Color.FromArgb(46, 51, 73);
+            btnExcluir.IconColor = Color.FromArgb(57, 57, 57);
             btnExcluir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnExcluir.IconSize = 28;
             btnExcluir.ImageAlign = ContentAlignment.MiddleRight;
@@ -246,9 +246,9 @@ namespace ISManager
             btnAlterar.BackColor = Color.LightSteelBlue;
             btnAlterar.FlatStyle = FlatStyle.Flat;
             btnAlterar.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAlterar.ForeColor = Color.FromArgb(46, 51, 73);
+            btnAlterar.ForeColor = Color.FromArgb(57, 57, 57);
             btnAlterar.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
-            btnAlterar.IconColor = Color.FromArgb(46, 51, 73);
+            btnAlterar.IconColor = Color.FromArgb(57, 57, 57);
             btnAlterar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnAlterar.IconSize = 30;
             btnAlterar.ImageAlign = ContentAlignment.MiddleRight;
@@ -267,9 +267,9 @@ namespace ISManager
             btnCadastrar.BackColor = Color.SeaGreen;
             btnCadastrar.FlatStyle = FlatStyle.Flat;
             btnCadastrar.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCadastrar.ForeColor = Color.FromArgb(46, 51, 73);
+            btnCadastrar.ForeColor = Color.FromArgb(57, 57, 57);
             btnCadastrar.IconChar = FontAwesome.Sharp.IconChar.FileCirclePlus;
-            btnCadastrar.IconColor = Color.FromArgb(46, 51, 73);
+            btnCadastrar.IconColor = Color.FromArgb(57, 57, 57);
             btnCadastrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnCadastrar.IconSize = 30;
             btnCadastrar.ImageAlign = ContentAlignment.MiddleRight;
@@ -290,7 +290,7 @@ namespace ISManager
             dtGridClientes.AllowUserToResizeRows = false;
             dtGridClientes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dtGridClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dtGridClientes.BackgroundColor = Color.FromArgb(46, 51, 73);
+            dtGridClientes.BackgroundColor = Color.White;
             dtGridClientes.BorderStyle = BorderStyle.None;
             dtGridClientes.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dtGridClientes.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;

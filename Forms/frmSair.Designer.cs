@@ -35,8 +35,9 @@
             // lblSair
             // 
             lblSair.AutoSize = true;
+            lblSair.BackColor = Color.Transparent;
             lblSair.Font = new Font("Segoe UI", 21F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblSair.ForeColor = Color.White;
+            lblSair.ForeColor = Color.FromArgb(57, 57, 57);
             lblSair.Location = new Point(430, 218);
             lblSair.Name = "lblSair";
             lblSair.Size = new Size(252, 76);
@@ -48,9 +49,9 @@
             btnSair.BackColor = Color.IndianRed;
             btnSair.FlatStyle = FlatStyle.Flat;
             btnSair.Font = new Font("Segoe UI", 15.25F, FontStyle.Bold);
-            btnSair.ForeColor = Color.FromArgb(46, 51, 73);
+            btnSair.ForeColor = Color.FromArgb(57, 57, 57);
             btnSair.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket;
-            btnSair.IconColor = Color.FromArgb(46, 51, 73);
+            btnSair.IconColor = Color.FromArgb(57, 57, 57);
             btnSair.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnSair.IconSize = 30;
             btnSair.ImageAlign = ContentAlignment.MiddleRight;
@@ -67,7 +68,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(46, 51, 73);
+            BackColor = Color.White;
             ClientSize = new Size(1114, 639);
             Controls.Add(btnSair);
             Controls.Add(lblSair);

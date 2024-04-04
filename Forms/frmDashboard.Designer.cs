@@ -74,9 +74,10 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
             label2.FlatStyle = FlatStyle.Flat;
             label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.White;
+            label2.ForeColor = Color.FromArgb(57, 57, 57);
             label2.Location = new Point(19, 13);
             label2.Name = "label2";
             label2.Size = new Size(52, 25);
@@ -119,7 +120,7 @@
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.AutoSize = true;
-            panel1.BackColor = Color.FromArgb(37, 42, 64);
+            panel1.BackColor = Color.White;
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(label2);
@@ -133,7 +134,7 @@
             // 
             panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel2.AutoSize = true;
-            panel2.BackColor = Color.FromArgb(37, 42, 64);
+            panel2.BackColor = Color.White;
             panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(label1);
             panel2.Controls.Add(label3);
@@ -167,9 +168,10 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
             label3.FlatStyle = FlatStyle.Flat;
             label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.White;
+            label3.ForeColor = Color.FromArgb(57, 57, 57);
             label3.Location = new Point(19, 13);
             label3.Name = "label3";
             label3.Size = new Size(108, 25);
@@ -202,7 +204,7 @@
             // 
             panel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel3.AutoSize = true;
-            panel3.BackColor = Color.FromArgb(37, 42, 64);
+            panel3.BackColor = Color.White;
             panel3.Controls.Add(pictureBox3);
             panel3.Controls.Add(label7);
             panel3.Controls.Add(label8);
@@ -236,9 +238,10 @@
             // label8
             // 
             label8.AutoSize = true;
+            label8.BackColor = Color.Transparent;
             label8.FlatStyle = FlatStyle.Flat;
             label8.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.ForeColor = Color.White;
+            label8.ForeColor = Color.FromArgb(57, 57, 57);
             label8.Location = new Point(19, 13);
             label8.Name = "label8";
             label8.Size = new Size(105, 25);
@@ -260,7 +263,7 @@
             // 
             panel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel4.AutoSize = true;
-            panel4.BackColor = Color.FromArgb(37, 42, 64);
+            panel4.BackColor = Color.White;
             panel4.Controls.Add(label5);
             panel4.Controls.Add(label9);
             panel4.Location = new Point(95, 236);
@@ -282,9 +285,10 @@
             // label9
             // 
             label9.AutoSize = true;
+            label9.BackColor = Color.Transparent;
             label9.FlatStyle = FlatStyle.Flat;
             label9.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.ForeColor = Color.White;
+            label9.ForeColor = Color.FromArgb(57, 57, 57);
             label9.Location = new Point(19, 13);
             label9.Name = "label9";
             label9.Size = new Size(88, 25);
@@ -295,7 +299,7 @@
             // 
             panel5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel5.AutoSize = true;
-            panel5.BackColor = Color.FromArgb(37, 42, 64);
+            panel5.BackColor = Color.White;
             panel5.Controls.Add(label11);
             panel5.Controls.Add(label12);
             panel5.Location = new Point(328, 236);
@@ -317,9 +321,10 @@
             // label12
             // 
             label12.AutoSize = true;
+            label12.BackColor = Color.Transparent;
             label12.FlatStyle = FlatStyle.Flat;
             label12.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label12.ForeColor = Color.White;
+            label12.ForeColor = Color.FromArgb(57, 57, 57);
             label12.Location = new Point(19, 13);
             label12.Name = "label12";
             label12.Size = new Size(88, 25);
@@ -330,7 +335,7 @@
             // 
             panel6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel6.AutoSize = true;
-            panel6.BackColor = Color.FromArgb(37, 42, 64);
+            panel6.BackColor = Color.White;
             panel6.Controls.Add(pictureBox4);
             panel6.Controls.Add(label10);
             panel6.Controls.Add(label13);
@@ -364,9 +369,10 @@
             // label13
             // 
             label13.AutoSize = true;
+            label13.BackColor = Color.Transparent;
             label13.FlatStyle = FlatStyle.Flat;
             label13.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label13.ForeColor = Color.White;
+            label13.ForeColor = Color.FromArgb(57, 57, 57);
             label13.Location = new Point(19, 13);
             label13.Name = "label13";
             label13.Size = new Size(139, 25);
@@ -377,7 +383,7 @@
             // 
             panel7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel7.AutoSize = true;
-            panel7.BackColor = Color.FromArgb(37, 42, 64);
+            panel7.BackColor = Color.White;
             panel7.Controls.Add(label15);
             panel7.Controls.Add(label16);
             panel7.Location = new Point(794, 236);
@@ -399,9 +405,10 @@
             // label16
             // 
             label16.AutoSize = true;
+            label16.BackColor = Color.Transparent;
             label16.FlatStyle = FlatStyle.Flat;
             label16.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label16.ForeColor = Color.White;
+            label16.ForeColor = Color.FromArgb(57, 57, 57);
             label16.Location = new Point(19, 13);
             label16.Name = "label16";
             label16.Size = new Size(88, 25);
@@ -412,7 +419,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(46, 51, 73);
+            BackColor = Color.FromArgb(241, 243, 244);
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(1114, 639);
             Controls.Add(panel7);

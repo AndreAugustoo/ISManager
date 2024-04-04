@@ -4,14 +4,6 @@ using ISManager.Forms;
 using MySql.Data.MySqlClient;
 using System.Runtime.InteropServices;
 
-
-                /* COLORS
-                formBackColor: 46; 51; 73
-                Primary: 24; 30; 54
-                Secundary: 0; 126; 249
-                txt: 158; 161; 176
-                */
-
 namespace ISManager
 {
     public partial class frmMenu : Form
@@ -40,9 +32,9 @@ namespace ISManager
         }
         private struct RGBColors
         {
-            //public static Color color1 = Color.FromArgb(158, 161, 176);
-            public static Color color1 = Color.White;
-            //public static Color color1 = Color.Coral;
+            public static Color activeForeColor = Color.FromArgb(82, 67, 254);
+            /*public static Color defaultBackColor = Color.FromArgb(24, 30, 54);
+            public static Color selectedBackColor = Color.FromArgb(46, 51, 73);*/
         }
         private void ActivateButton(object senderBtn, Color color)
         {
@@ -51,7 +43,7 @@ namespace ISManager
                 DisableButton();
                 //Button
                 currentBtn = (IconButton)senderBtn;
-                currentBtn.BackColor = Color.FromArgb(37, 36, 81);
+                currentBtn.BackColor = Color.White;
                 currentBtn.ForeColor = color;
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
                 currentBtn.IconColor = color;
@@ -71,10 +63,10 @@ namespace ISManager
         {
             if (currentBtn != null)
             {
-                currentBtn.BackColor = Color.FromArgb(24, 30, 54);
-                currentBtn.ForeColor = Color.White;
+                currentBtn.BackColor = Color.White;
+                currentBtn.ForeColor = Color.FromArgb(57, 57, 57);
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
-                currentBtn.IconColor = Color.White;
+                currentBtn.IconColor = Color.FromArgb(57, 57, 57);
                 currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
@@ -107,28 +99,28 @@ namespace ISManager
         }
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
+            ActivateButton(sender, RGBColors.activeForeColor);
             lblTitleChildForm.Text = "Dashboard";
             OpenChildForm(new frmDashboard());
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
+            ActivateButton(sender, RGBColors.activeForeColor);
             lblTitleChildForm.Text = "Implantações";
             OpenChildForm(new frmClientes());
         }
 
         private void btnMigracoes_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
+            ActivateButton(sender, RGBColors.activeForeColor);
             lblTitleChildForm.Text = "Migrações";
             OpenChildForm(new frmMigracoes());
         }
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
+            ActivateButton(sender, RGBColors.activeForeColor);
             lblTitleChildForm.Text = "Sair";
             OpenChildForm(new frmSair());
         }

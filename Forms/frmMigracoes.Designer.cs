@@ -47,6 +47,7 @@
             // 
             // pnlMigracoes
             // 
+            pnlMigracoes.BackColor = Color.White;
             pnlMigracoes.Controls.Add(label1);
             pnlMigracoes.Controls.Add(btnFiltrar);
             pnlMigracoes.Controls.Add(btnExcluir);
@@ -66,7 +67,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(158, 161, 176);
+            label1.ForeColor = Color.FromArgb(57, 57, 57);
             label1.Location = new Point(793, 594);
             label1.Name = "label1";
             label1.Size = new Size(275, 20);
@@ -78,9 +79,9 @@
             btnFiltrar.BackColor = Color.Silver;
             btnFiltrar.FlatStyle = FlatStyle.Flat;
             btnFiltrar.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnFiltrar.ForeColor = Color.FromArgb(46, 51, 73);
+            btnFiltrar.ForeColor = Color.FromArgb(57, 57, 57);
             btnFiltrar.IconChar = FontAwesome.Sharp.IconChar.Filter;
-            btnFiltrar.IconColor = Color.FromArgb(46, 51, 73);
+            btnFiltrar.IconColor = Color.FromArgb(57, 57, 57);
             btnFiltrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnFiltrar.IconSize = 30;
             btnFiltrar.ImageAlign = ContentAlignment.MiddleRight;
@@ -97,9 +98,9 @@
             btnExcluir.BackColor = Color.IndianRed;
             btnExcluir.FlatStyle = FlatStyle.Flat;
             btnExcluir.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnExcluir.ForeColor = Color.FromArgb(46, 51, 73);
+            btnExcluir.ForeColor = Color.FromArgb(57, 57, 57);
             btnExcluir.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            btnExcluir.IconColor = Color.FromArgb(46, 51, 73);
+            btnExcluir.IconColor = Color.FromArgb(57, 57, 57);
             btnExcluir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnExcluir.IconSize = 28;
             btnExcluir.ImageAlign = ContentAlignment.MiddleRight;
@@ -116,9 +117,9 @@
             btnAlterar.BackColor = Color.LightSteelBlue;
             btnAlterar.FlatStyle = FlatStyle.Flat;
             btnAlterar.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAlterar.ForeColor = Color.FromArgb(46, 51, 73);
+            btnAlterar.ForeColor = Color.FromArgb(57, 57, 57);
             btnAlterar.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
-            btnAlterar.IconColor = Color.FromArgb(46, 51, 73);
+            btnAlterar.IconColor = Color.FromArgb(57, 57, 57);
             btnAlterar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnAlterar.IconSize = 30;
             btnAlterar.ImageAlign = ContentAlignment.MiddleRight;
@@ -135,9 +136,9 @@
             btnCadastrar.BackColor = Color.SeaGreen;
             btnCadastrar.FlatStyle = FlatStyle.Flat;
             btnCadastrar.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCadastrar.ForeColor = Color.FromArgb(46, 51, 73);
+            btnCadastrar.ForeColor = Color.FromArgb(57, 57, 57);
             btnCadastrar.IconChar = FontAwesome.Sharp.IconChar.FileCirclePlus;
-            btnCadastrar.IconColor = Color.FromArgb(46, 51, 73);
+            btnCadastrar.IconColor = Color.FromArgb(57, 57, 57);
             btnCadastrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnCadastrar.IconSize = 30;
             btnCadastrar.ImageAlign = ContentAlignment.MiddleRight;
@@ -151,15 +152,14 @@
             // 
             // cbxFiltro
             // 
-            cbxFiltro.BackColor = Color.FromArgb(46, 51, 73);
-            cbxFiltro.FlatStyle = FlatStyle.Flat;
+            cbxFiltro.BackColor = Color.White;
             cbxFiltro.Font = new Font("Segoe UI", 13F);
-            cbxFiltro.ForeColor = Color.FromArgb(188, 191, 206);
+            cbxFiltro.ForeColor = Color.FromArgb(57, 57, 57);
             cbxFiltro.FormattingEnabled = true;
             cbxFiltro.IntegralHeight = false;
             cbxFiltro.ItemHeight = 23;
             cbxFiltro.Items.AddRange(new object[] { "ID", "Nome", "Status" });
-            cbxFiltro.Location = new Point(47, 29);
+            cbxFiltro.Location = new Point(44, 27);
             cbxFiltro.Name = "cbxFiltro";
             cbxFiltro.Size = new Size(104, 31);
             cbxFiltro.TabIndex = 0;
@@ -169,7 +169,7 @@
             // 
             lblNumeroRegistro.AutoSize = true;
             lblNumeroRegistro.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNumeroRegistro.ForeColor = Color.FromArgb(158, 161, 176);
+            lblNumeroRegistro.ForeColor = Color.FromArgb(57, 57, 57);
             lblNumeroRegistro.Location = new Point(44, 594);
             lblNumeroRegistro.Name = "lblNumeroRegistro";
             lblNumeroRegistro.Size = new Size(262, 20);
@@ -178,13 +178,13 @@
             // 
             // txtFiltro
             // 
-            txtFiltro.BackColor = Color.FromArgb(46, 51, 73);
+            txtFiltro.BackColor = Color.White;
             txtFiltro.Font = new Font("Segoe UI", 14F);
-            txtFiltro.ForeColor = Color.White;
-            txtFiltro.Location = new Point(167, 29);
+            txtFiltro.ForeColor = Color.FromArgb(57, 57, 57);
+            txtFiltro.Location = new Point(166, 25);
             txtFiltro.Name = "txtFiltro";
             txtFiltro.PlaceholderText = "  Filtro";
-            txtFiltro.Size = new Size(262, 32);
+            txtFiltro.Size = new Size(418, 32);
             txtFiltro.TabIndex = 1;
             // 
             // dtGridMigracoes
@@ -194,7 +194,7 @@
             dtGridMigracoes.AllowUserToOrderColumns = true;
             dtGridMigracoes.AllowUserToResizeRows = false;
             dtGridMigracoes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dtGridMigracoes.BackgroundColor = Color.FromArgb(46, 51, 73);
+            dtGridMigracoes.BackgroundColor = Color.White;
             dtGridMigracoes.BorderStyle = BorderStyle.None;
             dtGridMigracoes.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dtGridMigracoes.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
