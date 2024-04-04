@@ -111,8 +111,9 @@ namespace ISManager
             pnlClientes.Controls.Add(lblNumeroRegistro);
             pnlClientes.Controls.Add(txtFiltro);
             pnlClientes.Controls.Add(dtGridClientes);
-            pnlClientes.Location = new Point(1, 1);
-            pnlClientes.MinimumSize = new Size(1114, 640);
+            pnlClientes.Dock = DockStyle.Fill;
+            pnlClientes.Location = new Point(0, 0);
+            pnlClientes.MinimumSize = new Size(1114, 639);
             pnlClientes.Name = "pnlClientes";
             pnlClientes.Size = new Size(1114, 640);
             pnlClientes.TabIndex = 14;
@@ -305,7 +306,7 @@ namespace ISManager
             dtGridClientes.ColumnHeadersHeight = 30;
             dtGridClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(241, 243, 244);
+            dataGridViewCellStyle2.BackColor = Color.Gainsboro;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
             dataGridViewCellStyle2.ForeColor = Color.FromArgb(57, 57, 57);
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
@@ -340,7 +341,8 @@ namespace ISManager
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(46, 51, 73);
+            AutoSize = true;
+            BackColor = Color.White;
             ClientSize = new Size(1113, 640);
             Controls.Add(pnlClientes);
             FormBorderStyle = FormBorderStyle.None;

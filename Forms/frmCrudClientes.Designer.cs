@@ -30,6 +30,7 @@ namespace ISManager.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCrudClientes));
             lblObservacao = new Label();
             lblDataFechamento = new Label();
             lblHoras = new Label();
@@ -326,7 +327,7 @@ namespace ISManager.Forms
             chkOpcao3.FlatStyle = FlatStyle.Flat;
             chkOpcao3.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             chkOpcao3.ForeColor = Color.FromArgb(57, 57, 57);
-            chkOpcao3.Image = Properties.Resources._unchecked;
+            chkOpcao3.Image = (Image)resources.GetObject("chkOpcao3.Image");
             chkOpcao3.Location = new Point(37, 493);
             chkOpcao3.Name = "chkOpcao3";
             chkOpcao3.Size = new Size(131, 35);
@@ -349,7 +350,7 @@ namespace ISManager.Forms
             chkPesquisa.FlatStyle = FlatStyle.Flat;
             chkPesquisa.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             chkPesquisa.ForeColor = Color.FromArgb(57, 57, 57);
-            chkPesquisa.Image = Properties.Resources._unchecked;
+            chkPesquisa.Image = (Image)resources.GetObject("chkPesquisa.Image");
             chkPesquisa.Location = new Point(37, 225);
             chkPesquisa.Name = "chkPesquisa";
             chkPesquisa.Size = new Size(134, 35);
@@ -372,7 +373,7 @@ namespace ISManager.Forms
             chkOpcao2.FlatStyle = FlatStyle.Flat;
             chkOpcao2.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             chkOpcao2.ForeColor = Color.FromArgb(57, 57, 57);
-            chkOpcao2.Image = Properties.Resources._unchecked;
+            chkOpcao2.Image = (Image)resources.GetObject("chkOpcao2.Image");
             chkOpcao2.Location = new Point(37, 402);
             chkOpcao2.Name = "chkOpcao2";
             chkOpcao2.Size = new Size(131, 35);
@@ -395,7 +396,7 @@ namespace ISManager.Forms
             chkDocumentacao.FlatStyle = FlatStyle.Flat;
             chkDocumentacao.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             chkDocumentacao.ForeColor = Color.FromArgb(57, 57, 57);
-            chkDocumentacao.Image = Properties.Resources._unchecked;
+            chkDocumentacao.Image = (Image)resources.GetObject("chkDocumentacao.Image");
             chkDocumentacao.Location = new Point(37, 135);
             chkDocumentacao.Name = "chkDocumentacao";
             chkDocumentacao.Size = new Size(192, 35);
@@ -418,7 +419,7 @@ namespace ISManager.Forms
             chkOpcao1.FlatStyle = FlatStyle.Flat;
             chkOpcao1.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             chkOpcao1.ForeColor = Color.FromArgb(57, 57, 57);
-            chkOpcao1.Image = Properties.Resources._unchecked;
+            chkOpcao1.Image = (Image)resources.GetObject("chkOpcao1.Image");
             chkOpcao1.Location = new Point(37, 312);
             chkOpcao1.Name = "chkOpcao1";
             chkOpcao1.Size = new Size(131, 35);
@@ -441,7 +442,7 @@ namespace ISManager.Forms
             chkZendesk.FlatStyle = FlatStyle.Flat;
             chkZendesk.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             chkZendesk.ForeColor = Color.FromArgb(57, 57, 57);
-            chkZendesk.Image = Properties.Resources._unchecked;
+            chkZendesk.Image = (Image)resources.GetObject("chkZendesk.Image");
             chkZendesk.Location = new Point(37, 48);
             chkZendesk.Name = "chkZendesk";
             chkZendesk.Size = new Size(133, 35);
