@@ -38,6 +38,7 @@
             lblNome = new Label();
             lblSubNome = new Label();
             btnHome = new PictureBox();
+            tgbChangeTheme = new Class.CustomToggleButton();
             panelDesktop = new Panel();
             label3 = new Label();
             label2 = new Label();
@@ -214,6 +215,21 @@
             btnHome.TabIndex = 0;
             btnHome.TabStop = false;
             btnHome.Click += btnHome_Click;
+            // 
+            // tgbChangeTheme
+            // 
+            tgbChangeTheme.AutoSize = true;
+            tgbChangeTheme.Location = new Point(973, 6);
+            tgbChangeTheme.MinimumSize = new Size(45, 22);
+            tgbChangeTheme.Name = "tgbChangeTheme";
+            tgbChangeTheme.OffBackColor = Color.FromArgb(57, 57, 57);
+            tgbChangeTheme.OffToggleColor = Color.Gainsboro;
+            tgbChangeTheme.OnBackColor = Color.Gainsboro;
+            tgbChangeTheme.OnToggleColor = Color.White;
+            tgbChangeTheme.Size = new Size(45, 22);
+            tgbChangeTheme.TabIndex = 8;
+            tgbChangeTheme.UseVisualStyleBackColor = true;
+            tgbChangeTheme.CheckedChanged += tgbChangeTheme_CheckedChanged;
             // 
             // panelDesktop
             // 
@@ -436,6 +452,7 @@
             // 
             panelTitleBar.BackColor = Color.White;
             panelTitleBar.Controls.Add(btnMinimaze);
+            panelTitleBar.Controls.Add(tgbChangeTheme);
             panelTitleBar.Controls.Add(btnMaximaze);
             panelTitleBar.Controls.Add(btnClose);
             panelTitleBar.Controls.Add(lblTitleChildForm);
@@ -553,6 +570,7 @@
             gbxConexaoBanco.ResumeLayout(false);
             gbxConexaoBanco.PerformLayout();
             panelTitleBar.ResumeLayout(false);
+            panelTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)btnMinimaze).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnMaximaze).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnClose).EndInit();
@@ -596,5 +614,6 @@
         private Label label2;
         private Label label1;
         private Label label3;
+        public Class.CustomToggleButton tgbChangeTheme;
     }
 }

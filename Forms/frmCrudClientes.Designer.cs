@@ -62,6 +62,7 @@ namespace ISManager.Forms
             txtDataEntrada = new CustomDatePicker();
             btnCancelar = new FontAwesome.Sharp.IconButton();
             btnConfirmar = new FontAwesome.Sharp.IconButton();
+            panel1 = new Panel();
             pnlFormLoader.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -289,6 +290,7 @@ namespace ISManager.Forms
             pnlFormLoader.BackColor = Color.White;
             pnlFormLoader.Controls.Add(groupBox2);
             pnlFormLoader.Controls.Add(groupBox1);
+            pnlFormLoader.Controls.Add(panel1);
             pnlFormLoader.Dock = DockStyle.Fill;
             pnlFormLoader.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
             pnlFormLoader.ForeColor = Color.FromArgb(57, 57, 57);
@@ -559,6 +561,14 @@ namespace ISManager.Forms
             btnConfirmar.UseVisualStyleBackColor = false;
             btnConfirmar.Click += btnConfirmar_Click;
             // 
+            // panel1
+            // 
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1114, 639);
+            panel1.TabIndex = 67;
+            // 
             // frmCrudClientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -612,5 +622,6 @@ namespace ISManager.Forms
         public CheckBox chkOpcao1;
         public CheckBox chkOpcao2;
         public CheckBox chkOpcao3;
+        private Panel panel1;
     }
 }

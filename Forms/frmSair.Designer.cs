@@ -30,6 +30,7 @@
         {
             lblSair = new Label();
             btnSair = new FontAwesome.Sharp.IconButton();
+            panelSair = new Panel();
             SuspendLayout();
             // 
             // lblSair
@@ -64,6 +65,14 @@
             btnSair.UseVisualStyleBackColor = false;
             btnSair.Click += btnSair_Click;
             // 
+            // panelSair
+            // 
+            panelSair.Dock = DockStyle.Fill;
+            panelSair.Location = new Point(0, 0);
+            panelSair.Name = "panelSair";
+            panelSair.Size = new Size(1114, 639);
+            panelSair.TabIndex = 16;
+            // 
             // frmSair
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -72,6 +81,7 @@
             ClientSize = new Size(1114, 639);
             Controls.Add(btnSair);
             Controls.Add(lblSair);
+            Controls.Add(panelSair);
             FormBorderStyle = FormBorderStyle.None;
             MinimumSize = new Size(1114, 639);
             Name = "frmSair";
@@ -84,5 +94,6 @@
         #endregion
         private Label lblSair;
         private FontAwesome.Sharp.IconButton btnSair;
+        private Panel panelSair;
     }
 }
