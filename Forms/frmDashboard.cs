@@ -51,6 +51,11 @@ namespace ISManager
             resultadoSelect.Close();
             lblTotalAberto.Text = numeroRegistros.ToString();
 
+            panelTotalImplantacao.BackColor = Color.FromArgb(255, 128, 40);
+            panelTotalAberto.BackColor = Color.FromArgb(0, 126, 249);
+            panelTotalFinalizado.BackColor = Color.FromArgb(50, 226, 178);
+            panelTotalCancelado.BackColor = Color.FromArgb(226, 50, 90);
+
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e)

@@ -31,6 +31,7 @@
             lblSair = new Label();
             btnSair = new FontAwesome.Sharp.IconButton();
             panelSair = new Panel();
+            panelSair.SuspendLayout();
             SuspendLayout();
             // 
             // lblSair
@@ -39,7 +40,7 @@
             lblSair.BackColor = Color.Transparent;
             lblSair.Font = new Font("Segoe UI", 21F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblSair.ForeColor = Color.FromArgb(57, 57, 57);
-            lblSair.Location = new Point(430, 218);
+            lblSair.Location = new Point(409, 217);
             lblSair.Name = "lblSair";
             lblSair.Size = new Size(252, 76);
             lblSair.TabIndex = 6;
@@ -67,6 +68,7 @@
             // 
             // panelSair
             // 
+            panelSair.Controls.Add(lblSair);
             panelSair.Dock = DockStyle.Fill;
             panelSair.Location = new Point(0, 0);
             panelSair.Name = "panelSair";
@@ -80,15 +82,15 @@
             BackColor = Color.White;
             ClientSize = new Size(1114, 639);
             Controls.Add(btnSair);
-            Controls.Add(lblSair);
             Controls.Add(panelSair);
             FormBorderStyle = FormBorderStyle.None;
             MinimumSize = new Size(1114, 639);
             Name = "frmSair";
             Text = "Sair";
             Load += frmSair_Load;
+            panelSair.ResumeLayout(false);
+            panelSair.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

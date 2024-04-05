@@ -79,15 +79,14 @@ namespace ISManager
                 currentChildForm.Close();
             }
             currentChildForm = childForm;
-            //End
+
+            //aplica tema
             if (tgbChangeTheme.Checked == true) //Modo noturno
             {
                 ThemeManager.ApplyDarkTheme(childForm);
             }
-            else if (tgbChangeTheme.Checked == false) // Modo claro
-            {
 
-            }
+            //End
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
@@ -95,6 +94,7 @@ namespace ISManager
             panelDesktop.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+            lblTitleChildForm.ForeColor = RGBColors.activeForeColor;
             lblTitleChildForm.Text = childForm.Text;
         }
         private void Reset()
@@ -102,7 +102,8 @@ namespace ISManager
             DisableButton();
             leftBorderBtn.Visible = false;
             iconCurrentChildForm.IconChar = IconChar.Home;
-            iconCurrentChildForm.IconColor = RGBColors.btnBackColor;
+            iconCurrentChildForm.IconColor = RGBColors.activeForeColor;
+            lblTitleChildForm.ForeColor = RGBColors.activeForeColor;
             lblTitleChildForm.Text = "Home";
         }
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -110,6 +111,7 @@ namespace ISManager
             ActivateButton(sender, RGBColors.activeForeColor);
             lblTitleChildForm.Text = "Dashboard";
             OpenChildForm(new frmDashboard());
+            tgbChangeTheme.Visible = false;
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
@@ -117,6 +119,7 @@ namespace ISManager
             ActivateButton(sender, RGBColors.activeForeColor);
             lblTitleChildForm.Text = "Implantações";
             OpenChildForm(new frmClientes());
+            tgbChangeTheme.Visible = false;
         }
 
         private void btnMigracoes_Click(object sender, EventArgs e)
@@ -124,6 +127,7 @@ namespace ISManager
             ActivateButton(sender, RGBColors.activeForeColor);
             lblTitleChildForm.Text = "Migrações";
             OpenChildForm(new frmMigracoes());
+            tgbChangeTheme.Visible = false;
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -131,12 +135,14 @@ namespace ISManager
             ActivateButton(sender, RGBColors.activeForeColor);
             lblTitleChildForm.Text = "Sair";
             OpenChildForm(new frmSair());
+            tgbChangeTheme.Visible = false;
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
             currentChildForm.Close();
             Reset();
+            tgbChangeTheme.Visible = true;
         }
         //Drag Form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -251,29 +257,36 @@ namespace ISManager
                     ApplyDarkTheme(control);
                 }
             }
-                //mudanças fora do control
-                frmMenu FrmMenu_Vrb = new frmMenu();
-                FrmMenu_Vrb.BackColor = Color.White;
-                RGBColors.btnBackColor = Color.FromArgb(25, 25, 25);
-                RGBColors.btnForeColor = Color.White;
+            //mudanças fora do control
+            frmMenu FrmMenu_Vrb = new frmMenu();
+            FrmMenu_Vrb.BackColor = Color.White;
+            RGBColors.btnBackColor = Color.FromArgb(25, 25, 25);
+            RGBColors.btnForeColor = Color.White;
                 
-                btnDashboard.ForeColor = Color.White;
-                btnClientes.ForeColor = Color.White;
-                btnMigracoes.ForeColor = Color.White;
-                btnSair.ForeColor = Color.White;
-                btnClose.ForeColor = Color.White;
-                btnMaximaze.ForeColor = Color.White;
-                btnMinimaze.ForeColor = Color.White;
+            btnDashboard.ForeColor = Color.White;
+            btnClientes.ForeColor = Color.White;
+            btnMigracoes.ForeColor = Color.White;
+            btnSair.ForeColor = Color.White;
+            btnClose.ForeColor = Color.White;
+            btnMaximaze.ForeColor = Color.White;
+            btnMinimaze.ForeColor = Color.White;
 
-                btnDashboard.IconColor = Color.White;
-                btnClientes.IconColor = Color.White;
-                btnMigracoes.IconColor = Color.White;
-                btnSair.IconColor = Color.White;
-                btnClose.IconColor = Color.White;
-                btnMaximaze.IconColor = Color.White;
-                btnMinimaze.IconColor = Color.White;
-                btnConectar.ForeColor = Color.FromArgb(57, 57, 57);
-                btnConectar.IconColor = Color.FromArgb(57, 57, 57);
+            btnDashboard.IconColor = Color.White;
+            btnClientes.IconColor = Color.White;
+            btnMigracoes.IconColor = Color.White;
+            btnSair.IconColor = Color.White;
+            btnClose.IconColor = Color.White;
+            btnMaximaze.IconColor = Color.White;
+            btnMinimaze.IconColor = Color.White;
+            btnConectar.ForeColor = Color.FromArgb(57, 57, 57);
+            btnConectar.IconColor = Color.FromArgb(57, 57, 57);
+            iconCurrentChildForm.IconColor = RGBColors.activeForeColor;
+            lblTitleChildForm.ForeColor = RGBColors.activeForeColor;
+
+            btnDashboard.BackColor = Color.FromArgb(25, 25, 25);
+            btnClientes.BackColor = Color.FromArgb(25, 25, 25);
+            btnMigracoes.BackColor = Color.FromArgb(25, 25, 25);
+            btnSair.BackColor = Color.FromArgb(25, 25, 25);
 
         }
          private void ApplyLightTheme(Control parentControl)
@@ -323,9 +336,13 @@ namespace ISManager
             RGBColors.btnBackColor = Color.White;
             RGBColors.btnForeColor = Color.FromArgb(57, 57, 57);
             btnDashboard.IconColor = Color.FromArgb(57, 57, 57);
+            btnDashboard.BackColor = Color.White;
             btnClientes.IconColor = Color.FromArgb(57, 57, 57);
+            btnClientes.BackColor = Color.White;
             btnMigracoes.IconColor = Color.FromArgb(57, 57, 57);
+            btnMigracoes.BackColor = Color.White;
             btnSair.IconColor = Color.FromArgb(57, 57, 57);
+            btnSair.BackColor = Color.White;
             btnClose.IconColor = Color.FromArgb(57, 57, 57);
             btnMaximaze.IconColor = Color.FromArgb(57, 57, 57);
             btnMinimaze.IconColor = Color.FromArgb(57, 57, 57);

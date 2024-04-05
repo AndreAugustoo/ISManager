@@ -49,7 +49,8 @@ namespace ISManager.Class
                 Label label = (Label)control;
                 // Altere as propriedades do label
                 label.ForeColor = Color.White;
-                label.BackColor = Color.FromArgb(25, 25, 25);
+               //label.BackColor = Color.FromArgb(25, 25, 25);
+                label.BackColor = Color.Transparent;
             }
             else if (control is GroupBox)
             {

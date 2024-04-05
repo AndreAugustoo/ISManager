@@ -28,20 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboard));
             label2 = new Label();
             lblTotalImplantacoes = new Label();
             label4 = new Label();
-            pictureBox2 = new PictureBox();
-            panel1 = new Panel();
-            panel2 = new Panel();
-            pictureBox1 = new PictureBox();
+            panelTotalImplantacao = new Panel();
+            panelTotalCancelado = new Panel();
             label1 = new Label();
             label3 = new Label();
             lblTotalCancelado = new Label();
             lblTotalAberto = new Label();
-            panel3 = new Panel();
-            pictureBox3 = new PictureBox();
+            panelTotalFinalizado = new Panel();
             label7 = new Label();
             label8 = new Label();
             lblTotalFechado = new Label();
@@ -51,23 +47,19 @@
             panel5 = new Panel();
             label11 = new Label();
             label12 = new Label();
-            panel6 = new Panel();
-            pictureBox4 = new PictureBox();
+            panelTotalAberto = new Panel();
             label10 = new Label();
             label13 = new Label();
             panel7 = new Panel();
             label15 = new Label();
             label16 = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            panel8 = new Panel();
+            panelTotalImplantacao.SuspendLayout();
+            panelTotalCancelado.SuspendLayout();
+            panelTotalFinalizado.SuspendLayout();
             panel4.SuspendLayout();
             panel5.SuspendLayout();
-            panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            panelTotalAberto.SuspendLayout();
             panel7.SuspendLayout();
             SuspendLayout();
             // 
@@ -77,7 +69,7 @@
             label2.BackColor = Color.Transparent;
             label2.FlatStyle = FlatStyle.Flat;
             label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.FromArgb(57, 57, 57);
+            label2.ForeColor = Color.White;
             label2.Location = new Point(19, 13);
             label2.Name = "label2";
             label2.Size = new Size(52, 25);
@@ -88,7 +80,7 @@
             // 
             lblTotalImplantacoes.AutoSize = true;
             lblTotalImplantacoes.Font = new Font("Segoe UI", 28F, FontStyle.Bold);
-            lblTotalImplantacoes.ForeColor = Color.FromArgb(255, 128, 40);
+            lblTotalImplantacoes.ForeColor = Color.White;
             lblTotalImplantacoes.Location = new Point(12, 38);
             lblTotalImplantacoes.Name = "lblTotalImplantacoes";
             lblTotalImplantacoes.Size = new Size(88, 51);
@@ -99,66 +91,44 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.FromArgb(57, 57, 57);
+            label4.ForeColor = Color.White;
             label4.Location = new Point(12, 107);
             label4.Name = "label4";
             label4.Size = new Size(139, 17);
             label4.TabIndex = 2;
             label4.Text = "Total de implantações.";
             // 
-            // pictureBox2
+            // panelTotalImplantacao
             // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(172, 13);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(37, 38);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 3;
-            pictureBox2.TabStop = false;
+            panelTotalImplantacao.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panelTotalImplantacao.AutoSize = true;
+            panelTotalImplantacao.BackColor = Color.FromArgb(255, 128, 40);
+            panelTotalImplantacao.Controls.Add(label4);
+            panelTotalImplantacao.Controls.Add(label2);
+            panelTotalImplantacao.Controls.Add(lblTotalImplantacoes);
+            panelTotalImplantacao.Location = new Point(95, 88);
+            panelTotalImplantacao.Name = "panelTotalImplantacao";
+            panelTotalImplantacao.Size = new Size(227, 142);
+            panelTotalImplantacao.TabIndex = 10;
             // 
-            // panel1
+            // panelTotalCancelado
             // 
-            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel1.AutoSize = true;
-            panel1.BackColor = Color.FromArgb(241, 243, 244);
-            panel1.Controls.Add(pictureBox2);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(lblTotalImplantacoes);
-            panel1.Location = new Point(95, 88);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(227, 142);
-            panel1.TabIndex = 10;
-            // 
-            // panel2
-            // 
-            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel2.AutoSize = true;
-            panel2.BackColor = Color.FromArgb(241, 243, 244);
-            panel2.Controls.Add(pictureBox1);
-            panel2.Controls.Add(label1);
-            panel2.Controls.Add(label3);
-            panel2.Controls.Add(lblTotalCancelado);
-            panel2.Location = new Point(561, 88);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(227, 142);
-            panel2.TabIndex = 11;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(172, 13);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(37, 38);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 3;
-            pictureBox1.TabStop = false;
+            panelTotalCancelado.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panelTotalCancelado.AutoSize = true;
+            panelTotalCancelado.BackColor = Color.FromArgb(226, 50, 90);
+            panelTotalCancelado.Controls.Add(label1);
+            panelTotalCancelado.Controls.Add(label3);
+            panelTotalCancelado.Controls.Add(lblTotalCancelado);
+            panelTotalCancelado.Location = new Point(561, 88);
+            panelTotalCancelado.Name = "panelTotalCancelado";
+            panelTotalCancelado.Size = new Size(227, 142);
+            panelTotalCancelado.TabIndex = 11;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(57, 57, 57);
+            label1.ForeColor = Color.White;
             label1.Location = new Point(12, 107);
             label1.Name = "label1";
             label1.Size = new Size(156, 17);
@@ -171,7 +141,7 @@
             label3.BackColor = Color.Transparent;
             label3.FlatStyle = FlatStyle.Flat;
             label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.FromArgb(57, 57, 57);
+            label3.ForeColor = Color.White;
             label3.Location = new Point(19, 13);
             label3.Name = "label3";
             label3.Size = new Size(108, 25);
@@ -182,7 +152,7 @@
             // 
             lblTotalCancelado.AutoSize = true;
             lblTotalCancelado.Font = new Font("Segoe UI", 28F, FontStyle.Bold);
-            lblTotalCancelado.ForeColor = Color.FromArgb(226, 50, 90);
+            lblTotalCancelado.ForeColor = Color.White;
             lblTotalCancelado.Location = new Point(12, 38);
             lblTotalCancelado.Name = "lblTotalCancelado";
             lblTotalCancelado.Size = new Size(88, 51);
@@ -193,42 +163,31 @@
             // 
             lblTotalAberto.AutoSize = true;
             lblTotalAberto.Font = new Font("Segoe UI", 28F, FontStyle.Bold);
-            lblTotalAberto.ForeColor = Color.FromArgb(0, 126, 249);
+            lblTotalAberto.ForeColor = Color.White;
             lblTotalAberto.Location = new Point(12, 38);
             lblTotalAberto.Name = "lblTotalAberto";
             lblTotalAberto.Size = new Size(88, 51);
             lblTotalAberto.TabIndex = 1;
             lblTotalAberto.Text = "999";
             // 
-            // panel3
+            // panelTotalFinalizado
             // 
-            panel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel3.AutoSize = true;
-            panel3.BackColor = Color.FromArgb(241, 243, 244);
-            panel3.Controls.Add(pictureBox3);
-            panel3.Controls.Add(label7);
-            panel3.Controls.Add(label8);
-            panel3.Controls.Add(lblTotalFechado);
-            panel3.Location = new Point(328, 88);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(227, 142);
-            panel3.TabIndex = 11;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(172, 13);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(37, 38);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 3;
-            pictureBox3.TabStop = false;
+            panelTotalFinalizado.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panelTotalFinalizado.AutoSize = true;
+            panelTotalFinalizado.BackColor = Color.FromArgb(50, 226, 178);
+            panelTotalFinalizado.Controls.Add(label7);
+            panelTotalFinalizado.Controls.Add(label8);
+            panelTotalFinalizado.Controls.Add(lblTotalFechado);
+            panelTotalFinalizado.Location = new Point(328, 88);
+            panelTotalFinalizado.Name = "panelTotalFinalizado";
+            panelTotalFinalizado.Size = new Size(227, 142);
+            panelTotalFinalizado.TabIndex = 11;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.FromArgb(57, 57, 57);
+            label7.ForeColor = Color.White;
             label7.Location = new Point(12, 107);
             label7.Name = "label7";
             label7.Size = new Size(153, 17);
@@ -241,7 +200,7 @@
             label8.BackColor = Color.Transparent;
             label8.FlatStyle = FlatStyle.Flat;
             label8.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.ForeColor = Color.FromArgb(57, 57, 57);
+            label8.ForeColor = Color.White;
             label8.Location = new Point(19, 13);
             label8.Name = "label8";
             label8.Size = new Size(105, 25);
@@ -252,7 +211,7 @@
             // 
             lblTotalFechado.AutoSize = true;
             lblTotalFechado.Font = new Font("Segoe UI", 28F, FontStyle.Bold);
-            lblTotalFechado.ForeColor = Color.FromArgb(50, 226, 178);
+            lblTotalFechado.ForeColor = Color.White;
             lblTotalFechado.Location = new Point(12, 38);
             lblTotalFechado.Name = "lblTotalFechado";
             lblTotalFechado.Size = new Size(88, 51);
@@ -331,35 +290,24 @@
             label12.TabIndex = 0;
             label12.Text = "Gráfico 2";
             // 
-            // panel6
+            // panelTotalAberto
             // 
-            panel6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel6.AutoSize = true;
-            panel6.BackColor = Color.FromArgb(241, 243, 244);
-            panel6.Controls.Add(pictureBox4);
-            panel6.Controls.Add(label10);
-            panel6.Controls.Add(label13);
-            panel6.Controls.Add(lblTotalAberto);
-            panel6.Location = new Point(794, 88);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(227, 142);
-            panel6.TabIndex = 12;
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(172, 13);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(37, 38);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox4.TabIndex = 3;
-            pictureBox4.TabStop = false;
+            panelTotalAberto.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panelTotalAberto.AutoSize = true;
+            panelTotalAberto.BackColor = Color.FromArgb(0, 126, 249);
+            panelTotalAberto.Controls.Add(label10);
+            panelTotalAberto.Controls.Add(label13);
+            panelTotalAberto.Controls.Add(lblTotalAberto);
+            panelTotalAberto.Location = new Point(794, 88);
+            panelTotalAberto.Name = "panelTotalAberto";
+            panelTotalAberto.Size = new Size(227, 142);
+            panelTotalAberto.TabIndex = 12;
             // 
             // label10
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label10.ForeColor = Color.FromArgb(57, 57, 57);
+            label10.ForeColor = Color.White;
             label10.Location = new Point(12, 107);
             label10.Name = "label10";
             label10.Size = new Size(180, 17);
@@ -372,7 +320,7 @@
             label13.BackColor = Color.Transparent;
             label13.FlatStyle = FlatStyle.Flat;
             label13.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label13.ForeColor = Color.FromArgb(57, 57, 57);
+            label13.ForeColor = Color.White;
             label13.Location = new Point(19, 13);
             label13.Name = "label13";
             label13.Size = new Size(139, 25);
@@ -415,6 +363,14 @@
             label16.TabIndex = 0;
             label16.Text = "Gráfico 3";
             // 
+            // panel8
+            // 
+            panel8.Dock = DockStyle.Fill;
+            panel8.Location = new Point(0, 0);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(1114, 639);
+            panel8.TabIndex = 13;
+            // 
             // frmDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -423,33 +379,30 @@
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(1114, 639);
             Controls.Add(panel7);
-            Controls.Add(panel6);
+            Controls.Add(panelTotalAberto);
             Controls.Add(panel5);
             Controls.Add(panel4);
-            Controls.Add(panel3);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
+            Controls.Add(panelTotalFinalizado);
+            Controls.Add(panelTotalCancelado);
+            Controls.Add(panelTotalImplantacao);
+            Controls.Add(panel8);
             FormBorderStyle = FormBorderStyle.None;
             MinimumSize = new Size(1114, 639);
             Name = "frmDashboard";
             Text = "Dashboard";
             Load += frmDashboard_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            panelTotalImplantacao.ResumeLayout(false);
+            panelTotalImplantacao.PerformLayout();
+            panelTotalCancelado.ResumeLayout(false);
+            panelTotalCancelado.PerformLayout();
+            panelTotalFinalizado.ResumeLayout(false);
+            panelTotalFinalizado.PerformLayout();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            panelTotalAberto.ResumeLayout(false);
+            panelTotalAberto.PerformLayout();
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
             ResumeLayout(false);
@@ -459,33 +412,30 @@
         #endregion
         private Label label6;
         private Label label2;
-        private Label lblTotalImplantacoes;
         private Label label4;
-        private PictureBox pictureBox2;
-        private Panel panel1;
-        private Panel panel2;
-        private PictureBox pictureBox1;
         private Label label1;
         private Label label3;
-        private Label lblTotalAberto;
-        private Panel panel3;
-        private PictureBox pictureBox3;
         private Label label7;
         private Label label8;
-        private Label lblTotalFechado;
-        private Panel panel4;
         private Label label5;
         private Label label9;
-        private Panel panel5;
         private Label label11;
         private Label label12;
-        private Panel panel6;
-        private PictureBox pictureBox4;
         private Label label10;
         private Label label13;
-        private Label lblTotalCancelado;
-        private Panel panel7;
         private Label label15;
         private Label label16;
+        public Panel panelTotalImplantacao;
+        public Panel panelTotalCancelado;
+        public Panel panelTotalFinalizado;
+        public Panel panel4;
+        public Panel panel5;
+        public Panel panelTotalAberto;
+        public Panel panel7;
+        public Label lblTotalImplantacoes;
+        public Label lblTotalAberto;
+        public Label lblTotalFechado;
+        public Label lblTotalCancelado;
+        private Panel panel8;
     }
 }
