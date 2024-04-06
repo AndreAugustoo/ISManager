@@ -127,6 +127,9 @@
   <data name="sunDark" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\sunDark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="uncheckedLight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\uncheckedLight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="calendarDark" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\calendarDark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,7 +142,7 @@
   <data name="checkedLight" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\checkedLight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="uncheckedLight" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\uncheckedLight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="backgroundHome" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\backgroundHome.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

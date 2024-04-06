@@ -68,6 +68,9 @@ namespace ISManager
             panelTotalAbertoISM.BackColor = Color.FromArgb(0, 126, 249);
             panelTotalFinalizado.BackColor = Color.FromArgb(50, 226, 178);
             panelTotalCancelado.BackColor = Color.FromArgb(226, 50, 90);
+            panelGrafico1.BackColor = Color.FromArgb(255, 128, 40);
+            panelGrafico2.BackColor = Color.FromArgb(50, 226, 178);
+            panelGrafico3.BackColor = Color.FromArgb(226, 50, 90);
 
         }
 

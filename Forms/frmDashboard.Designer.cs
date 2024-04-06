@@ -58,7 +58,7 @@
             label15 = new Label();
             lblIsm = new Label();
             panel8 = new Panel();
-            panel1 = new Panel();
+            panelGrafico3 = new Panel();
             label16 = new Label();
             label17 = new Label();
             panelTotalImplantacao.SuspendLayout();
@@ -69,7 +69,7 @@
             panelTotalAberto.SuspendLayout();
             panelTotalAbertoISM.SuspendLayout();
             panel8.SuspendLayout();
-            panel1.SuspendLayout();
+            panelGrafico3.SuspendLayout();
             SuspendLayout();
             // 
             // label2
@@ -426,24 +426,24 @@
             // 
             // panel8
             // 
-            panel8.Controls.Add(panel1);
+            panel8.Controls.Add(panelGrafico3);
             panel8.Dock = DockStyle.Fill;
             panel8.Location = new Point(0, 0);
             panel8.Name = "panel8";
             panel8.Size = new Size(1114, 639);
             panel8.TabIndex = 13;
             // 
-            // panel1
+            // panelGrafico3
             // 
-            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel1.AutoSize = true;
-            panel1.BackColor = Color.FromArgb(226, 50, 90);
-            panel1.Controls.Add(label16);
-            panel1.Controls.Add(label17);
-            panel1.Location = new Point(561, 236);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(227, 332);
-            panel1.TabIndex = 12;
+            panelGrafico3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panelGrafico3.AutoSize = true;
+            panelGrafico3.BackColor = Color.FromArgb(226, 50, 90);
+            panelGrafico3.Controls.Add(label16);
+            panelGrafico3.Controls.Add(label17);
+            panelGrafico3.Location = new Point(561, 236);
+            panelGrafico3.Name = "panelGrafico3";
+            panelGrafico3.Size = new Size(227, 332);
+            panelGrafico3.TabIndex = 12;
             // 
             // label16
             // 
@@ -505,8 +505,8 @@
             panelTotalAbertoISM.PerformLayout();
             panel8.ResumeLayout(false);
             panel8.PerformLayout();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            panelGrafico3.ResumeLayout(false);
+            panelGrafico3.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -542,7 +542,7 @@
         public Label lblTotalAndre;
         public Label lblTotalEdivania;
         private Label label14;
-        public Panel panel1;
+        public Panel panelGrafico3;
         private Label label16;
         private Label label17;
     }

@@ -81,10 +81,10 @@
             btnClose.IconChar = FontAwesome.Sharp.IconChar.X;
             btnClose.IconColor = Color.FromArgb(57, 57, 57);
             btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnClose.IconSize = 25;
-            btnClose.Location = new Point(1087, 3);
+            btnClose.IconSize = 30;
+            btnClose.Location = new Point(1079, 12);
             btnClose.Name = "btnClose";
-            btnClose.Size = new Size(25, 25);
+            btnClose.Size = new Size(30, 30);
             btnClose.TabIndex = 74;
             btnClose.TabStop = false;
             btnClose.Click += btnClose_Click;

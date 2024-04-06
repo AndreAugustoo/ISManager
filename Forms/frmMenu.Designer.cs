@@ -219,6 +219,8 @@
             // panelDesktop
             // 
             panelDesktop.BackColor = Color.White;
+            panelDesktop.BackgroundImage = Properties.Resources.backgroundHome;
+            panelDesktop.BackgroundImageLayout = ImageLayout.Zoom;
             panelDesktop.Location = new Point(187, 61);
             panelDesktop.MinimumSize = new Size(1113, 640);
             panelDesktop.Name = "panelDesktop";
