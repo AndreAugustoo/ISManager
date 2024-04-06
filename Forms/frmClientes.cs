@@ -1,5 +1,4 @@
-﻿using Bunifu.UI.WinForms.Helpers.Transitions;
-using ISManager.Class;
+﻿using ISManager.Class;
 using ISManager.Forms;
 using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Asn1.Cmp;

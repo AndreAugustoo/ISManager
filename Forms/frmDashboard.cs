@@ -51,6 +51,18 @@ namespace ISManager
             resultadoSelect.Close();
             lblTotalAberto.Text = numeroRegistros.ToString();
 
+            resultadoSelect = this.clientes.ListarTotalAndre();
+            resultadoSelect.Read();
+            numeroRegistros = resultadoSelect.GetInt32(0);
+            resultadoSelect.Close();
+            lblTotalAndre.Text = numeroRegistros.ToString();
+
+            resultadoSelect = this.clientes.ListarTotalEdivania();
+            resultadoSelect.Read();
+            numeroRegistros = resultadoSelect.GetInt32(0);
+            resultadoSelect.Close();
+            lblTotalEdivania.Text = numeroRegistros.ToString();
+
             panelTotalImplantacao.BackColor = Color.FromArgb(255, 128, 40);
             panelTotalAberto.BackColor = Color.FromArgb(0, 126, 249);
             panelTotalFinalizado.BackColor = Color.FromArgb(50, 226, 178);

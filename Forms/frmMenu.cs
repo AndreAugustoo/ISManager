@@ -1,8 +1,13 @@
 using FontAwesome.Sharp;
 using ISManager.Class;
 using ISManager.Forms;
+using ISManager.Properties;
 using MySql.Data.MySqlClient;
 using System.Runtime.InteropServices;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Drawing.Text;
 
 namespace ISManager
 {
@@ -112,6 +117,7 @@ namespace ISManager
             lblTitleChildForm.Text = "Dashboard";
             OpenChildForm(new frmDashboard());
             tgbChangeTheme.Visible = false;
+            themeIcon.Visible = false;
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
@@ -120,6 +126,7 @@ namespace ISManager
             lblTitleChildForm.Text = "Implantações";
             OpenChildForm(new frmClientes());
             tgbChangeTheme.Visible = false;
+            themeIcon.Visible = false;
         }
 
         private void btnMigracoes_Click(object sender, EventArgs e)
@@ -128,6 +135,7 @@ namespace ISManager
             lblTitleChildForm.Text = "Migrações";
             OpenChildForm(new frmMigracoes());
             tgbChangeTheme.Visible = false;
+            themeIcon.Visible = false;
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -136,6 +144,7 @@ namespace ISManager
             lblTitleChildForm.Text = "Sair";
             OpenChildForm(new frmSair());
             tgbChangeTheme.Visible = false;
+            themeIcon.Visible = false;
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -143,6 +152,7 @@ namespace ISManager
             currentChildForm.Close();
             Reset();
             tgbChangeTheme.Visible = true;
+            themeIcon.Visible = true;
         }
         //Drag Form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -262,7 +272,7 @@ namespace ISManager
             FrmMenu_Vrb.BackColor = Color.White;
             RGBColors.btnBackColor = Color.FromArgb(25, 25, 25);
             RGBColors.btnForeColor = Color.White;
-                
+
             btnDashboard.ForeColor = Color.White;
             btnClientes.ForeColor = Color.White;
             btnMigracoes.ForeColor = Color.White;
@@ -289,42 +299,42 @@ namespace ISManager
             btnSair.BackColor = Color.FromArgb(25, 25, 25);
 
         }
-         private void ApplyLightTheme(Control parentControl)
-         {
-             foreach (Control control in parentControl.Controls)
-             {
-                 if (control is TextBox)
-                 {
-                     TextBox textBox = (TextBox)control;
-                     // Altere as propriedades do TextBox
-                     textBox.BackColor = Color.White;
-                     textBox.ForeColor = Color.FromArgb(57, 57, 57);
-                 }
-                 else if (control is Panel)
-                 {
-                     Panel panel = (Panel)control;
-                     // Altere as propriedades do Panel
-                     panel.BackColor = Color.White;
-                 }
-                 else if (control is Button)
-                 {
-                     Button button = (Button)control;
-                     // Altere as propriedades do Button
-                     button.ForeColor = Color.FromArgb(57, 57, 57);
-                 }
-                 else if (control is Label)
-                 {
-                     Label label = (Label)control;
-                     // Altere as propriedades do label
-                     label.ForeColor = Color.FromArgb(57, 57, 57);
-                     label.BackColor = Color.White;
-                 }
-                 else if (control is GroupBox)
-                 {
-                     GroupBox groupBox = (GroupBox)control;
-                     // Altere as propriedades do label
-                     groupBox.ForeColor = Color.FromArgb(57, 57, 57);
-                 }
+        private void ApplyLightTheme(Control parentControl)
+        {
+            foreach (Control control in parentControl.Controls)
+            {
+                if (control is TextBox)
+                {
+                    TextBox textBox = (TextBox)control;
+                    // Altere as propriedades do TextBox
+                    textBox.BackColor = Color.White;
+                    textBox.ForeColor = Color.FromArgb(57, 57, 57);
+                }
+                else if (control is Panel)
+                {
+                    Panel panel = (Panel)control;
+                    // Altere as propriedades do Panel
+                    panel.BackColor = Color.White;
+                }
+                else if (control is Button)
+                {
+                    Button button = (Button)control;
+                    // Altere as propriedades do Button
+                    button.ForeColor = Color.FromArgb(57, 57, 57);
+                }
+                else if (control is Label)
+                {
+                    Label label = (Label)control;
+                    // Altere as propriedades do label
+                    label.ForeColor = Color.FromArgb(57, 57, 57);
+                    label.BackColor = Color.White;
+                }
+                else if (control is GroupBox)
+                {
+                    GroupBox groupBox = (GroupBox)control;
+                    // Altere as propriedades do label
+                    groupBox.ForeColor = Color.FromArgb(57, 57, 57);
+                }
                 if (control.HasChildren)
                 {
                     ApplyLightTheme(control);
@@ -354,10 +364,12 @@ namespace ISManager
             if (tgbChangeTheme.Checked == true) //Modo noturno
             {
                 ApplyDarkTheme(this);
+                themeIcon.Image = Resources.sunLight;
             }
             else if (tgbChangeTheme.Checked == false) // Modo claro
             {
                 ApplyLightTheme(this);
+                themeIcon.Image = Resources.sunDark;
             }
         }
     }

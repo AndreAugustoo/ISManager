@@ -573,7 +573,7 @@ namespace ISManager.Forms
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(46, 51, 73);
+            BackColor = Color.White;
             ClientSize = new Size(1114, 639);
             Controls.Add(pnlFormLoader);
             FormBorderStyle = FormBorderStyle.None;

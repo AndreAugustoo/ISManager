@@ -172,6 +172,18 @@ namespace ISManager.Class
                 "SELECT COUNT(*) FROM cliente WHERE status_implantacao_cliente IN ('Cancelada')");
         }
 
+        public MySqlDataReader ListarTotalAndre()
+        {
+            return database.Query(
+                "SELECT COUNT(*) FROM cliente WHERE status_implantacao_cliente IN ('Em andamento', 'Parada') AND ism_responsavel_cliente = 'André'");
+        }
+
+        public MySqlDataReader ListarTotalEdivania()
+        {
+            return database.Query(
+                "SELECT COUNT(*) FROM cliente WHERE status_implantacao_cliente IN ('Em andamento', 'Parada') AND ism_responsavel_cliente = 'Edivania'");
+        }
+
         public string? Id_cliente { get => id_cliente; set => id_cliente = value; }
         public string? Nome_cliente { get => nome_cliente; set => nome_cliente = value; }
         public string? Data_entrada_cliente { get => data_entrada_cliente; set => data_entrada_cliente = value; }

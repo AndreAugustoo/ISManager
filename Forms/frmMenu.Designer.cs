@@ -56,6 +56,7 @@
             txtPassword = new TextBox();
             lblHost = new Label();
             panelTitleBar = new Panel();
+            themeIcon = new PictureBox();
             btnMinimaze = new FontAwesome.Sharp.IconPictureBox();
             btnMaximaze = new FontAwesome.Sharp.IconPictureBox();
             btnClose = new FontAwesome.Sharp.IconPictureBox();
@@ -68,6 +69,7 @@
             panelDesktop.SuspendLayout();
             gbxConexaoBanco.SuspendLayout();
             panelTitleBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)themeIcon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnMinimaze).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnMaximaze).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnClose).BeginInit();
@@ -219,7 +221,7 @@
             // tgbChangeTheme
             // 
             tgbChangeTheme.AutoSize = true;
-            tgbChangeTheme.Location = new Point(973, 6);
+            tgbChangeTheme.Location = new Point(962, 6);
             tgbChangeTheme.MinimumSize = new Size(45, 22);
             tgbChangeTheme.Name = "tgbChangeTheme";
             tgbChangeTheme.OffBackColor = Color.FromArgb(57, 57, 57);
@@ -451,6 +453,7 @@
             // panelTitleBar
             // 
             panelTitleBar.BackColor = Color.White;
+            panelTitleBar.Controls.Add(themeIcon);
             panelTitleBar.Controls.Add(btnMinimaze);
             panelTitleBar.Controls.Add(tgbChangeTheme);
             panelTitleBar.Controls.Add(btnMaximaze);
@@ -463,6 +466,18 @@
             panelTitleBar.Size = new Size(1114, 55);
             panelTitleBar.TabIndex = 5;
             panelTitleBar.MouseDown += panelTitleBar_MouseDown;
+            // 
+            // themeIcon
+            // 
+            themeIcon.BackColor = Color.Transparent;
+            themeIcon.Image = Properties.Resources.sunDark;
+            themeIcon.InitialImage = Properties.Resources.calendarDark;
+            themeIcon.Location = new Point(930, 3);
+            themeIcon.Name = "themeIcon";
+            themeIcon.Size = new Size(26, 26);
+            themeIcon.SizeMode = PictureBoxSizeMode.Zoom;
+            themeIcon.TabIndex = 9;
+            themeIcon.TabStop = false;
             // 
             // btnMinimaze
             // 
@@ -571,6 +586,7 @@
             gbxConexaoBanco.PerformLayout();
             panelTitleBar.ResumeLayout(false);
             panelTitleBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)themeIcon).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnMinimaze).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnMaximaze).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnClose).EndInit();
@@ -615,5 +631,6 @@
         private Label label1;
         private Label label3;
         public Class.CustomToggleButton tgbChangeTheme;
+        private PictureBox themeIcon;
     }
 }

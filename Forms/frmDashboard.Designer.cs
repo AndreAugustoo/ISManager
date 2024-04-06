@@ -41,26 +41,35 @@
             label7 = new Label();
             label8 = new Label();
             lblTotalFechado = new Label();
-            panel4 = new Panel();
+            panelGrafico1 = new Panel();
             label5 = new Label();
             label9 = new Label();
-            panel5 = new Panel();
+            panelGrafico2 = new Panel();
             label11 = new Label();
             label12 = new Label();
             panelTotalAberto = new Panel();
             label10 = new Label();
             label13 = new Label();
-            panel7 = new Panel();
+            panelGrafico3 = new Panel();
+            label14 = new Label();
+            label6 = new Label();
+            lblTotalAndre = new Label();
+            lblTotalEdivania = new Label();
             label15 = new Label();
-            label16 = new Label();
+            lblIsm = new Label();
             panel8 = new Panel();
+            panel1 = new Panel();
+            label16 = new Label();
+            label17 = new Label();
             panelTotalImplantacao.SuspendLayout();
             panelTotalCancelado.SuspendLayout();
             panelTotalFinalizado.SuspendLayout();
-            panel4.SuspendLayout();
-            panel5.SuspendLayout();
+            panelGrafico1.SuspendLayout();
+            panelGrafico2.SuspendLayout();
             panelTotalAberto.SuspendLayout();
-            panel7.SuspendLayout();
+            panelGrafico3.SuspendLayout();
+            panel8.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // label2
@@ -218,28 +227,28 @@
             lblTotalFechado.TabIndex = 1;
             lblTotalFechado.Text = "999";
             // 
-            // panel4
+            // panelGrafico1
             // 
-            panel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel4.AutoSize = true;
-            panel4.BackColor = Color.FromArgb(241, 243, 244);
-            panel4.Controls.Add(label5);
-            panel4.Controls.Add(label9);
-            panel4.Location = new Point(95, 236);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(227, 332);
-            panel4.TabIndex = 11;
+            panelGrafico1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panelGrafico1.AutoSize = true;
+            panelGrafico1.BackColor = Color.FromArgb(255, 128, 40);
+            panelGrafico1.Controls.Add(label5);
+            panelGrafico1.Controls.Add(label9);
+            panelGrafico1.Location = new Point(95, 236);
+            panelGrafico1.Name = "panelGrafico1";
+            panelGrafico1.Size = new Size(227, 332);
+            panelGrafico1.TabIndex = 11;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.FromArgb(57, 57, 57);
+            label5.ForeColor = Color.White;
             label5.Location = new Point(12, 301);
             label5.Name = "label5";
-            label5.Size = new Size(137, 17);
+            label5.Size = new Size(150, 17);
             label5.TabIndex = 2;
-            label5.Text = "Descrição do gráfico1";
+            label5.Text = "Implantações finalizadas";
             // 
             // label9
             // 
@@ -247,35 +256,35 @@
             label9.BackColor = Color.Transparent;
             label9.FlatStyle = FlatStyle.Flat;
             label9.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.ForeColor = Color.FromArgb(57, 57, 57);
+            label9.ForeColor = Color.White;
             label9.Location = new Point(19, 13);
             label9.Name = "label9";
-            label9.Size = new Size(88, 25);
+            label9.Size = new Size(137, 50);
             label9.TabIndex = 0;
-            label9.Text = "Gráfico 1";
+            label9.Text = "Finalizadas no \r\núltimo mês";
             // 
-            // panel5
+            // panelGrafico2
             // 
-            panel5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel5.AutoSize = true;
-            panel5.BackColor = Color.FromArgb(241, 243, 244);
-            panel5.Controls.Add(label11);
-            panel5.Controls.Add(label12);
-            panel5.Location = new Point(328, 236);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(460, 332);
-            panel5.TabIndex = 11;
+            panelGrafico2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panelGrafico2.AutoSize = true;
+            panelGrafico2.BackColor = Color.FromArgb(50, 226, 178);
+            panelGrafico2.Controls.Add(label11);
+            panelGrafico2.Controls.Add(label12);
+            panelGrafico2.Location = new Point(328, 236);
+            panelGrafico2.Name = "panelGrafico2";
+            panelGrafico2.Size = new Size(227, 332);
+            panelGrafico2.TabIndex = 11;
             // 
             // label11
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label11.ForeColor = Color.FromArgb(57, 57, 57);
+            label11.ForeColor = Color.White;
             label11.Location = new Point(19, 301);
             label11.Name = "label11";
-            label11.Size = new Size(141, 17);
+            label11.Size = new Size(150, 17);
             label11.TabIndex = 2;
-            label11.Text = "Descrição do gráfico 2";
+            label11.Text = "Implantações finalizadas";
             // 
             // label12
             // 
@@ -283,12 +292,12 @@
             label12.BackColor = Color.Transparent;
             label12.FlatStyle = FlatStyle.Flat;
             label12.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label12.ForeColor = Color.FromArgb(57, 57, 57);
+            label12.ForeColor = Color.White;
             label12.Location = new Point(19, 13);
             label12.Name = "label12";
-            label12.Size = new Size(88, 25);
+            label12.Size = new Size(137, 50);
             label12.TabIndex = 0;
-            label12.Text = "Gráfico 2";
+            label12.Text = "Finalizadas no \r\nmês atual\r\n";
             // 
             // panelTotalAberto
             // 
@@ -327,49 +336,138 @@
             label13.TabIndex = 0;
             label13.Text = "Em andamento";
             // 
-            // panel7
+            // panelGrafico3
             // 
-            panel7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel7.AutoSize = true;
-            panel7.BackColor = Color.FromArgb(241, 243, 244);
-            panel7.Controls.Add(label15);
-            panel7.Controls.Add(label16);
-            panel7.Location = new Point(794, 236);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(227, 332);
-            panel7.TabIndex = 12;
+            panelGrafico3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panelGrafico3.AutoSize = true;
+            panelGrafico3.BackColor = Color.FromArgb(0, 126, 249);
+            panelGrafico3.Controls.Add(label14);
+            panelGrafico3.Controls.Add(label6);
+            panelGrafico3.Controls.Add(lblTotalAndre);
+            panelGrafico3.Controls.Add(lblTotalEdivania);
+            panelGrafico3.Controls.Add(label15);
+            panelGrafico3.Controls.Add(lblIsm);
+            panelGrafico3.Location = new Point(794, 236);
+            panelGrafico3.Name = "panelGrafico3";
+            panelGrafico3.Size = new Size(227, 332);
+            panelGrafico3.TabIndex = 12;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.BackColor = Color.Transparent;
+            label14.FlatStyle = FlatStyle.Flat;
+            label14.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label14.ForeColor = Color.White;
+            label14.Location = new Point(19, 177);
+            label14.Name = "label14";
+            label14.Size = new Size(83, 25);
+            label14.TabIndex = 6;
+            label14.Text = "Edivania";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
+            label6.FlatStyle = FlatStyle.Flat;
+            label6.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(19, 73);
+            label6.Name = "label6";
+            label6.Size = new Size(63, 25);
+            label6.TabIndex = 5;
+            label6.Text = "André";
+            // 
+            // lblTotalAndre
+            // 
+            lblTotalAndre.AutoSize = true;
+            lblTotalAndre.Font = new Font("Segoe UI", 28F, FontStyle.Bold);
+            lblTotalAndre.ForeColor = Color.White;
+            lblTotalAndre.Location = new Point(19, 98);
+            lblTotalAndre.Name = "lblTotalAndre";
+            lblTotalAndre.Size = new Size(88, 51);
+            lblTotalAndre.TabIndex = 4;
+            lblTotalAndre.Text = "999";
+            // 
+            // lblTotalEdivania
+            // 
+            lblTotalEdivania.AutoSize = true;
+            lblTotalEdivania.Font = new Font("Segoe UI", 28F, FontStyle.Bold);
+            lblTotalEdivania.ForeColor = Color.White;
+            lblTotalEdivania.Location = new Point(19, 202);
+            lblTotalEdivania.Name = "lblTotalEdivania";
+            lblTotalEdivania.Size = new Size(88, 51);
+            lblTotalEdivania.TabIndex = 3;
+            lblTotalEdivania.Text = "999";
             // 
             // label15
             // 
             label15.AutoSize = true;
             label15.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label15.ForeColor = Color.FromArgb(57, 57, 57);
+            label15.ForeColor = Color.White;
             label15.Location = new Point(12, 301);
             label15.Name = "label15";
-            label15.Size = new Size(141, 17);
+            label15.Size = new Size(177, 17);
             label15.TabIndex = 2;
-            label15.Text = "Descrição do gráfico 3";
+            label15.Text = "Implantações em andamento";
             // 
-            // label16
+            // lblIsm
             // 
-            label16.AutoSize = true;
-            label16.BackColor = Color.Transparent;
-            label16.FlatStyle = FlatStyle.Flat;
-            label16.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label16.ForeColor = Color.FromArgb(57, 57, 57);
-            label16.Location = new Point(19, 13);
-            label16.Name = "label16";
-            label16.Size = new Size(88, 25);
-            label16.TabIndex = 0;
-            label16.Text = "Gráfico 3";
+            lblIsm.AutoSize = true;
+            lblIsm.BackColor = Color.Transparent;
+            lblIsm.FlatStyle = FlatStyle.Flat;
+            lblIsm.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblIsm.ForeColor = Color.White;
+            lblIsm.Location = new Point(19, 13);
+            lblIsm.Name = "lblIsm";
+            lblIsm.Size = new Size(167, 25);
+            lblIsm.TabIndex = 0;
+            lblIsm.Text = "Agrupado por ISM";
             // 
             // panel8
             // 
+            panel8.Controls.Add(panel1);
             panel8.Dock = DockStyle.Fill;
             panel8.Location = new Point(0, 0);
             panel8.Name = "panel8";
             panel8.Size = new Size(1114, 639);
             panel8.TabIndex = 13;
+            // 
+            // panel1
+            // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel1.AutoSize = true;
+            panel1.BackColor = Color.FromArgb(226, 50, 90);
+            panel1.Controls.Add(label16);
+            panel1.Controls.Add(label17);
+            panel1.Location = new Point(561, 236);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(227, 332);
+            panel1.TabIndex = 12;
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label16.ForeColor = Color.White;
+            label16.Location = new Point(19, 301);
+            label16.Name = "label16";
+            label16.Size = new Size(141, 17);
+            label16.TabIndex = 2;
+            label16.Text = "Descrição do gráfico 2";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.BackColor = Color.Transparent;
+            label17.FlatStyle = FlatStyle.Flat;
+            label17.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label17.ForeColor = Color.White;
+            label17.Location = new Point(19, 13);
+            label17.Name = "label17";
+            label17.Size = new Size(88, 25);
+            label17.TabIndex = 0;
+            label17.Text = "Gráfico 2";
             // 
             // frmDashboard
             // 
@@ -378,10 +476,10 @@
             BackColor = Color.White;
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(1114, 639);
-            Controls.Add(panel7);
+            Controls.Add(panelGrafico3);
             Controls.Add(panelTotalAberto);
-            Controls.Add(panel5);
-            Controls.Add(panel4);
+            Controls.Add(panelGrafico2);
+            Controls.Add(panelGrafico1);
             Controls.Add(panelTotalFinalizado);
             Controls.Add(panelTotalCancelado);
             Controls.Add(panelTotalImplantacao);
@@ -397,14 +495,18 @@
             panelTotalCancelado.PerformLayout();
             panelTotalFinalizado.ResumeLayout(false);
             panelTotalFinalizado.PerformLayout();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
+            panelGrafico1.ResumeLayout(false);
+            panelGrafico1.PerformLayout();
+            panelGrafico2.ResumeLayout(false);
+            panelGrafico2.PerformLayout();
             panelTotalAberto.ResumeLayout(false);
             panelTotalAberto.PerformLayout();
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
+            panelGrafico3.ResumeLayout(false);
+            panelGrafico3.PerformLayout();
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -424,18 +526,24 @@
         private Label label10;
         private Label label13;
         private Label label15;
-        private Label label16;
+        private Label lblIsm;
         public Panel panelTotalImplantacao;
         public Panel panelTotalCancelado;
         public Panel panelTotalFinalizado;
-        public Panel panel4;
-        public Panel panel5;
+        public Panel panelGrafico1;
+        public Panel panelGrafico2;
         public Panel panelTotalAberto;
-        public Panel panel7;
+        public Panel panelGrafico3;
         public Label lblTotalImplantacoes;
         public Label lblTotalAberto;
         public Label lblTotalFechado;
         public Label lblTotalCancelado;
         private Panel panel8;
+        public Label lblTotalAndre;
+        public Label lblTotalEdivania;
+        private Label label14;
+        public Panel panel1;
+        private Label label16;
+        private Label label17;
     }
 }

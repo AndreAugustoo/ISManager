@@ -55,7 +55,6 @@ namespace ISManager
             // 
             // txtFiltro
             // 
-            txtFiltro.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtFiltro.BackColor = Color.FromArgb(241, 243, 244);
             txtFiltro.Font = new Font("Segoe UI", 14F);
             txtFiltro.ForeColor = Color.FromArgb(57, 57, 57);
@@ -67,7 +66,7 @@ namespace ISManager
             // 
             // lblNumeroRegistro
             // 
-            lblNumeroRegistro.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblNumeroRegistro.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             lblNumeroRegistro.AutoSize = true;
             lblNumeroRegistro.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblNumeroRegistro.ForeColor = Color.FromArgb(57, 57, 57);
@@ -79,7 +78,6 @@ namespace ISManager
             // 
             // cbxFiltro
             // 
-            cbxFiltro.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             cbxFiltro.BackColor = Color.FromArgb(241, 243, 244);
             cbxFiltro.Font = new Font("Segoe UI", 13F);
             cbxFiltro.ForeColor = Color.FromArgb(57, 57, 57);
@@ -96,6 +94,7 @@ namespace ISManager
             // 
             // pnlClientes
             // 
+            pnlClientes.Anchor = AnchorStyles.None;
             pnlClientes.BackColor = Color.White;
             pnlClientes.Controls.Add(lblRegistroExibido);
             pnlClientes.Controls.Add(lblDataFim);
@@ -111,7 +110,6 @@ namespace ISManager
             pnlClientes.Controls.Add(lblNumeroRegistro);
             pnlClientes.Controls.Add(txtFiltro);
             pnlClientes.Controls.Add(dtGridClientes);
-            pnlClientes.Dock = DockStyle.Fill;
             pnlClientes.Location = new Point(0, 0);
             pnlClientes.MinimumSize = new Size(1114, 639);
             pnlClientes.Name = "pnlClientes";
@@ -120,7 +118,7 @@ namespace ISManager
             // 
             // lblRegistroExibido
             // 
-            lblRegistroExibido.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblRegistroExibido.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblRegistroExibido.AutoSize = true;
             lblRegistroExibido.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblRegistroExibido.ForeColor = Color.FromArgb(57, 57, 57);
@@ -132,7 +130,6 @@ namespace ISManager
             // 
             // lblDataFim
             // 
-            lblDataFim.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblDataFim.AutoSize = true;
             lblDataFim.Font = new Font("Segoe UI", 14F);
             lblDataFim.ForeColor = Color.FromArgb(57, 57, 57);
@@ -144,7 +141,6 @@ namespace ISManager
             // 
             // lblDataInicio
             // 
-            lblDataInicio.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblDataInicio.AutoSize = true;
             lblDataInicio.Font = new Font("Segoe UI", 14F);
             lblDataInicio.ForeColor = Color.FromArgb(57, 57, 57);
@@ -156,7 +152,6 @@ namespace ISManager
             // 
             // dtpDataFim
             // 
-            dtpDataFim.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dtpDataFim.BorderColor = Color.FromArgb(57, 57, 57);
             dtpDataFim.BorderSize = 1;
             dtpDataFim.CalendarFont = new Font("Segoe UI", 11F);
@@ -173,7 +168,6 @@ namespace ISManager
             // 
             // dtpDataInicio
             // 
-            dtpDataInicio.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dtpDataInicio.BorderColor = Color.FromArgb(57, 57, 57);
             dtpDataInicio.BorderSize = 1;
             dtpDataInicio.CalendarFont = new Font("Segoe UI", 11F);
@@ -190,7 +184,7 @@ namespace ISManager
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(57, 57, 57);
@@ -202,7 +196,7 @@ namespace ISManager
             // 
             // btnFiltrar
             // 
-            btnFiltrar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnFiltrar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnFiltrar.BackColor = Color.Silver;
             btnFiltrar.FlatStyle = FlatStyle.Flat;
             btnFiltrar.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -223,7 +217,7 @@ namespace ISManager
             // 
             // btnExcluir
             // 
-            btnExcluir.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnExcluir.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnExcluir.BackColor = Color.IndianRed;
             btnExcluir.FlatStyle = FlatStyle.Flat;
             btnExcluir.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -244,7 +238,7 @@ namespace ISManager
             // 
             // btnAlterar
             // 
-            btnAlterar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnAlterar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnAlterar.BackColor = Color.LightSteelBlue;
             btnAlterar.FlatStyle = FlatStyle.Flat;
             btnAlterar.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -265,7 +259,7 @@ namespace ISManager
             // 
             // btnCadastrar
             // 
-            btnCadastrar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnCadastrar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnCadastrar.BackColor = Color.SeaGreen;
             btnCadastrar.FlatStyle = FlatStyle.Flat;
             btnCadastrar.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -343,7 +337,7 @@ namespace ISManager
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = Color.White;
-            ClientSize = new Size(1113, 640);
+            ClientSize = new Size(1097, 601);
             Controls.Add(pnlClientes);
             FormBorderStyle = FormBorderStyle.None;
             MinimumSize = new Size(1113, 640);
