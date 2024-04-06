@@ -31,9 +31,9 @@
             panelCrudMigracoes = new Panel();
             groupBox1 = new GroupBox();
             cbxStatus = new ComboBox();
-            txtDataFechamento = new Class.CustomDatePicker();
-            txtHoras = new TextBox();
-            txtDataEntrada = new Class.CustomDatePicker();
+            txtDataAtualizacao = new Class.CustomDatePicker();
+            txtVersao = new TextBox();
+            txtDataUltimaAtualizacao = new Class.CustomDatePicker();
             txtObservacao = new TextBox();
             btnCancelar = new FontAwesome.Sharp.IconButton();
             txtNome = new TextBox();
@@ -41,8 +41,6 @@
             lblNome = new Label();
             lblStatus = new Label();
             lblObservacao = new Label();
-            cbxIsm = new ComboBox();
-            lblIsm = new Label();
             txtId = new TextBox();
             lblId = new Label();
             lblHoras = new Label();
@@ -67,9 +65,9 @@
             // 
             groupBox1.BackColor = Color.Transparent;
             groupBox1.Controls.Add(cbxStatus);
-            groupBox1.Controls.Add(txtDataFechamento);
-            groupBox1.Controls.Add(txtHoras);
-            groupBox1.Controls.Add(txtDataEntrada);
+            groupBox1.Controls.Add(txtDataAtualizacao);
+            groupBox1.Controls.Add(txtVersao);
+            groupBox1.Controls.Add(txtDataUltimaAtualizacao);
             groupBox1.Controls.Add(txtObservacao);
             groupBox1.Controls.Add(btnCancelar);
             groupBox1.Controls.Add(txtNome);
@@ -77,8 +75,6 @@
             groupBox1.Controls.Add(lblNome);
             groupBox1.Controls.Add(lblStatus);
             groupBox1.Controls.Add(lblObservacao);
-            groupBox1.Controls.Add(cbxIsm);
-            groupBox1.Controls.Add(lblIsm);
             groupBox1.Controls.Add(txtId);
             groupBox1.Controls.Add(lblId);
             groupBox1.Controls.Add(lblHoras);
@@ -100,52 +96,52 @@
             cbxStatus.ForeColor = Color.FromArgb(57, 57, 57);
             cbxStatus.FormattingEnabled = true;
             cbxStatus.Items.AddRange(new object[] { "Em andamento", "Atualizado", "Pendente", "Não atualizar" });
-            cbxStatus.Location = new Point(116, 252);
+            cbxStatus.Location = new Point(515, 248);
             cbxStatus.Name = "cbxStatus";
             cbxStatus.Size = new Size(127, 29);
             cbxStatus.TabIndex = 3;
             // 
-            // txtDataFechamento
+            // txtDataAtualizacao
             // 
-            txtDataFechamento.BorderColor = Color.FromArgb(57, 57, 57);
-            txtDataFechamento.BorderSize = 1;
-            txtDataFechamento.CustomFormat = "yyyy-MM-dd";
-            txtDataFechamento.Font = new Font("Segoe UI", 11F);
-            txtDataFechamento.Format = DateTimePickerFormat.Custom;
-            txtDataFechamento.Location = new Point(505, 147);
-            txtDataFechamento.MinimumSize = new Size(0, 35);
-            txtDataFechamento.Name = "txtDataFechamento";
-            txtDataFechamento.Size = new Size(133, 35);
-            txtDataFechamento.SkinColor = Color.FromArgb(241, 243, 244);
-            txtDataFechamento.TabIndex = 8;
-            txtDataFechamento.TextColor = Color.FromArgb(57, 57, 57);
-            txtDataFechamento.Value = new DateTime(2024, 4, 1, 0, 0, 0, 0);
+            txtDataAtualizacao.BorderColor = Color.FromArgb(57, 57, 57);
+            txtDataAtualizacao.BorderSize = 1;
+            txtDataAtualizacao.CustomFormat = "yyyy-MM-dd";
+            txtDataAtualizacao.Font = new Font("Segoe UI", 11F);
+            txtDataAtualizacao.Format = DateTimePickerFormat.Custom;
+            txtDataAtualizacao.Location = new Point(203, 243);
+            txtDataAtualizacao.MinimumSize = new Size(0, 35);
+            txtDataAtualizacao.Name = "txtDataAtualizacao";
+            txtDataAtualizacao.Size = new Size(133, 35);
+            txtDataAtualizacao.SkinColor = Color.FromArgb(241, 243, 244);
+            txtDataAtualizacao.TabIndex = 8;
+            txtDataAtualizacao.TextColor = Color.FromArgb(57, 57, 57);
+            txtDataAtualizacao.Value = new DateTime(2024, 4, 1, 0, 0, 0, 0);
             // 
-            // txtHoras
+            // txtVersao
             // 
-            txtHoras.BackColor = Color.FromArgb(241, 243, 244);
-            txtHoras.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtHoras.ForeColor = Color.FromArgb(57, 57, 57);
-            txtHoras.Location = new Point(515, 248);
-            txtHoras.Name = "txtHoras";
-            txtHoras.Size = new Size(124, 33);
-            txtHoras.TabIndex = 7;
+            txtVersao.BackColor = Color.FromArgb(241, 243, 244);
+            txtVersao.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtVersao.ForeColor = Color.FromArgb(57, 57, 57);
+            txtVersao.Location = new Point(515, 149);
+            txtVersao.Name = "txtVersao";
+            txtVersao.Size = new Size(124, 33);
+            txtVersao.TabIndex = 7;
             // 
-            // txtDataEntrada
+            // txtDataUltimaAtualizacao
             // 
-            txtDataEntrada.BorderColor = Color.FromArgb(57, 57, 57);
-            txtDataEntrada.BorderSize = 1;
-            txtDataEntrada.CalendarFont = new Font("Segoe UI", 11F);
-            txtDataEntrada.CustomFormat = "yyyy-MM-dd";
-            txtDataEntrada.Font = new Font("Segoe UI", 11F);
-            txtDataEntrada.Format = DateTimePickerFormat.Custom;
-            txtDataEntrada.Location = new Point(209, 149);
-            txtDataEntrada.MinimumSize = new Size(0, 35);
-            txtDataEntrada.Name = "txtDataEntrada";
-            txtDataEntrada.Size = new Size(127, 35);
-            txtDataEntrada.SkinColor = Color.FromArgb(241, 243, 244);
-            txtDataEntrada.TabIndex = 2;
-            txtDataEntrada.TextColor = Color.FromArgb(57, 57, 57);
+            txtDataUltimaAtualizacao.BorderColor = Color.FromArgb(57, 57, 57);
+            txtDataUltimaAtualizacao.BorderSize = 1;
+            txtDataUltimaAtualizacao.CalendarFont = new Font("Segoe UI", 11F);
+            txtDataUltimaAtualizacao.CustomFormat = "yyyy-MM-dd";
+            txtDataUltimaAtualizacao.Font = new Font("Segoe UI", 11F);
+            txtDataUltimaAtualizacao.Format = DateTimePickerFormat.Custom;
+            txtDataUltimaAtualizacao.Location = new Point(222, 149);
+            txtDataUltimaAtualizacao.MinimumSize = new Size(0, 35);
+            txtDataUltimaAtualizacao.Name = "txtDataUltimaAtualizacao";
+            txtDataUltimaAtualizacao.Size = new Size(127, 35);
+            txtDataUltimaAtualizacao.SkinColor = Color.FromArgb(241, 243, 244);
+            txtDataUltimaAtualizacao.TabIndex = 2;
+            txtDataUltimaAtualizacao.TextColor = Color.FromArgb(57, 57, 57);
             // 
             // txtObservacao
             // 
@@ -177,6 +173,7 @@
             btnCancelar.Text = " Cancelar";
             btnCancelar.TextAlign = ContentAlignment.MiddleLeft;
             btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // txtNome
             // 
@@ -208,6 +205,7 @@
             btnConfirmar.Text = "   Salvar";
             btnConfirmar.TextAlign = ContentAlignment.MiddleLeft;
             btnConfirmar.UseVisualStyleBackColor = false;
+            btnConfirmar.Click += btnConfirmar_Click;
             // 
             // lblNome
             // 
@@ -227,7 +225,7 @@
             lblStatus.BackColor = Color.White;
             lblStatus.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblStatus.ForeColor = Color.FromArgb(57, 57, 57);
-            lblStatus.Location = new Point(44, 252);
+            lblStatus.Location = new Point(443, 248);
             lblStatus.Name = "lblStatus";
             lblStatus.Size = new Size(67, 25);
             lblStatus.TabIndex = 55;
@@ -244,30 +242,6 @@
             lblObservacao.Size = new Size(124, 25);
             lblObservacao.TabIndex = 58;
             lblObservacao.Text = "Observações";
-            // 
-            // cbxIsm
-            // 
-            cbxIsm.BackColor = Color.FromArgb(241, 243, 244);
-            cbxIsm.Font = new Font("Segoe UI", 12F);
-            cbxIsm.ForeColor = Color.FromArgb(57, 57, 57);
-            cbxIsm.FormattingEnabled = true;
-            cbxIsm.Items.AddRange(new object[] { "André", "Edivania" });
-            cbxIsm.Location = new Point(318, 252);
-            cbxIsm.Name = "cbxIsm";
-            cbxIsm.Size = new Size(113, 29);
-            cbxIsm.TabIndex = 4;
-            // 
-            // lblIsm
-            // 
-            lblIsm.AutoSize = true;
-            lblIsm.BackColor = Color.White;
-            lblIsm.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblIsm.ForeColor = Color.FromArgb(57, 57, 57);
-            lblIsm.Location = new Point(265, 252);
-            lblIsm.Name = "lblIsm";
-            lblIsm.Size = new Size(47, 25);
-            lblIsm.TabIndex = 53;
-            lblIsm.Text = "ISM";
             // 
             // txtId
             // 
@@ -299,7 +273,7 @@
             lblHoras.BackColor = Color.White;
             lblHoras.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblHoras.ForeColor = Color.FromArgb(57, 57, 57);
-            lblHoras.Location = new Point(437, 251);
+            lblHoras.Location = new Point(437, 152);
             lblHoras.Name = "lblHoras";
             lblHoras.Size = new Size(72, 25);
             lblHoras.TabIndex = 56;
@@ -311,7 +285,7 @@
             lblDataFechamento.BackColor = Color.White;
             lblDataFechamento.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDataFechamento.ForeColor = Color.FromArgb(57, 57, 57);
-            lblDataFechamento.Location = new Point(342, 152);
+            lblDataFechamento.Location = new Point(40, 248);
             lblDataFechamento.Name = "lblDataFechamento";
             lblDataFechamento.Size = new Size(157, 25);
             lblDataFechamento.TabIndex = 57;
@@ -323,7 +297,7 @@
             lblUltimaAtualizacao.BackColor = Color.White;
             lblUltimaAtualizacao.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblUltimaAtualizacao.ForeColor = Color.FromArgb(57, 57, 57);
-            lblUltimaAtualizacao.Location = new Point(36, 152);
+            lblUltimaAtualizacao.Location = new Point(49, 152);
             lblUltimaAtualizacao.Name = "lblUltimaAtualizacao";
             lblUltimaAtualizacao.Size = new Size(174, 25);
             lblUltimaAtualizacao.TabIndex = 51;
@@ -333,12 +307,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1098, 600);
+            ClientSize = new Size(1114, 639);
             Controls.Add(panelCrudMigracoes);
             FormBorderStyle = FormBorderStyle.None;
             MinimumSize = new Size(1114, 639);
             Name = "frmCrudMigracoes";
             Text = "frmCrudMigracoes";
+            Load += frmCrudMigracoes_Load;
             panelCrudMigracoes.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
@@ -350,9 +325,9 @@
         private Panel panelCrudMigracoes;
         private GroupBox groupBox1;
         public ComboBox cbxStatus;
-        public Class.CustomDatePicker txtDataFechamento;
-        public TextBox txtHoras;
-        public Class.CustomDatePicker txtDataEntrada;
+        public Class.CustomDatePicker txtDataAtualizacao;
+        public TextBox txtVersao;
+        public Class.CustomDatePicker txtDataUltimaAtualizacao;
         public TextBox txtObservacao;
         public FontAwesome.Sharp.IconButton btnCancelar;
         public TextBox txtNome;
@@ -360,8 +335,6 @@
         private Label lblNome;
         private Label lblStatus;
         private Label lblObservacao;
-        public ComboBox cbxIsm;
-        private Label lblIsm;
         public TextBox txtId;
         private Label lblId;
         private Label lblHoras;

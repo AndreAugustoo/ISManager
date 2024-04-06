@@ -94,7 +94,6 @@ namespace ISManager
             // 
             // pnlClientes
             // 
-            pnlClientes.Anchor = AnchorStyles.None;
             pnlClientes.BackColor = Color.White;
             pnlClientes.Controls.Add(lblRegistroExibido);
             pnlClientes.Controls.Add(lblDataFim);
@@ -110,6 +109,7 @@ namespace ISManager
             pnlClientes.Controls.Add(lblNumeroRegistro);
             pnlClientes.Controls.Add(txtFiltro);
             pnlClientes.Controls.Add(dtGridClientes);
+            pnlClientes.Dock = DockStyle.Fill;
             pnlClientes.Location = new Point(0, 0);
             pnlClientes.MinimumSize = new Size(1114, 639);
             pnlClientes.Name = "pnlClientes";
@@ -337,7 +337,7 @@ namespace ISManager
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = Color.White;
-            ClientSize = new Size(1097, 601);
+            ClientSize = new Size(1113, 640);
             Controls.Add(pnlClientes);
             FormBorderStyle = FormBorderStyle.None;
             MinimumSize = new Size(1113, 640);

@@ -58,6 +58,12 @@ namespace ISManager.Class
                 // Altere as propriedades do label
                 groupBox.ForeColor = Color.White;
             }
+            else if (control is CheckBox)
+            {
+                CheckBox checkBox = (CheckBox)control;
+                // Altere as propriedades do label
+                checkBox.ForeColor = Color.White;
+            }
 
         }
 

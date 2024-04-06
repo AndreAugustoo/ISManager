@@ -46,9 +46,9 @@
             cbxFiltro = new ComboBox();
             lblNumeroRegistro = new Label();
             txtFiltro = new TextBox();
-            dtGridClientes = new DataGridView();
+            dtGridMigracoes = new DataGridView();
             pnlMigracoes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dtGridClientes).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dtGridMigracoes).BeginInit();
             SuspendLayout();
             // 
             // pnlMigracoes
@@ -67,7 +67,7 @@
             pnlMigracoes.Controls.Add(cbxFiltro);
             pnlMigracoes.Controls.Add(lblNumeroRegistro);
             pnlMigracoes.Controls.Add(txtFiltro);
-            pnlMigracoes.Controls.Add(dtGridClientes);
+            pnlMigracoes.Controls.Add(dtGridMigracoes);
             pnlMigracoes.Dock = DockStyle.Fill;
             pnlMigracoes.Location = new Point(0, 0);
             pnlMigracoes.Name = "pnlMigracoes";
@@ -171,6 +171,7 @@
             btnFiltrar.Text = "    Filtrar";
             btnFiltrar.TextAlign = ContentAlignment.MiddleLeft;
             btnFiltrar.UseVisualStyleBackColor = false;
+            btnFiltrar.Click += btnFiltrar_Click;
             // 
             // btnExcluir
             // 
@@ -191,6 +192,7 @@
             btnExcluir.Text = "    Excluir";
             btnExcluir.TextAlign = ContentAlignment.MiddleLeft;
             btnExcluir.UseVisualStyleBackColor = false;
+            btnExcluir.Click += btnExcluir_Click;
             // 
             // btnAlterar
             // 
@@ -211,6 +213,7 @@
             btnAlterar.Text = "    Abrir";
             btnAlterar.TextAlign = ContentAlignment.MiddleLeft;
             btnAlterar.UseVisualStyleBackColor = false;
+            btnAlterar.Click += btnAlterar_Click;
             // 
             // btnCadastrar
             // 
@@ -231,6 +234,7 @@
             btnCadastrar.Text = "    Novo";
             btnCadastrar.TextAlign = ContentAlignment.MiddleLeft;
             btnCadastrar.UseVisualStyleBackColor = false;
+            btnCadastrar.Click += btnCadastrar_Click;
             // 
             // cbxFiltro
             // 
@@ -246,6 +250,7 @@
             cbxFiltro.Size = new Size(147, 31);
             cbxFiltro.TabIndex = 14;
             cbxFiltro.Text = "ID";
+            cbxFiltro.SelectedValueChanged += cbxFiltro_SelectedValueChanged;
             // 
             // lblNumeroRegistro
             // 
@@ -270,27 +275,27 @@
             txtFiltro.Size = new Size(371, 32);
             txtFiltro.TabIndex = 15;
             // 
-            // dtGridClientes
+            // dtGridMigracoes
             // 
-            dtGridClientes.AllowUserToAddRows = false;
-            dtGridClientes.AllowUserToDeleteRows = false;
-            dtGridClientes.AllowUserToOrderColumns = true;
-            dtGridClientes.AllowUserToResizeRows = false;
-            dtGridClientes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dtGridClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dtGridClientes.BackgroundColor = Color.White;
-            dtGridClientes.BorderStyle = BorderStyle.None;
-            dtGridClientes.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dtGridClientes.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dtGridMigracoes.AllowUserToAddRows = false;
+            dtGridMigracoes.AllowUserToDeleteRows = false;
+            dtGridMigracoes.AllowUserToOrderColumns = true;
+            dtGridMigracoes.AllowUserToResizeRows = false;
+            dtGridMigracoes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dtGridMigracoes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dtGridMigracoes.BackgroundColor = Color.White;
+            dtGridMigracoes.BorderStyle = BorderStyle.None;
+            dtGridMigracoes.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dtGridMigracoes.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(57, 57, 57);
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = Color.White;
             dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(57, 57, 57);
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dtGridClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dtGridClientes.ColumnHeadersHeight = 30;
-            dtGridClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dtGridMigracoes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dtGridMigracoes.ColumnHeadersHeight = 30;
+            dtGridMigracoes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.Gainsboro;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -298,29 +303,30 @@
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dtGridClientes.DefaultCellStyle = dataGridViewCellStyle2;
-            dtGridClientes.EditMode = DataGridViewEditMode.EditProgrammatically;
-            dtGridClientes.EnableHeadersVisualStyles = false;
-            dtGridClientes.GridColor = Color.FromArgb(241, 243, 244);
-            dtGridClientes.Location = new Point(45, 91);
-            dtGridClientes.MultiSelect = false;
-            dtGridClientes.Name = "dtGridClientes";
-            dtGridClientes.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dtGridMigracoes.DefaultCellStyle = dataGridViewCellStyle2;
+            dtGridMigracoes.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dtGridMigracoes.EnableHeadersVisualStyles = false;
+            dtGridMigracoes.GridColor = Color.FromArgb(241, 243, 244);
+            dtGridMigracoes.Location = new Point(45, 91);
+            dtGridMigracoes.MultiSelect = false;
+            dtGridMigracoes.Name = "dtGridMigracoes";
+            dtGridMigracoes.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.TopLeft;
-            dtGridClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            dtGridClientes.RowHeadersVisible = false;
-            dtGridClientes.RowHeadersWidth = 4;
-            dtGridClientes.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dtGridMigracoes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dtGridMigracoes.RowHeadersVisible = false;
+            dtGridMigracoes.RowHeadersWidth = 4;
+            dtGridMigracoes.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle4.BackColor = Color.White;
             dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle4.ForeColor = Color.FromArgb(57, 57, 57);
             dataGridViewCellStyle4.SelectionBackColor = Color.Gainsboro;
             dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(57, 57, 57);
-            dtGridClientes.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            dtGridClientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dtGridClientes.Size = new Size(1024, 482);
-            dtGridClientes.TabIndex = 20;
-            dtGridClientes.TabStop = false;
+            dtGridMigracoes.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dtGridMigracoes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dtGridMigracoes.Size = new Size(1024, 482);
+            dtGridMigracoes.TabIndex = 20;
+            dtGridMigracoes.TabStop = false;
+            dtGridMigracoes.CellMouseDoubleClick += dtGridMigracoes_CellMouseDoubleClick;
             // 
             // frmMigracoes
             // 
@@ -333,9 +339,10 @@
             MinimumSize = new Size(1114, 639);
             Name = "frmMigracoes";
             Text = "Migrações";
+            Load += frmMigracoes_Load;
             pnlMigracoes.ResumeLayout(false);
             pnlMigracoes.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dtGridClientes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dtGridMigracoes).EndInit();
             ResumeLayout(false);
         }
 
@@ -354,6 +361,6 @@
         private ComboBox cbxFiltro;
         private Label lblNumeroRegistro;
         private TextBox txtFiltro;
-        private DataGridView dtGridClientes;
+        private DataGridView dtGridMigracoes;
     }
 }

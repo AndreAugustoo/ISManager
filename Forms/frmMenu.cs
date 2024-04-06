@@ -365,11 +365,13 @@ namespace ISManager
             {
                 ApplyDarkTheme(this);
                 themeIcon.Image = Resources.sunLight;
+                Crud.Instance.darkTheme = true;
             }
             else if (tgbChangeTheme.Checked == false) // Modo claro
             {
                 ApplyLightTheme(this);
                 themeIcon.Image = Resources.sunDark;
+                Crud.Instance.darkTheme = false;
             }
         }
     }

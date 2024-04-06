@@ -50,7 +50,7 @@
             panelTotalAberto = new Panel();
             label10 = new Label();
             label13 = new Label();
-            panelGrafico3 = new Panel();
+            panelTotalAbertoISM = new Panel();
             label14 = new Label();
             label6 = new Label();
             lblTotalAndre = new Label();
@@ -67,7 +67,7 @@
             panelGrafico1.SuspendLayout();
             panelGrafico2.SuspendLayout();
             panelTotalAberto.SuspendLayout();
-            panelGrafico3.SuspendLayout();
+            panelTotalAbertoISM.SuspendLayout();
             panel8.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -336,21 +336,21 @@
             label13.TabIndex = 0;
             label13.Text = "Em andamento";
             // 
-            // panelGrafico3
+            // panelTotalAbertoISM
             // 
-            panelGrafico3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panelGrafico3.AutoSize = true;
-            panelGrafico3.BackColor = Color.FromArgb(0, 126, 249);
-            panelGrafico3.Controls.Add(label14);
-            panelGrafico3.Controls.Add(label6);
-            panelGrafico3.Controls.Add(lblTotalAndre);
-            panelGrafico3.Controls.Add(lblTotalEdivania);
-            panelGrafico3.Controls.Add(label15);
-            panelGrafico3.Controls.Add(lblIsm);
-            panelGrafico3.Location = new Point(794, 236);
-            panelGrafico3.Name = "panelGrafico3";
-            panelGrafico3.Size = new Size(227, 332);
-            panelGrafico3.TabIndex = 12;
+            panelTotalAbertoISM.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panelTotalAbertoISM.AutoSize = true;
+            panelTotalAbertoISM.BackColor = Color.FromArgb(0, 126, 249);
+            panelTotalAbertoISM.Controls.Add(label14);
+            panelTotalAbertoISM.Controls.Add(label6);
+            panelTotalAbertoISM.Controls.Add(lblTotalAndre);
+            panelTotalAbertoISM.Controls.Add(lblTotalEdivania);
+            panelTotalAbertoISM.Controls.Add(label15);
+            panelTotalAbertoISM.Controls.Add(lblIsm);
+            panelTotalAbertoISM.Location = new Point(794, 236);
+            panelTotalAbertoISM.Name = "panelTotalAbertoISM";
+            panelTotalAbertoISM.Size = new Size(227, 332);
+            panelTotalAbertoISM.TabIndex = 12;
             // 
             // label14
             // 
@@ -476,7 +476,7 @@
             BackColor = Color.White;
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(1114, 639);
-            Controls.Add(panelGrafico3);
+            Controls.Add(panelTotalAbertoISM);
             Controls.Add(panelTotalAberto);
             Controls.Add(panelGrafico2);
             Controls.Add(panelGrafico1);
@@ -501,8 +501,8 @@
             panelGrafico2.PerformLayout();
             panelTotalAberto.ResumeLayout(false);
             panelTotalAberto.PerformLayout();
-            panelGrafico3.ResumeLayout(false);
-            panelGrafico3.PerformLayout();
+            panelTotalAbertoISM.ResumeLayout(false);
+            panelTotalAbertoISM.PerformLayout();
             panel8.ResumeLayout(false);
             panel8.PerformLayout();
             panel1.ResumeLayout(false);
@@ -533,7 +533,7 @@
         public Panel panelGrafico1;
         public Panel panelGrafico2;
         public Panel panelTotalAberto;
-        public Panel panelGrafico3;
+        public Panel panelTotalAbertoISM;
         public Label lblTotalImplantacoes;
         public Label lblTotalAberto;
         public Label lblTotalFechado;

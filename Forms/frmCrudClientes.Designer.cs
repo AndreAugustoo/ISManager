@@ -298,7 +298,6 @@ namespace ISManager.Forms
             pnlFormLoader.Name = "pnlFormLoader";
             pnlFormLoader.Size = new Size(1114, 639);
             pnlFormLoader.TabIndex = 59;
-            pnlFormLoader.Paint += pnlFormLoader_Paint;
             // 
             // groupBox2
             // 
@@ -321,7 +320,7 @@ namespace ISManager.Forms
             // 
             chkOpcao3.Appearance = Appearance.Button;
             chkOpcao3.AutoSize = true;
-            chkOpcao3.BackColor = Color.White;
+            chkOpcao3.BackColor = Color.Transparent;
             chkOpcao3.FlatAppearance.BorderSize = 0;
             chkOpcao3.FlatAppearance.CheckedBackColor = Color.Transparent;
             chkOpcao3.FlatAppearance.MouseDownBackColor = Color.Transparent;
@@ -344,7 +343,7 @@ namespace ISManager.Forms
             // 
             chkPesquisa.Appearance = Appearance.Button;
             chkPesquisa.AutoSize = true;
-            chkPesquisa.BackColor = Color.White;
+            chkPesquisa.BackColor = Color.Transparent;
             chkPesquisa.FlatAppearance.BorderSize = 0;
             chkPesquisa.FlatAppearance.CheckedBackColor = Color.Transparent;
             chkPesquisa.FlatAppearance.MouseDownBackColor = Color.Transparent;
@@ -367,7 +366,7 @@ namespace ISManager.Forms
             // 
             chkOpcao2.Appearance = Appearance.Button;
             chkOpcao2.AutoSize = true;
-            chkOpcao2.BackColor = Color.White;
+            chkOpcao2.BackColor = Color.Transparent;
             chkOpcao2.FlatAppearance.BorderSize = 0;
             chkOpcao2.FlatAppearance.CheckedBackColor = Color.Transparent;
             chkOpcao2.FlatAppearance.MouseDownBackColor = Color.Transparent;
@@ -390,7 +389,7 @@ namespace ISManager.Forms
             // 
             chkDocumentacao.Appearance = Appearance.Button;
             chkDocumentacao.AutoSize = true;
-            chkDocumentacao.BackColor = Color.White;
+            chkDocumentacao.BackColor = Color.Transparent;
             chkDocumentacao.FlatAppearance.BorderSize = 0;
             chkDocumentacao.FlatAppearance.CheckedBackColor = Color.Transparent;
             chkDocumentacao.FlatAppearance.MouseDownBackColor = Color.Transparent;
@@ -413,7 +412,7 @@ namespace ISManager.Forms
             // 
             chkOpcao1.Appearance = Appearance.Button;
             chkOpcao1.AutoSize = true;
-            chkOpcao1.BackColor = Color.White;
+            chkOpcao1.BackColor = Color.Transparent;
             chkOpcao1.FlatAppearance.BorderSize = 0;
             chkOpcao1.FlatAppearance.CheckedBackColor = Color.Transparent;
             chkOpcao1.FlatAppearance.MouseDownBackColor = Color.Transparent;
@@ -436,7 +435,7 @@ namespace ISManager.Forms
             // 
             chkZendesk.Appearance = Appearance.Button;
             chkZendesk.AutoSize = true;
-            chkZendesk.BackColor = Color.White;
+            chkZendesk.BackColor = Color.Transparent;
             chkZendesk.FlatAppearance.BorderSize = 0;
             chkZendesk.FlatAppearance.CheckedBackColor = Color.Transparent;
             chkZendesk.FlatAppearance.MouseDownBackColor = Color.Transparent;
@@ -444,7 +443,7 @@ namespace ISManager.Forms
             chkZendesk.FlatStyle = FlatStyle.Flat;
             chkZendesk.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             chkZendesk.ForeColor = Color.FromArgb(57, 57, 57);
-            chkZendesk.Image = (Image)resources.GetObject("chkZendesk.Image");
+            chkZendesk.Image = Properties.Resources._unchecked;
             chkZendesk.Location = new Point(37, 48);
             chkZendesk.Name = "chkZendesk";
             chkZendesk.Size = new Size(133, 35);

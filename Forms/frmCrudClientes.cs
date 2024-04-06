@@ -1,4 +1,5 @@
 ﻿using ISManager.Class;
+using ISManager.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +24,21 @@ namespace ISManager.Forms
 
         private void frmCrudClientes_Load(object sender, EventArgs e)
         {
+            //aplica tema
+            if (Crud.Instance.darkTheme) //Modo noturno
+            {
+                ThemeManager.ApplyDarkTheme(this);
+                txtDataEntrada.TextColor = Color.White;
+                txtDataEntrada.SkinColor = Color.FromArgb(25, 25, 25);
+                txtDataFechamento.TextColor = Color.White;
+                txtDataFechamento.SkinColor = Color.FromArgb(25, 25, 25);
+                chkDocumentacao.Image = Resources.uncheckedLight;
+                chkZendesk.Image = Resources.uncheckedLight;
+                chkPesquisa.Image = Resources.uncheckedLight;
+                chkOpcao1.Image = Resources.uncheckedLight;
+                chkOpcao2.Image = Resources.uncheckedLight;
+                chkOpcao3.Image = Resources.uncheckedLight;
+            }
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
@@ -122,22 +138,30 @@ namespace ISManager.Forms
             this.pnlFormLoader.Controls.Add(FrmClientes_Vrb);
             FrmClientes_Vrb.Show();
         }
-
-        private void pnlFormLoader_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void chkCheckedCh(object sender, EventArgs e)
         {
             CheckBox chk = sender as CheckBox;
             if (chk.Checked)
             {
-                chk.Image = Properties.Resources._checked;
+                if(Crud.Instance.darkTheme == true)
+                {
+                    chk.Image = Resources.checkedLight;
+                }
+                else
+                {
+                    chk.Image = Resources._checked;
+                }
             }
             else
             {
-                chk.Image = Properties.Resources._unchecked;
+                if (Crud.Instance.darkTheme == true)
+                {
+                    chk.Image = Resources.uncheckedLight;
+                }
+                else
+                {
+                    chk.Image = Resources._unchecked;
+                }
             }
         }
     }

@@ -19,7 +19,6 @@ namespace ISManager
     public partial class frmClientes : Form
     {
         private Clientes clientes;
-        private Crud crud;
 
         public frmClientes()
         {

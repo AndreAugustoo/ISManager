@@ -40,6 +40,7 @@ namespace ISManager.Class
         /// 4 = delete frmCrudClientes.btnExcluir
         /// </summary>
         public int TipoCrud { get; set; }
+        public bool darkTheme { get; set; }
 
     }
 }

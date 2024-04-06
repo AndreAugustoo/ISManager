@@ -103,6 +103,16 @@ namespace ISManager.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap checkedLight {
+            get {
+                object obj = ResourceManager.GetObject("checkedLight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sunDark {
             get {
                 object obj = ResourceManager.GetObject("sunDark", resourceCulture);
@@ -116,6 +126,16 @@ namespace ISManager.Properties {
         internal static System.Drawing.Bitmap sunLight {
             get {
                 object obj = ResourceManager.GetObject("sunLight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap uncheckedLight {
+            get {
+                object obj = ResourceManager.GetObject("uncheckedLight", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
