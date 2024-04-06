@@ -22,10 +22,6 @@ namespace ISManager
         {
             InitializeComponent();
 
-            btnDashboard.Enabled = false;
-            btnClientes.Enabled = false;
-            btnMigracoes.Enabled = false;
-
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 50);
             panelMenu.Controls.Add(leftBorderBtn);
@@ -203,22 +199,6 @@ namespace ISManager
             }
         }
 
-        private void btnConectar_Click(object sender, EventArgs e)
-        {
-            Database.host = txtHost.Text;
-            Database.porta = txtPort.Text;
-            Database.nomeBanco = txtDatabase.Text;
-            Database.usuario = txtUser.Text;
-            Database.senha = txtPassword.Text;
-
-            this.database = new Database();
-            database.Conectar();
-            MessageBox.Show("Conectado com sucesso!", "ISManager", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            btnDashboard.Enabled = true;
-            btnClientes.Enabled = true;
-            btnMigracoes.Enabled = true;
-
-        }
         private void ApplyDarkTheme(Control parentControl)
         {
             foreach (Control control in parentControl.Controls)
@@ -288,8 +268,6 @@ namespace ISManager
             btnClose.IconColor = Color.White;
             btnMaximaze.IconColor = Color.White;
             btnMinimaze.IconColor = Color.White;
-            btnConectar.ForeColor = Color.FromArgb(57, 57, 57);
-            btnConectar.IconColor = Color.FromArgb(57, 57, 57);
             iconCurrentChildForm.IconColor = RGBColors.activeForeColor;
             lblTitleChildForm.ForeColor = RGBColors.activeForeColor;
 
@@ -356,8 +334,6 @@ namespace ISManager
             btnClose.IconColor = Color.FromArgb(57, 57, 57);
             btnMaximaze.IconColor = Color.FromArgb(57, 57, 57);
             btnMinimaze.IconColor = Color.FromArgb(57, 57, 57);
-            btnConectar.ForeColor = Color.FromArgb(57, 57, 57);
-            btnConectar.IconColor = Color.FromArgb(57, 57, 57);
         }
         private void tgbChangeTheme_CheckedChanged(object sender, EventArgs e)
         {
