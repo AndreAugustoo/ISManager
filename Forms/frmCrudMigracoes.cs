@@ -105,9 +105,11 @@ namespace ISManager.Forms
             {
                 ThemeManager.ApplyDarkTheme(this);
                 txtDataAtualizacao.TextColor = Color.White;
-                txtDataAtualizacao.SkinColor = Color.FromArgb(25, 25, 25);
+                txtDataAtualizacao.BorderColor = Color.White;
+                txtDataAtualizacao.SkinColor = Color.FromArgb(57, 57, 57);
                 txtDataUltimaAtualizacao.TextColor = Color.White;
-                txtDataUltimaAtualizacao.SkinColor = Color.FromArgb(25, 25, 25);
+                txtDataUltimaAtualizacao.BorderColor = Color.White;
+                txtDataUltimaAtualizacao.SkinColor = Color.FromArgb(57, 57, 57);
             }
         }
     }

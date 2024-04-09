@@ -98,6 +98,7 @@ namespace ISManager
             if (tgbChangeTheme.Checked == true) //Modo noturno
             {
                 ThemeManager.ApplyDarkTheme(childForm);
+                this.BackColor = Color.White;
             }
 
             //End
@@ -220,20 +221,20 @@ namespace ISManager
                 {
                     TextBox textBox = (TextBox)control;
                     // Altere as propriedades do TextBox
-                    textBox.BackColor = Color.FromArgb(25, 25, 25);
+                    textBox.BackColor = Color.FromArgb(57, 57, 57);
                     textBox.ForeColor = Color.White;
                 }
                 else if (control is Panel)
                 {
                     Panel panel = (Panel)control;
                     // Altere as propriedades do Panel
-                    panel.BackColor = Color.FromArgb(25, 25, 25);
+                    panel.BackColor = Color.FromArgb(57, 57, 57);
                 }
                 else if (control is ComboBox)
                 {
                     ComboBox comboBox = (ComboBox)control;
                     // Altere as propriedades do form
-                    comboBox.BackColor = Color.FromArgb(25, 25, 25);
+                    comboBox.BackColor = Color.FromArgb(57, 57, 57);
                     comboBox.ForeColor = Color.White;
                 }
                 else if (control is Button)
@@ -247,7 +248,7 @@ namespace ISManager
                     Label label = (Label)control;
                     // Altere as propriedades do label
                     label.ForeColor = Color.White;
-                    label.BackColor = Color.FromArgb(25, 25, 25);
+                    label.BackColor = Color.FromArgb(57, 57, 57);
                 }
                 else if (control is GroupBox)
                 {
@@ -263,18 +264,22 @@ namespace ISManager
             //mudanças fora do control
             frmMenu FrmMenu_Vrb = new frmMenu();
             FrmMenu_Vrb.BackColor = Color.White;
-            RGBColors.btnBackColor = Color.FromArgb(25, 25, 25);
+            RGBColors.btnBackColor = Color.FromArgb(57, 57, 57);
             RGBColors.btnForeColor = Color.White;
 
             btnDashboard.ForeColor = Color.White;
             btnClientes.ForeColor = Color.White;
             btnMigracoes.ForeColor = Color.White;
+            btnDocumentacao.ForeColor = Color.White;
+            btnRetreinamento.ForeColor = Color.White;
             btnSair.ForeColor = Color.White;
             btnClose.ForeColor = Color.White;
             btnMaximaze.ForeColor = Color.White;
             btnMinimaze.ForeColor = Color.White;
 
             btnDashboard.IconColor = Color.White;
+            btnDocumentacao.IconColor = Color.White;
+            btnRetreinamento.IconColor = Color.White;
             btnClientes.IconColor = Color.White;
             btnMigracoes.IconColor = Color.White;
             btnSair.IconColor = Color.White;
@@ -284,10 +289,12 @@ namespace ISManager
             iconCurrentChildForm.IconColor = RGBColors.activeForeColor;
             lblTitleChildForm.ForeColor = RGBColors.activeForeColor;
 
-            btnDashboard.BackColor = Color.FromArgb(25, 25, 25);
-            btnClientes.BackColor = Color.FromArgb(25, 25, 25);
-            btnMigracoes.BackColor = Color.FromArgb(25, 25, 25);
-            btnSair.BackColor = Color.FromArgb(25, 25, 25);
+            btnDashboard.BackColor = Color.FromArgb(57, 57, 57);
+            btnClientes.BackColor = Color.FromArgb(57, 57, 57);
+            btnMigracoes.BackColor = Color.FromArgb(57, 57, 57);
+            btnDocumentacao.BackColor = Color.FromArgb(57, 57, 57);
+            btnRetreinamento.BackColor = Color.FromArgb(57, 57, 57);
+            btnSair.BackColor = Color.FromArgb(57, 57, 57);
 
         }
         private void ApplyLightTheme(Control parentControl)
@@ -342,6 +349,10 @@ namespace ISManager
             btnClientes.BackColor = Color.White;
             btnMigracoes.IconColor = Color.FromArgb(57, 57, 57);
             btnMigracoes.BackColor = Color.White;
+            btnDocumentacao.BackColor = Color.White;
+            btnRetreinamento.BackColor = Color.White;
+            btnDocumentacao.IconColor = Color.FromArgb(57, 57, 57);
+            btnRetreinamento.IconColor = Color.FromArgb(57, 57, 57);
             btnSair.IconColor = Color.FromArgb(57, 57, 57);
             btnSair.BackColor = Color.White;
             btnClose.IconColor = Color.FromArgb(57, 57, 57);
@@ -362,6 +373,24 @@ namespace ISManager
                 themeIcon.Image = Resources.sunDark;
                 Crud.Instance.darkTheme = false;
             }
+        }
+
+        private void btnDocumentacao_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.activeForeColor);
+            lblTitleChildForm.Text = "Migrações";
+            OpenChildForm(new frmDocumentacao());
+            tgbChangeTheme.Visible = false;
+            themeIcon.Visible = false;
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.activeForeColor);
+            lblTitleChildForm.Text = "Migrações";
+            OpenChildForm(new frmRetreinamento());
+            tgbChangeTheme.Visible = false;
+            themeIcon.Visible = false;
         }
     }
 }

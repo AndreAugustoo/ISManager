@@ -291,10 +291,10 @@ namespace ISManager
             dtGridClientes.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dtGridClientes.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(57, 57, 57);
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(25, 25, 25);
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(57, 57, 57);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(25, 25, 25);
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dtGridClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dtGridClientes.ColumnHeadersHeight = 30;

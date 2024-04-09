@@ -27,7 +27,7 @@ namespace ISManager.Class
             {
                 TextBox textBox = (TextBox)control;
                 // Altere as propriedades do TextBox
-                textBox.BackColor = Color.FromArgb(25, 25, 25);
+                textBox.BackColor = Color.FromArgb(57, 57, 57);
                 textBox.BorderStyle = BorderStyle.FixedSingle;
                 textBox.ForeColor = Color.White;
             }
@@ -35,13 +35,13 @@ namespace ISManager.Class
             {
                 Panel panel = (Panel)control;
                 // Altere as propriedades do Panel
-                panel.BackColor = Color.FromArgb(25, 25, 25);
+                panel.BackColor = Color.FromArgb(57, 57, 57);
             }
             else if (control is ComboBox)
             {
                 ComboBox comboBox = (ComboBox)control;
                 // Altere as propriedades do form
-                comboBox.BackColor = Color.FromArgb(25, 25, 25);
+                comboBox.BackColor = Color.FromArgb(57, 57, 57);
                 comboBox.ForeColor = Color.White;
             }
             else if (control is Label)

@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             panelMenu = new Panel();
+            btnRetreinamento = new FontAwesome.Sharp.IconButton();
+            btnDocumentacao = new FontAwesome.Sharp.IconButton();
             btnSair = new FontAwesome.Sharp.IconButton();
             btnMigracoes = new FontAwesome.Sharp.IconButton();
             btnClientes = new FontAwesome.Sharp.IconButton();
@@ -62,6 +64,8 @@
             // panelMenu
             // 
             panelMenu.BackColor = Color.White;
+            panelMenu.Controls.Add(btnRetreinamento);
+            panelMenu.Controls.Add(btnDocumentacao);
             panelMenu.Controls.Add(btnSair);
             panelMenu.Controls.Add(btnMigracoes);
             panelMenu.Controls.Add(btnClientes);
@@ -72,6 +76,48 @@
             panelMenu.Name = "panelMenu";
             panelMenu.Size = new Size(186, 700);
             panelMenu.TabIndex = 0;
+            // 
+            // btnRetreinamento
+            // 
+            btnRetreinamento.Dock = DockStyle.Top;
+            btnRetreinamento.FlatAppearance.BorderSize = 0;
+            btnRetreinamento.FlatStyle = FlatStyle.Flat;
+            btnRetreinamento.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnRetreinamento.ForeColor = Color.FromArgb(57, 57, 57);
+            btnRetreinamento.IconChar = FontAwesome.Sharp.IconChar.PersonChalkboard;
+            btnRetreinamento.IconColor = Color.FromArgb(57, 57, 57);
+            btnRetreinamento.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnRetreinamento.IconSize = 34;
+            btnRetreinamento.ImageAlign = ContentAlignment.MiddleLeft;
+            btnRetreinamento.Location = new Point(0, 348);
+            btnRetreinamento.Name = "btnRetreinamento";
+            btnRetreinamento.Padding = new Padding(10, 0, 0, 0);
+            btnRetreinamento.Size = new Size(186, 50);
+            btnRetreinamento.TabIndex = 9;
+            btnRetreinamento.Text = "Retreinamento";
+            btnRetreinamento.UseVisualStyleBackColor = true;
+            btnRetreinamento.Click += iconButton1_Click;
+            // 
+            // btnDocumentacao
+            // 
+            btnDocumentacao.Dock = DockStyle.Top;
+            btnDocumentacao.FlatAppearance.BorderSize = 0;
+            btnDocumentacao.FlatStyle = FlatStyle.Flat;
+            btnDocumentacao.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnDocumentacao.ForeColor = Color.FromArgb(57, 57, 57);
+            btnDocumentacao.IconChar = FontAwesome.Sharp.IconChar.File;
+            btnDocumentacao.IconColor = Color.FromArgb(57, 57, 57);
+            btnDocumentacao.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnDocumentacao.IconSize = 31;
+            btnDocumentacao.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDocumentacao.Location = new Point(0, 298);
+            btnDocumentacao.Name = "btnDocumentacao";
+            btnDocumentacao.Padding = new Padding(10, 0, 0, 0);
+            btnDocumentacao.Size = new Size(186, 50);
+            btnDocumentacao.TabIndex = 8;
+            btnDocumentacao.Text = "Documentação";
+            btnDocumentacao.UseVisualStyleBackColor = true;
+            btnDocumentacao.Click += btnDocumentacao_Click;
             // 
             // btnSair
             // 
@@ -391,5 +437,7 @@
         private FontAwesome.Sharp.IconPictureBox btnMaximaze;
         public Class.CustomToggleButton tgbChangeTheme;
         private PictureBox themeIcon;
+        private FontAwesome.Sharp.IconButton btnRetreinamento;
+        private FontAwesome.Sharp.IconButton btnDocumentacao;
     }
 }

@@ -29,9 +29,11 @@ namespace ISManager.Forms
             {
                 ThemeManager.ApplyDarkTheme(this);
                 txtDataEntrada.TextColor = Color.White;
-                txtDataEntrada.SkinColor = Color.FromArgb(25, 25, 25);
+                txtDataEntrada.BorderColor = Color.White;
+                txtDataEntrada.SkinColor = Color.FromArgb(57, 57, 57);
                 txtDataFechamento.TextColor = Color.White;
-                txtDataFechamento.SkinColor = Color.FromArgb(25, 25, 25);
+                txtDataFechamento.BorderColor = Color.White;
+                txtDataFechamento.SkinColor = Color.FromArgb(57, 57, 57);
                 chkDocumentacao.Image = Resources.uncheckedLight;
                 chkZendesk.Image = Resources.uncheckedLight;
                 chkPesquisa.Image = Resources.uncheckedLight;

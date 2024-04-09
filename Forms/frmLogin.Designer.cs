@@ -38,7 +38,6 @@
             btnHome = new PictureBox();
             label1 = new Label();
             label3 = new Label();
-            gbxConexaoBanco = new GroupBox();
             txtPort = new TextBox();
             btnConectar = new FontAwesome.Sharp.IconButton();
             lblPort = new Label();
@@ -57,15 +56,24 @@
             ((System.ComponentModel.ISupportInitialize)btnInstagram).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnGitHub).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnHome).BeginInit();
-            gbxConexaoBanco.SuspendLayout();
             SuspendLayout();
             // 
             // panelDesktop
             // 
             panelDesktop.BackColor = Color.White;
+            panelDesktop.Controls.Add(txtPort);
+            panelDesktop.Controls.Add(btnConectar);
             panelDesktop.Controls.Add(btnClose);
+            panelDesktop.Controls.Add(lblPort);
             panelDesktop.Controls.Add(panel1);
-            panelDesktop.Controls.Add(gbxConexaoBanco);
+            panelDesktop.Controls.Add(txtHost);
+            panelDesktop.Controls.Add(lblPassword);
+            panelDesktop.Controls.Add(lblHost);
+            panelDesktop.Controls.Add(txtDatabase);
+            panelDesktop.Controls.Add(txtPassword);
+            panelDesktop.Controls.Add(lblDatabase);
+            panelDesktop.Controls.Add(lblUser);
+            panelDesktop.Controls.Add(txtUser);
             panelDesktop.Dock = DockStyle.Fill;
             panelDesktop.Location = new Point(0, 0);
             panelDesktop.MinimumSize = new Size(1113, 640);
@@ -186,35 +194,12 @@
             label3.Text = "Desenvolvido por: André Oliveira";
             label3.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // gbxConexaoBanco
-            // 
-            gbxConexaoBanco.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            gbxConexaoBanco.Controls.Add(txtPort);
-            gbxConexaoBanco.Controls.Add(btnConectar);
-            gbxConexaoBanco.Controls.Add(lblPort);
-            gbxConexaoBanco.Controls.Add(txtHost);
-            gbxConexaoBanco.Controls.Add(lblPassword);
-            gbxConexaoBanco.Controls.Add(txtDatabase);
-            gbxConexaoBanco.Controls.Add(lblDatabase);
-            gbxConexaoBanco.Controls.Add(txtUser);
-            gbxConexaoBanco.Controls.Add(lblUser);
-            gbxConexaoBanco.Controls.Add(txtPassword);
-            gbxConexaoBanco.Controls.Add(lblHost);
-            gbxConexaoBanco.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            gbxConexaoBanco.ForeColor = Color.FromArgb(57, 57, 57);
-            gbxConexaoBanco.Location = new Point(720, 68);
-            gbxConexaoBanco.Name = "gbxConexaoBanco";
-            gbxConexaoBanco.Size = new Size(257, 512);
-            gbxConexaoBanco.TabIndex = 71;
-            gbxConexaoBanco.TabStop = false;
-            gbxConexaoBanco.Text = "Conectar ao MySQL";
-            // 
             // txtPort
             // 
             txtPort.BackColor = Color.FromArgb(241, 243, 244);
             txtPort.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtPort.ForeColor = Color.FromArgb(57, 57, 57);
-            txtPort.Location = new Point(60, 133);
+            txtPort.Location = new Point(779, 199);
             txtPort.MaxLength = 80;
             txtPort.Name = "txtPort";
             txtPort.Size = new Size(132, 33);
@@ -233,7 +218,7 @@
             btnConectar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnConectar.IconSize = 30;
             btnConectar.ImageAlign = ContentAlignment.MiddleRight;
-            btnConectar.Location = new Point(62, 440);
+            btnConectar.Location = new Point(781, 506);
             btnConectar.Name = "btnConectar";
             btnConectar.Size = new Size(132, 38);
             btnConectar.TabIndex = 59;
@@ -248,7 +233,7 @@
             lblPort.BackColor = Color.Transparent;
             lblPort.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblPort.ForeColor = Color.FromArgb(57, 57, 57);
-            lblPort.Location = new Point(101, 110);
+            lblPort.Location = new Point(779, 171);
             lblPort.Name = "lblPort";
             lblPort.Size = new Size(51, 25);
             lblPort.TabIndex = 68;
@@ -259,7 +244,7 @@
             txtHost.BackColor = Color.FromArgb(241, 243, 244);
             txtHost.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtHost.ForeColor = Color.FromArgb(57, 57, 57);
-            txtHost.Location = new Point(60, 60);
+            txtHost.Location = new Point(779, 126);
             txtHost.MaxLength = 80;
             txtHost.Name = "txtHost";
             txtHost.Size = new Size(132, 33);
@@ -273,7 +258,7 @@
             lblPassword.BackColor = Color.Transparent;
             lblPassword.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblPassword.ForeColor = Color.FromArgb(57, 57, 57);
-            lblPassword.Location = new Point(79, 264);
+            lblPassword.Location = new Point(779, 330);
             lblPassword.Name = "lblPassword";
             lblPassword.Size = new Size(97, 25);
             lblPassword.TabIndex = 69;
@@ -284,7 +269,7 @@
             txtDatabase.BackColor = Color.FromArgb(241, 243, 244);
             txtDatabase.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtDatabase.ForeColor = Color.FromArgb(57, 57, 57);
-            txtDatabase.Location = new Point(62, 375);
+            txtDatabase.Location = new Point(781, 441);
             txtDatabase.MaxLength = 80;
             txtDatabase.Name = "txtDatabase";
             txtDatabase.Size = new Size(132, 33);
@@ -298,7 +283,7 @@
             lblDatabase.BackColor = Color.Transparent;
             lblDatabase.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDatabase.ForeColor = Color.FromArgb(57, 57, 57);
-            lblDatabase.Location = new Point(79, 347);
+            lblDatabase.Location = new Point(779, 413);
             lblDatabase.Name = "lblDatabase";
             lblDatabase.Size = new Size(93, 25);
             lblDatabase.TabIndex = 65;
@@ -309,7 +294,7 @@
             txtUser.BackColor = Color.FromArgb(241, 243, 244);
             txtUser.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtUser.ForeColor = Color.FromArgb(57, 57, 57);
-            txtUser.Location = new Point(62, 213);
+            txtUser.Location = new Point(781, 279);
             txtUser.MaxLength = 80;
             txtUser.Name = "txtUser";
             txtUser.Size = new Size(132, 33);
@@ -323,7 +308,7 @@
             lblUser.BackColor = Color.Transparent;
             lblUser.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblUser.ForeColor = Color.FromArgb(57, 57, 57);
-            lblUser.Location = new Point(101, 185);
+            lblUser.Location = new Point(778, 251);
             lblUser.Name = "lblUser";
             lblUser.Size = new Size(52, 25);
             lblUser.TabIndex = 66;
@@ -334,7 +319,7 @@
             txtPassword.BackColor = Color.FromArgb(241, 243, 244);
             txtPassword.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtPassword.ForeColor = Color.FromArgb(57, 57, 57);
-            txtPassword.Location = new Point(62, 292);
+            txtPassword.Location = new Point(781, 358);
             txtPassword.MaxLength = 80;
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
@@ -349,7 +334,7 @@
             lblHost.BackColor = Color.Transparent;
             lblHost.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblHost.ForeColor = Color.FromArgb(57, 57, 57);
-            lblHost.Location = new Point(101, 35);
+            lblHost.Location = new Point(779, 98);
             lblHost.Name = "lblHost";
             lblHost.Size = new Size(54, 25);
             lblHost.TabIndex = 67;
@@ -366,14 +351,13 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmLogin";
             panelDesktop.ResumeLayout(false);
+            panelDesktop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)btnClose).EndInit();
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)btnLinkedin).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnInstagram).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnGitHub).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnHome).EndInit();
-            gbxConexaoBanco.ResumeLayout(false);
-            gbxConexaoBanco.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -382,7 +366,6 @@
         private Panel panelDesktop;
         private Label label3;
         private Label label1;
-        private GroupBox gbxConexaoBanco;
         public TextBox txtPort;
         private FontAwesome.Sharp.IconButton btnConectar;
         private Label lblPort;

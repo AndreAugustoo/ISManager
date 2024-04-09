@@ -123,6 +123,16 @@ namespace ISManager.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap homeBackground {
+            get {
+                object obj = ResourceManager.GetObject("homeBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sunDark {
             get {
                 object obj = ResourceManager.GetObject("sunDark", resourceCulture);
