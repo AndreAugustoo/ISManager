@@ -64,7 +64,7 @@
             FormBorderStyle = FormBorderStyle.None;
             MinimumSize = new Size(1114, 639);
             Name = "frmRetreinamento";
-            Text = "frmRetreinamento";
+            Text = "Retreinamento";
             panelRetreinamento.ResumeLayout(false);
             panelRetreinamento.PerformLayout();
             ResumeLayout(false);

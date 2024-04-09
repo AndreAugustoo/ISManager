@@ -63,7 +63,7 @@
             FormBorderStyle = FormBorderStyle.None;
             MinimumSize = new Size(1114, 639);
             Name = "frmDocumentacao";
-            Text = "frmDocumentacao";
+            Text = "Documentação";
             panelDocumentacao.ResumeLayout(false);
             panelDocumentacao.PerformLayout();
             ResumeLayout(false);
