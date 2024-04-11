@@ -378,17 +378,26 @@ namespace ISManager
         private void btnDocumentacao_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.activeForeColor);
-            lblTitleChildForm.Text = "Migrações";
+            lblTitleChildForm.Text = "Documentação";
             OpenChildForm(new frmDocumentacao());
             tgbChangeTheme.Visible = false;
             themeIcon.Visible = false;
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
+        private void btnRetreinamento_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.activeForeColor);
-            lblTitleChildForm.Text = "Migrações";
+            lblTitleChildForm.Text = "Retreinamento";
             OpenChildForm(new frmRetreinamento());
+            tgbChangeTheme.Visible = false;
+            themeIcon.Visible = false;
+        }
+
+        private void btnReembolso_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.activeForeColor);
+            lblTitleChildForm.Text = "Reembolso";
+            OpenChildForm(new frmReembolso());
             tgbChangeTheme.Visible = false;
             themeIcon.Visible = false;
         }

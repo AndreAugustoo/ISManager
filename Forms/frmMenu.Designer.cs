@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             panelMenu = new Panel();
+            btnReembolso = new FontAwesome.Sharp.IconButton();
             btnRetreinamento = new FontAwesome.Sharp.IconButton();
             btnDocumentacao = new FontAwesome.Sharp.IconButton();
             btnSair = new FontAwesome.Sharp.IconButton();
@@ -64,6 +65,7 @@
             // panelMenu
             // 
             panelMenu.BackColor = Color.White;
+            panelMenu.Controls.Add(btnReembolso);
             panelMenu.Controls.Add(btnRetreinamento);
             panelMenu.Controls.Add(btnDocumentacao);
             panelMenu.Controls.Add(btnSair);
@@ -76,6 +78,27 @@
             panelMenu.Name = "panelMenu";
             panelMenu.Size = new Size(186, 700);
             panelMenu.TabIndex = 0;
+            // 
+            // btnReembolso
+            // 
+            btnReembolso.Dock = DockStyle.Top;
+            btnReembolso.FlatAppearance.BorderSize = 0;
+            btnReembolso.FlatStyle = FlatStyle.Flat;
+            btnReembolso.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnReembolso.ForeColor = Color.FromArgb(57, 57, 57);
+            btnReembolso.IconChar = FontAwesome.Sharp.IconChar.Automobile;
+            btnReembolso.IconColor = Color.FromArgb(57, 57, 57);
+            btnReembolso.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnReembolso.IconSize = 34;
+            btnReembolso.ImageAlign = ContentAlignment.MiddleLeft;
+            btnReembolso.Location = new Point(0, 398);
+            btnReembolso.Name = "btnReembolso";
+            btnReembolso.Padding = new Padding(10, 0, 0, 0);
+            btnReembolso.Size = new Size(186, 50);
+            btnReembolso.TabIndex = 10;
+            btnReembolso.Text = "Reembolso";
+            btnReembolso.UseVisualStyleBackColor = true;
+            btnReembolso.Click += btnReembolso_Click;
             // 
             // btnRetreinamento
             // 
@@ -96,7 +119,7 @@
             btnRetreinamento.TabIndex = 9;
             btnRetreinamento.Text = "Retreinamento";
             btnRetreinamento.UseVisualStyleBackColor = true;
-            btnRetreinamento.Click += iconButton1_Click;
+            btnRetreinamento.Click += btnRetreinamento_Click;
             // 
             // btnDocumentacao
             // 
@@ -439,5 +462,6 @@
         private PictureBox themeIcon;
         private FontAwesome.Sharp.IconButton btnRetreinamento;
         private FontAwesome.Sharp.IconButton btnDocumentacao;
+        private FontAwesome.Sharp.IconButton btnReembolso;
     }
 }
