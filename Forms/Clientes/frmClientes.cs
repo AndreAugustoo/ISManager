@@ -1,5 +1,6 @@
 ﻿using ISManager.Class;
 using ISManager.Forms;
+using ISManager.Forms.Clientes;
 using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Asn1.Cmp;
 using System;
